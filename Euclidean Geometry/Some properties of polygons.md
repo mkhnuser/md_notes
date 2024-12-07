@@ -1,0 +1,1 @@
+A median which is based on the hypotenuse of a right triangle equals half the hypotenuse.
