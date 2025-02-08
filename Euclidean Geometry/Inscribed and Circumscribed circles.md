@@ -1,0 +1,2 @@
+The area of a circumscribed 4-gon equals half of the product of its perimeter by a radius of inscribed circle.
+If the circle circumscribes a right triangle, then its center lies in the middle of the hypotenuse.

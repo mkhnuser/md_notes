@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "077d8a70b5f7d949",
+        "id": "aba6273deafc8670",
         "type": "tabs",
         "children": [
           {
-            "id": "619d0f34044bb7dc",
+            "id": "b1a28c596cab214a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "Similar Triangles"
             }
-          },
-          {
-            "id": "4166ab2354f9b592",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.7"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.7"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -53,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -171,11 +159,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4166ab2354f9b592",
+  "active": "b1a28c596cab214a",
   "lastOpenFiles": [
+    "Stage.md",
     "Euclidean Geometry/Some properties of polygons.md",
-    "Euclidean Geometry/Similar Triangles.md",
     "Euclidean Geometry/Surface Area.md",
+    "Euclidean Geometry/Similar Triangles.md",
+    "Euclidean Geometry/Inscribed and Circumscribed circles.md",
+    "Stage",
     "TODO.md",
     "My first obsidian note.md",
     "Euclidean Geometry"
