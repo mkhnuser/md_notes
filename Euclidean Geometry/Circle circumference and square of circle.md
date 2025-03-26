@@ -1,0 +1,1 @@
+Suppose you are given an equilateral triangle with an inscribed circle with radius r. Then a radius R of a circumscribed circle equals 2r.

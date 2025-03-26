@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "aba6273deafc8670",
+        "id": "95902e0bf9e298cd",
         "type": "tabs",
         "children": [
           {
-            "id": "b1a28c596cab214a",
+            "id": "56545490f9a1e3fa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Euclidean Geometry/Similar Triangles.md",
+                "file": "Ops/Git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Similar Triangles"
+              "title": "Git"
             }
           }
         ]
@@ -159,13 +159,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b1a28c596cab214a",
+  "active": "56545490f9a1e3fa",
   "lastOpenFiles": [
-    "Stage.md",
-    "Euclidean Geometry/Some properties of polygons.md",
+    "Stage/Stage.md",
+    "Ops/Git.md",
+    "Ops",
+    "Front/HTML-CSS.md",
+    "Euclidean Geometry/Circle circumference and square of circle.md",
+    "Front/JS-TS.md",
     "Euclidean Geometry/Surface Area.md",
+    "Euclidean Geometry/Some properties of polygons.md",
     "Euclidean Geometry/Similar Triangles.md",
     "Euclidean Geometry/Inscribed and Circumscribed circles.md",
+    "Euclidean Geometry/Correspondence between sides and angles of a triangle.md",
+    "Neovim/LazyVim.md",
+    "Front",
+    "Neovim",
+    "Euclidean Geometry/Inscribed and Circumscribed Circles.md",
     "Stage",
     "TODO.md",
     "My first obsidian note.md",
