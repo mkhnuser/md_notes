@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stage/Stage.md",
+                "file": "Backend/Logging in Python.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stage"
+              "title": "Logging in Python"
             }
           }
         ]
@@ -161,12 +161,13 @@
   },
   "active": "56545490f9a1e3fa",
   "lastOpenFiles": [
+    "Stage/Stage.md",
+    "Backend/Logging in Python.md",
     "Ops/Git.md",
     "Ops/Docker.md",
     "Neovim/LazyVim.md",
     "Backend/SQLAlchemy and Alembic.md",
     "Backend/FastAPI.md",
-    "Stage/Stage.md",
     "Euclidean Geometry/Circle circumference and square of circle.md",
     "Euclidean Geometry/Similar Triangles.md",
     "Euclidean Geometry/Surface Area.md",
