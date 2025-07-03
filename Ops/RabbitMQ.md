@@ -2,42 +2,34 @@
 
 ## Overview
 
-RabbitMQ is a message broker which rests on top of some message protocol such as AMQP or MQTT.
-AMQP and MQTT define binary representation of a message that is being sent.
-
-A message is binary blob of data.
-A size of a queue is determined by the memory and the disk space of a machine which hosts this queue.
-You cannot publish a message directly to a queue, you first need to pass it to an exchange.
-
-RabbitMQ team suggests using `pika` Python library.
-This library is has a synchronous interface and callback-based flow.
+RabbitMQ is a message broker which rests on top of message delivery protocols such as AMQP, MQTT, or others.
 
 ## Messages and Queues
 
-When you produce messages to a queue and you have multiple consumers,
-RabbitMQ users Round-Robin algorithm to distribute the messages.
+A message can be anything.
+A size of a queue is determined by the memory and the disk space of a machine which hosts this queue.
+You cannot publish a message directly to a queue, you first need to pass it to an exchange.
 
-`auto_ack` parameter determines whether a message is acknowledged automatically,
-If it is, then if a consumer dies, the message is lost - it is not distributed among other workers.
-Essentially, this works great for non-important messages.
-If you have an important message, use `channel.basic_ack` after you've processed the message.
-You must acknowledge a message on the same channel that has delivered this message.
+## RabbitMQ Message Delivery Patters
 
-If RabbitMQ dies or quits, all queues and messages are lost.
-To prevent this, mark a queue as durable and a message as persistent.
-!!! **Once you've created a queue as non-durable, you cannot redefine durability! It remains non-durable.**
-!!! **If you mark a message as persistent,**
-!!! **it may still be lost since RabbitMQ may not flush it to the disk or die while receiving this message.**
-!!! To prevent this, use **publisher confirms** strategy.
+* Work Queue (Task Queue, Competing Consumer Pattern): a message is delivered to only one worker to be processed.
+* Publish / Subscribe: a message is delivered to multiple consumers.
 
-Use `channel#qos` parameter to specify a maximum number of messages that a worker can process at a time.
+### Work Queue (Task Queue, Competing Consumer Pattern)
+
+A message is delivered to precisely one worker.
+Round Robin algorithm is used to distribute messages among workers.
+
+### Publish / Subscribe
+
+A message is delivered to multiple consumers using exchanges, queues and binding process.
 
 ## Exchanges
 
-Exchanges receive messages from publishers and route them to queues. They can also discard messages.
-There are four types of exchanges.
+Exchanges receive messages from publishers and route them to queues.
 The process of associating an exchange and a queue is called binding.
-So, producers pass messages to some exchange and this exchanges further routes this message to queues.
+So, producers pass messages to some exchange and this exchanges further routes this message to queues based on binding.
+You use routing key for routing.
 
 ### Fanout Exchange Type
 
@@ -50,7 +42,55 @@ You publish a message with some routing key.
 Direct exchange then routes this message to a queue which has been bound to this exchange with the same routing key.
 You can assign multiple routing keys to the same queue.
 
-## RabbitMQ Message Delivery Patters
+### Topic Exchange
 
-* Work Queue (Task Queue): a message is delivered to only one worker to be processed.
-* Pub/Sub: a message is delivered to multiple consumers.
+Topic Exchange allows you to use a composite routing key: *quick.brown.fox*.
+You can bind a queue to a Topic Exchange with *quick.#*;
+in this case the queue will receive messages with the following routing keys:
+*quick.rabbit*, *quick.another.animal*, etc.
+
+### Other Exchanges
+
+There are some other exchanges which are less popular.
+
+## Data Safety in RabbitMQ 
+
+Understand that data safety is a mutual responsibility of a Publisher, RabbitMQ, and Consumer.
+Conceptually, your data flow looks like this: Publisher <-> RabbitMQ <-> Consumer.
+
+Suppose you want to send your messages reliably;
+you want to ensure that once you've sent a message to RabbitMQ, it does not get lost.
+Then you need to implement the strategies below.
+
+Here are the three things which can go wrong:
+
+1. Once a Publisher sends a message, it may not be delivered to RabbitMQ.
+2. RabbitMQ as such dies / reloads.
+3. Consumer dies while processing the message.
+
+1. Publisher <-> RabbitMQ Data Safety: Publisher Confirms Strategy.
+
+      Publisher Confirms mechanism ensures that RabbitMQ has absolutely received a message from a Publisher.
+      Essentially, once RabbitMQ has successfully received a message from a Publisher,
+      it sends a confirmation message.
+
+2. RabbitMQ Death Data Safety.
+
+      If RabbitMQ dies or quits, all queues and messages are lost by default.
+      To prevent this, mark a queue as durable and a message as persistent.
+      This ensures that queues and messages will survive RabbitMQ death.
+      RabbitMQ archives persistence and durability by writing data to a disk.
+
+      Once you've created a queue as non-durable, you cannot redefine its durability.
+      If you mark a message as persistent,
+      it may still be lost since RabbitMQ may not flush it to the disk or die while receiving this message.
+      To prevent this, use **Publisher confirms** Strategy.
+
+3. RabbitMQ <-> Consumer Data Safety: Consumer Acknowledgement Strategy.
+
+      Consumer Acknowledgement Mechanism ensures that if a worker (consumer) dies, or
+      its channel is closed, or connection is closed, or TCP connection is lost
+      the message will still be requeued and redelivered to a worker.
+
+      A default ack timeout of 30 minutes is set.
+      Be careful of a message duplication: a message may be received more than once by your worker...

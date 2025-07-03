@@ -13,3 +13,9 @@ Any present data is destroyed if you create a new fs.
 The process of connecting a fs to a running system is called mounting.
 You mount a specific device (a disk or a partition) on a specific location on your fs called mount point.
 Mount point is a directory.
+
+Use LVM for flexible disk management:
+
+* you treat disk partitions as physical volumes;
+* you connect physical volumes to a volume group(s);
+* you create logical volumes out of a volume group.
