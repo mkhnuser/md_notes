@@ -6,3 +6,6 @@ Explore the concept of Dev Containers.
 
 Appreciate the difference between sync and async in Python.
 Further investigate collections.abc python module.
+
+Read "Introduction to Mathematics" by Whitehead.
+For Chemistry, read "Chemistry The Central Science".
