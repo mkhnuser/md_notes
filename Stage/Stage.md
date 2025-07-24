@@ -4,5 +4,4 @@ When it comes to testing JS code, investigate Jest for unit testing and PlayWrig
 
 Explore the concept of Dev Containers.
 
-Appreciate the difference between sync and async in Python.
-Further investigate collections.abc python module.
+For Chemistry, read "Chemistry The Central Science".
