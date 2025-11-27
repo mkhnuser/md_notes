@@ -43,7 +43,7 @@ Transactions may fail on the DB level, so a developer must be ready to handle
 Transaction Exceptions and to rerun these transactions - the whole idea
 of atomicity is that you can rerun transactions safely.
 
-In PostgreSQL, if you use SERIALIZABLE transaction level, you must use it for every transaction to avoid strange implicit behavior: if even one transaction
+? In PostgreSQL, if you use SERIALIZABLE transaction level, you must use it for every transaction to avoid strange implicit behavior: if even one transaction
 uses Transaction Isolation Level which is different from SERIALIZABLE,
 then all transactions marked as SERIALIZABLE will be implicitly run
 as REPEATABLE READ.

@@ -18,18 +18,23 @@ You cannot publish a message directly to a queue, you first need to pass it to a
 ### Work Queue (Task Queue, Competing Consumer Pattern)
 
 A message is delivered to precisely one worker.
-Round Robin algorithm is used to distribute messages among workers.
+Round Robin algorithm is used to distribute messages among workers by default.
 
 ### Publish / Subscribe
 
-A message is delivered to multiple consumers using exchanges, queues and binding process.
+A message is delivered to multiple consumers using exchanges, queues and the binding process.
 
 ## Exchanges
 
-Exchanges receive messages from publishers and route them to queues.
+Exchanges receive messages from publishers and route them to queues based on routing keys.
 The process of associating an exchange and a queue is called binding.
-So, producers pass messages to some exchange and this exchanges further routes this message to queues based on binding.
-You use routing key for routing.
+So, producers pass messages to some exchange and this exchanges further routes this message to queues based on key binding.
+
+### Default Exchange
+
+The whole concept of the default exchange is to accept and a message and a routing key.
+It then routes this message to a queue which has a name which is equal to the routing key.
+This exchange is especially useful for testing.
 
 ### Fanout Exchange Type
 
@@ -49,9 +54,30 @@ You can bind a queue to a Topic Exchange with *quick.#*;
 in this case the queue will receive messages with the following routing keys:
 *quick.rabbit*, *quick.another.animal*, etc.
 
-### Other Exchanges
+### Headers Exchange
 
-There are some other exchanges which are less popular.
+It is possible to route messages based on Headers Mapping.
+
+### Exchange-to-Exchange Binding
+
+It it possible to bind an exchange to another exchange.
+
+### Consistent Hashing Strategy
+
+You might want RabbitMQ to decide which queue a message goes to.
+
+### Alternative Exchanges
+
+You can bind an alternative exchange to a main exchange so that
+when a message with a "bad" routing key arrives,
+you redirect this message to an alternative exchange.
+
+Then, this alternative exchange might reroute this message
+according to the routing key bindings it has.
+
+### DeadLetter Exchanges
+
+You might want to route messages which have expired to a particular exchange.
 
 ## Data Safety in RabbitMQ 
 
@@ -80,6 +106,8 @@ Here are the three things which can go wrong:
       To prevent this, mark a queue as durable and a message as persistent.
       This ensures that queues and messages will survive RabbitMQ death.
       RabbitMQ archives persistence and durability by writing data to a disk.
+
+      Not all data deserves to be written on a disk.
 
       Once you've created a queue as non-durable, you cannot redefine its durability.
       If you mark a message as persistent,
