@@ -1,4 +1,4 @@
-# HTML & CSS
+# CSS
 
 ## Selector Specificity
 
