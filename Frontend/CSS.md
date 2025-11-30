@@ -38,6 +38,7 @@ Here is a rough recommendation for choosing CSS units:
 * Use `%` or `vh`, `vw` for width and height;
 * Use `ch` to limit the length of paragraphs on your page.
 * Use `rem` and `em` for margins and paddings and font sizes; or `px` as a last resort.
+* Use `px` for shadows.
 
 Usually, `16px` is the default font size. You can adjust it by using:
 
@@ -66,6 +67,12 @@ inline-block elements don't go to a new line, but can have width and height.
 
 You can use negative margins.
 
+Some examples of margins:
+
+* margin: top right buttom left;
+* margin: vertical horizontal;
+* margin: 2rem auto; (centers horizontally)
+
 ## [Vertical] Margin Collapsing
 
 Remember about margin collapsing in CSS: the resulting vertical margin is the biggest one; vertical margins do not add up if you have two elements side by side, for example. Horizontal margins do add up.
@@ -77,6 +84,23 @@ Here is how the resulting width of an element is calculated by default (box-sizi
 If you specify box-sizing: border box, then padding and border size is taken into account when you specify width and height and so the content of an element itself may shrink.
 
 Filling area is an area of content + padding + border. When you specify background-image or background-color prop, for example, it occupies the filling area of a given element.
+
+## Position Prop
+
+Position Prop allows you to control how elements are positioned on the page.
+
+## Stacking Context and Z index
+
+Stacking Context and Z index allow you to control the layering of elements.
+Z indexes are scoped to Stacking Contexts.
+
+## Background Images
+
+Background Images can be used for styling.
+
+## Inheritance
+
+Some properties are inherited and some are not. You can control inheritance.
 
 ## Content Layout
 
