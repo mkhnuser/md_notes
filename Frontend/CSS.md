@@ -102,6 +102,11 @@ Background Images can be used for styling.
 
 Some properties are inherited and some are not. You can control inheritance.
 
+## Visibility
+
+`visibility: hidden` hides an element: it still takes up some space;
+`display: none` completely removes an element - it does not take up any space.
+
 ## Content Layout
 
 To lay out content, you use float, flexbox, and grid. Just forget about floats as they are obsolete and focus on mastering flexbox & grid. Flexbox has the concept of main-axis and cross-axis. You can change these axes. Grid only uses column axis and row axis - you cannot change the direction of those.
