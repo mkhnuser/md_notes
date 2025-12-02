@@ -35,3 +35,15 @@ If it hasn't, you grant access to the protected endpoint.
 If it has, you ask user to authenticate again by raising 401 Unauthorized HTTP code.
 
 Remember that a JWT token is encoded, but not encrypted: anyone can see its content.
+
+## Cookies
+
+Here is a flow for a cookie-based authentication:
+
+1. A user logs in successfully;
+2. You create a unique session ID which you are associating with a user;
+
+    * You store user-related data in the DB against this session ID.
+
+3. You store this session ID in a cookie;
+4. When a cookie expires, go to step 1.

@@ -12,3 +12,14 @@ You can make a request to a resource, however, if remote origin does not match y
 current origin, then the browser won't allow you to access the response.
 
 Servers control CORS by settings HTTP HEADERS.
+
+## Cookies
+
+HTTP is stateless. You use cookies to introduce state.
+Cookies are browser-specific which makes it impossible to use it on mobiles.
+
+Cookies might be hijacked and so sessions might be stolen.
+Use two-factor auth to prevent this.
+
+You use cookies to store sessions, shopping cart, track users.
+You can set a cookies on a frontend and on a backend.

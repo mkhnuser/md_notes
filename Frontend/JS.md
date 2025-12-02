@@ -14,3 +14,7 @@ Objects in JS are compared by identity, but not by their content. Moreover empty
 
 One advantage of having named functions over anonymous ones is the convenience during debugging:
 a function's name will be displayed.
+
+## Timeout API
+
+Use `setTimeout()` if you want to invoke some code after some time.
