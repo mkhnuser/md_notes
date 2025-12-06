@@ -31,3 +31,7 @@ You can set a cookies on a frontend and on a backend.
 String Transport Security says to a browser upgrade to HTTPS.
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security
+
+## CSP
+
+Content Security Policy might make XSS attack "not so severe".

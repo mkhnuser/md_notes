@@ -1,5 +1,7 @@
 # Python Typing
 
+## Generics
+
 Generics allow you to annotate containers with arbitrary types they might work with.
 
 ```
@@ -22,3 +24,4 @@ def zero_all_vars(vars: Iterable[LoggedVar[int]]) -> None:
 ```
 
 A captain informs: `Union[X, None] == X | None == Optional[X]`.
+You can specify an upper bound for Generics.
