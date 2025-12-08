@@ -36,7 +36,7 @@ If it has, you ask user to authenticate again by raising 401 Unauthorized HTTP c
 
 Remember that a JWT token is encoded, but not encrypted: anyone can see its content.
 
-## Cookies
+## Cookie-based Sessions
 
 Here is a flow for a cookie-based authentication:
 
@@ -47,3 +47,11 @@ Here is a flow for a cookie-based authentication:
 
 3. You store this session ID in a cookie;
 4. When a cookie expires, go to step 1.
+
+## JWT vs Cookie-based Sessions
+
+JWT allow you to make your server stateless:
+you don't need to store anything, you just issue a token and verify it upon each request.
+
+Cookie-based sessions can only exist within a browser.
+JWT are more general.
