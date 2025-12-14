@@ -134,38 +134,38 @@ Low waiting time.
 
 ##### Video-streaming Service
 
-
-
-
-
-
-
 ### Load on a System Assessment
 
 Load on a system can be calculated based on these metrics:
 
-* Number of users;
+* User Load;
 * Network Load;
 * Computational Load;
 * Storage Space.
 
-General SRE book: https://sre.google/sre-book/service-level-objectives/
-
-#### Number of users
+#### User Load
 
 Consider this:
 
 * MAU - Monthly Active Users;
 * DAU - Daily Active Users;
-* How much content will be generated in the next 5, 10 years?
+* How much content will be generated in the next 5 years?
 * How much content does a user generate per day?
 * Calculate READ / WRITE Ratio.
 
-* How many requests per second does a particular instance have to handle (RPS)?
+Calculate this:
+
+* RPS;
+* QPS (Search Engine, DB);
+* CPS (Connections Per Second);
 * How many connections are open simultaneously?
+
+      Recall what c10K problem, c1M problem means.
+
 * Network Load (mbps, gbps);
 * Storage Space Requirements (TB);
-* Calculate Server Costs.
+* Calculate Server Costs;
+* https://en.wikipedia.org/wiki/Web_server#Performance_metrics
 
 #### Network Load
 
@@ -174,16 +174,16 @@ To calculate network load, consider these metrics:
 1. Traffic Load (mbps, gbps);
 2. Number of open connections (perhaps less significant).
 
-One instance can handle ~100k simultaneous connections.
-On average, to transfer 1GB of traffic, you have to pay 0.1 dollar.
+On average, to transfer 1GB of traffic, you have to pay $0.1.
+One web server instance can handle 100 thousand connections.
+You should know how much traffic can be transferred per second.
 
 There are various performance metrics one can assess:
 
-* https://en.wikipedia.org/wiki/Web_server#Performance_metrics
 * https://en.wikipedia.org/wiki/Time_to_first_byte
 * Bit Rate and Resolution for video-streaming.
-
-Video: https://medium.com/tinder/taming-video-delivery-through-http-live-streaming-5a4d6e543c85
+* Video: https://medium.com/tinder/taming-video-delivery-through-http-live-streaming-5a4d6e543c85
+* General SRE book: https://sre.google/sre-book/service-level-objectives/
 
 #### Computational Load
 
