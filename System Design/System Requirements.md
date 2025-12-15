@@ -204,7 +204,8 @@ There the three main types of storage devices:
 2. SSD;
 3. RAM.
 
-You should know their read-write speed and cost.
-One server might have up to 1TB of RAM, up to 50TB of SSD, up to 200TB of HDD.
-You should know L1 cache access time, RAM access time, etc.
-Average Failure Rate (AFR) of a storage device is around 1 percent.
+* You should know their read / write speed and cost.
+* One server might have up to 1TB of RAM, up to 50TB of SSD, up to 200TB of HDD.
+* You should know L1 cache access time, RAM access time, etc.
+* Average Failure Rate (AFR) of a storage device is around 1 percent.
+* Information should be replicated across multiple disks.
