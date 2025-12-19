@@ -70,26 +70,24 @@ No consistency is guaranteed. We can only guess the current state of the system.
 
 If we wait long enough, we will get the most recent data.
 
-
 ## CAP Theorem
 
-Distributed data store may provide *at most* two of the following three aspects:
+Partition-tolerant distributed data store may provide at most two of the following aspects:
 
-1. Consistency: every read receives the most recent write (do not confuse with consistency in ACID).
+1. Consistency: every client reading from any node receives the most recent information.
+For a write operation to be successful, it has to be forwarded / replicated to all other nodes.
+
 2. Availability: every request received by a non-failing node must produce a response.
-3. Partition Tolerance:
-
-    The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes.
 
 When a network partition failure happens, you have to choose between the two options:
 
 1. Abort the operation and therefore reduce availability in favor of consistency.
 2. Proceed with the operation and provide availability possibly introducing inconsistency.
 
-In the absence of Network Partitioning, both aspects can be satisfied.
-
+Important observation: in the absence of network partitioning, both aspects can be satisfied.
+Modern technologies allow you to reduce network partitions to a minimum. That's why it is important to consider PACELC theorem.
 
 ## PACELC Theorem
 
-
-TODO.
+PACELC Theorem expands CAP theorem.
+If partition happens, you choose between consistency and availability. Else, you choose between latency and consistency.

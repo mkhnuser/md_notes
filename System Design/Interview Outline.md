@@ -11,3 +11,5 @@ Here is a rough outline of how a system design interview should go:
         4. Storage Requirements.
         5. Network Requirements.
         6. Storage Requirements for 5 years of work.
+
+3. Conduct high-level design: draw a basic schema of the system and choose a DB.
