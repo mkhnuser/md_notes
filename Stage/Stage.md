@@ -7,3 +7,5 @@ When it comes to testing JS code, investigate Jest for unit testing and PlayWrig
 Explore the concept of Dev Containers.
 
 For Chemistry, read "Chemistry The Central Science".
+
+Learn Domain-Driven Design.
