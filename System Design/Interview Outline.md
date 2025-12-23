@@ -21,3 +21,8 @@ Here is a rough outline of how a system design interview should go:
 
                  Consider the usage of a message broker or a message bus.
                  This achieves decoupling and enables scalability.
+
+        4. Add scaling to the system.
+
+                  Discuss Load Balancing.
+                  Consider Database Shards and Replicas.

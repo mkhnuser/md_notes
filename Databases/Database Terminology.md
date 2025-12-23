@@ -1,4 +1,4 @@
-# Terminology
+# Database Terminology
 
 
 ## Availability and Scalability
