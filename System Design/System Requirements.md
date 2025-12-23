@@ -10,7 +10,7 @@ A design document should explicitly state what's expected from the system.
 
 Functional: what do you expect as a user?
 
-Non-Functional: 
+Non-Functional:
 
 * How do you make system highly available, scalable, responsive?
 * Do you really need to make it highly available, scalable?
