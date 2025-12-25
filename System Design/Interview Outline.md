@@ -26,3 +26,7 @@ Here is a rough outline of how a system design interview should go:
 
                   Discuss Load Balancing.
                   Consider Database Shards and Replicas.
+                  Understand that you should use consistent hashing strategy
+                  to determine a shard to which data is to be sent.
+
+        5. Increase System Responsiveness.

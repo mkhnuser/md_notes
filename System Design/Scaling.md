@@ -17,8 +17,13 @@ this approach has at least the following disadvantages:
 
 * Inability to perform SQL-Joins.
 * Almost all Relational Databases can't validate the foreign key references to external nodes.
-* If you use consistent hashing and you need to change a hash function,
-you need to redistribute your data across shards.
+* If you are to change a hash function, you need to redistribute your data across shards.
+
+### Consistent Hashing
+
+Given many shards of data, we need to route the request to a particular shard
+based on some field in this request. This is where classical (hashing + mod) might fail
+if you want to add a new shard. To solve this problem, you introduce consistent hashing.
 
 ### Redundancy and Replication
 
