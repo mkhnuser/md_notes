@@ -9,3 +9,4 @@ Explore the concept of Dev Containers.
 For Chemistry, read "Chemistry The Central Science".
 
 Learn Domain-Driven Design.
+Learn Lean and TLA+.

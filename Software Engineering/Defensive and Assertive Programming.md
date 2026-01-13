@@ -8,7 +8,7 @@ that something is wrong.
 * Always use the else statement in the if / else statement
 which generates a custom runtime error which signifies to you
 that something is wrong.
-* Try to crash early.
+* Fail fast.
 
 ## Exception Handling
 
@@ -38,3 +38,4 @@ Is worse than this (no exception handling):
 * Assertions ensure that something never happens; they document your assumptions about the code.
 * Exceptions allow you to handle something that can happen.
 * If blocks handle logical scenarios: you expect your code to branch out.
+* Perhaps, instead of comments, you should sometimes use assertions.
