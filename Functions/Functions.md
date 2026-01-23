@@ -9,6 +9,10 @@ Consider a semicircle, parabola, or a line, for example.
 
 Inverse is symmetrical across `y = x` to the original function.
 
-## Links
+## Periodic Functions
 
-https://en.wikipedia.org/wiki/Inverse_function#
+Review proofs which require periods.
+
+Important takeaway: it's important to separate functional definition from a functional "invocation";
+f(2x) might represent a functional definition in one context;
+and f(2x) might represent an argument 2x passed to the function in another context.
