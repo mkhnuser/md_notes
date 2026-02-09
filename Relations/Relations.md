@@ -10,3 +10,8 @@ Chapter 4.2.
 Example 4.2.4.
 Example 3 and example 4.
 Can you solve it?
+
+## Closures on relations
+
+Chapter 4.4.
+Exercises contain info on symmetric closures, transitive closures.
