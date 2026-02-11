@@ -23,5 +23,7 @@ def zero_all_vars(vars: Iterable[LoggedVar[int]]) -> None:
 ```
 ```
 
+## Optional
+
 A captain informs: `Union[X, None] == X | None == Optional[X]`.
 You can specify an upper bound for Generics.

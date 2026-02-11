@@ -17,3 +17,9 @@ The most dangerous books are not on public lists.
 * Democracy and Education. An introduction to the philosophy of education.
 * Some Thoughts Concerning Education.
 * The Montessori Method.
+
+## The History and Economics of Money
+
+* Better Money: gold, fiat, or bitcoin?
+* Broken Money: why our financial system is failing.
+* Ayn Rand: Capitalism.
