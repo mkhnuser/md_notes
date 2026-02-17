@@ -15,3 +15,8 @@ Can you solve it?
 
 Chapter 4.4.
 Exercises contain info on symmetric closures, transitive closures.
+
+## Equivalence Relations
+
+Chapter 4.5
+Exercises from 16 onward are quite promising to cause you pain.
