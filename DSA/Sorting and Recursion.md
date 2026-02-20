@@ -14,4 +14,4 @@ An array to be sorted gets modified, no other array gets created.
 
 ## Recursion
 
-One can use recursion to generate sequences of characters.
+One can use recursion to generate sequences of characters and solve maze problems :)

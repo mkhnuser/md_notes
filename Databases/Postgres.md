@@ -39,9 +39,7 @@ SQL Standard describes the following Transaction Isolation Levels:
 * REPEATABLE READ: solves non-repeatable reads; allows phantom reads IN SOME DBs (not PostgreSQL); does not prevent serialization errors.
 * SERIALIZABLE.
 
-SERIALIZABLE = the executing of multiple concurrent transaction equals the execution of these transactions in some order.
-SERIALIZEBLE isolation level doesn't guarantee a specific order of execution;
-it guarantees that there is order.
+SERIALIZABLE = the executing of multiple concurrent transaction equals the execution of these transactions in some order. SERIALIZEBLE isolation level doesn't guarantee a specific order of execution; it guarantees that there is order.
 
 Transactions fail, so you should be ready to rerun them in your code.
 The whole idea of atomicity is to rerun transactions.
