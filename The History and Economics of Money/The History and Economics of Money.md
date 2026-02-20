@@ -54,3 +54,16 @@ no other rights were given to it. Later, it became the only bank to issue bankno
 
 During WW1, Britain stops redemption of gold to finance the war and not to raise taxes directly.
 There was a huge amount of gold exported to the US from Europe during WW1.
+
+## Rise of Fiat
+
+Bretton Woods system establishes cooperation between the states.
+After the WW1, many countries take their gold back from the US.
+
+## Inflation
+
+Inflation creates short-sightedness; it is a form of taxation.
+
+## Crypto as a Currency
+
+...
