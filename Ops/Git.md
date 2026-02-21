@@ -21,7 +21,7 @@ Here are the levels: local, global, system.
 
 ## Reflog
 
-Having located the reflog entry, you can `git merge` it back.
+Having located a reflog entry, you can `git merge` it back.
 
 ## Rebasing vs Merging
 
@@ -37,10 +37,13 @@ HEAD points to "ours" branch. "theirs" branch is a branch which is being merged.
 
 The text above motivates the usage of: `git checkout --ours` and `git checkout --theirs`.
 
-### Revertability
+### Revertability (important!)
 
-You should prefer rebases to merges since you might want to revert the changes
-in the future: merge commits are difficult to revert.
+`git revert` reverts changes introduced by a particular commit.
+You should prefer rebases to merges since you might want to revert a merge commit
+in the future. However, merge commits are difficult to revert since they have two parents:
+
+https://stackoverflow.com/questions/7099833/how-do-i-revert-a-merge-commit-that-has-already-been-pushed-to-remote
 
 ### Commits drop
 
