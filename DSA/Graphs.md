@@ -14,11 +14,11 @@ Here are some examples of situations which can be modelled by graphs:
 ### Adjacency Matrix
 
 One can use edge weights as a matrix values too for a weighted graph.
-Adjacency matrix requires O(V ** 2) space.
+Adjacency matrix requires O(V ** 2) space and is rarely used because of this.
 
 ### Adjacency List
 
-Adjacency List is another way to store a graph in memory.
+Adjacency List is another way to store a graph in memory and its more efficient in terms of memory.
 
 ## DFS
 

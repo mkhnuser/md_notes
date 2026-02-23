@@ -67,3 +67,7 @@ Inflation creates short-sightedness; it is a form of taxation.
 ## Crypto as a Currency
 
 ...
+
+## Future of Money
+
+Money has to have a network effect: people have to want it.
