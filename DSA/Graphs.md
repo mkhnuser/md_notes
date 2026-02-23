@@ -25,4 +25,13 @@ Adjacency List is another way to store a graph in memory.
 To avoid cycles in DFS, you color vertices: white, gray, black;
 both recursive and iterative implementations are possible.
 
-# TODO: Understand iterative solution which uses a stack.
+## Topological Sorting on DAGs
+
+One uses topological sorting for ordering tasks if they can be ordered;
+it builds a dependency graph: a -> b -> c, which should be read as:
+a depends on b and b depends on c.
+
+## Connected Components
+
+One can use DFS with coloring
+to solve counting the number of Connected Components problem.
