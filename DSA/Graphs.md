@@ -6,8 +6,7 @@ Here are some examples of situations which can be modelled by graphs:
 
 * Railroad network;
 * Social network;
-* Dependency graph;
-* Planning graph.
+* Dependency graph.
 
 ## Representation of Graphs in Memory
 
@@ -18,39 +17,41 @@ Adjacency matrix requires O(V ** 2) space and is rarely used because of this.
 
 ### Adjacency List
 
-Adjacency List is another way to store a graph in memory and its more efficient in terms of memory.
+Adjacency List is another way to store a graph in memory and its more efficient in terms of memory consumption.
 
-## DFS
+## Algorithms on Graphs
+
+### DFS
 
 To avoid cycles in DFS, you color vertices: white, gray, black;
-both recursive and iterative implementations are possible.
+both recursive and iterative implementations of DFS are possible.
 
-## Topological Sorting on DAGs
+### Topological Sorting on DAGs
 
 One uses topological sorting for ordering tasks if they can be ordered;
-it builds a dependency graph: a -> b -> c, which should be read as:
-a depends on b and b depends on c.
+topological sorting builds a dependency graph: a -> b -> c, which should be read as:
+a depends on b & b depends on c.
 
-## Connected Components
+One constructs the ordering above my examining leave times of nodes in DFS procedure.
 
-One can use DFS with coloring
-to solve counting the number of Connected Components problem.
+### Connected Components
 
-## BFS
+One can use DFS to solve Counting The Number of Connected Components problem.
 
-One might use this wave algorithm
-to find the shortest path from a starting vertex
-to another reachable vertex.
+### BFS
 
-Understand: BFS doesn't take into account edge weights;
-it only takes into account the number of edges from a starting vertex to a destination.
+One might use this wave algorithm to find the shortest path from a starting vertex
+to another reachable vertex. Edge weights are not taken into account, but rather the
+number of edges are taken into account.
+
 To calculate the shortest path based on edge weights, use Dijkstra's algorithm.
 
-## Dijkstra's Algorithm
+### Dijkstra's Algorithm
 
-One might use this algorithm to construct a shortest path tree:
+One uses Dijkstra's Algorithm to construct a shortest path tree:
 given a starting vertex s, this tree contains the shortest paths to all
-other reachable vertices.
+other reachable vertices from s.
 
 The restriction for a graph is that a graph does not contain edges
-with negative weights. For negative weights and negative cycles, use Bellman-Ford algorithm.
+with negative weights;
+for negative weights and negative weight cycles, use Bellman-Ford algorithm.

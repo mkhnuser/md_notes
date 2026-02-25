@@ -2,17 +2,15 @@
 
 ## HEAD
 
-HEAD is a pointer which either (points to a specific branch which in turns points to a specific commit) or (points to a specific commit directly [a detached HEAD]).
+HEAD is a pointer which either:
+
+* Points to a specific branch which in turns points to a commit;
+* Points to a specific commit directly which is called a detached HEAD.
 
 ## Remotes
 
-A remote is a remote destination with which you can interact: make fetch, pull, push, etc.
-Usually you have only one remote called origin.
-
 Understand: git remote add <name> <uri> means that URI can be anything.
 For example: git remote add secret_origin ../../secret_local_project.
-
-A shorter syntax for `git pull origin main` is just `git pull` if a remote tracking branch in configured.
 
 ## Config
 
@@ -21,38 +19,49 @@ Here are the levels: local, global, system.
 
 ## Reflog
 
-Having located a reflog entry, you can `git merge` it back.
+Having located a reflog entry, you can `git merge` it back to your branch.
 
 ## Rebasing vs Merging
 
 ### HEAD
 
-When you do a rebase, HEAD points to a branch you are rebasing onto
-since this is the place from which commits start to be reapplied,
-so HEAD represents "ours" changes; the branch which is being rebased
-represents "theirs" changes because of the HEAD switch.
+#### HEAD during Rebase
 
-However, when you merge into your current branch,
+When you do rebasing,
+HEAD points to a branch you are rebasing onto
+since this is the place from which commits start to be consecutively reapplied.
+
+Therefore, HEAD represents "ours" changes,
+whereas the branch which is being rebased represents "theirs" changes.
+
+#### HEAD during Merge
+
+When you merge into your current branch,
 HEAD points to "ours" branch. "theirs" branch is a branch which is being merged.
 
 The text above motivates the usage of: `git checkout --ours` and `git checkout --theirs`.
+The commands above are used to specify that you want to only preserve "ours" changes
+or "theirs" changes during potential conflicts.
 
 ### Revertability (important!)
 
-`git revert` reverts changes introduced by a particular commit.
-You should prefer rebases to merges since you might want to revert a merge commit
-in the future. However, merge commits are difficult to revert since they have two parents:
+You should prefer rebasing to merging in terms of merge commit revertability.
+Merge commits are difficult to revert since they have two parents.
+Moreover, revert of a merge commit has consequences:
 
 https://stackoverflow.com/questions/7099833/how-do-i-revert-a-merge-commit-that-has-already-been-pushed-to-remote
 
-### Commits drop
+Rebasing does not have such problems since you obtain linear history as a rebasing result.
 
-Rebase might choose to drop empty commits, commits which delete files, for example.
+### Commits drop during rebasing
+
+Rebasing might choose to drop empty commits; commits which delete files, for example.
+Therefore, the resulting number of commits might differ after rebasing.
 
 ## Rerere
 
 The name means "Reuse Recorded Resolution".
-This part of git allows you to automatically resolve conflicts which have been resolved.
+This part of git allows you to automatically resolve conflicts which have been previously resolved.
 
 ## Bisect
 
