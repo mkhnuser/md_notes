@@ -1,8 +1,6 @@
 # Database Terminology
 
-
 ## Availability and Scalability
-
 
 ### Partitioning
 
@@ -28,9 +26,7 @@ Replication is a physical copy of all data across multiple databases.
 Each replica is kept in sync with the master node.
 Replicas contain all the data of the master node.
 
-
 ## ACID (Transactions)
-
 
 An operation within a DB which satisfies ACID principles is called a transaction.
 
@@ -52,7 +48,6 @@ There are many isolation levels.
 ### Durability
 
 Once a transaction commits, the data is permanently stored.
-
 
 ## Eventual Consistency (BASE)
 
