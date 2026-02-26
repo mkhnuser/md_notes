@@ -55,3 +55,20 @@ other reachable vertices from s.
 The restriction for a graph is that a graph does not contain edges
 with negative weights;
 for negative weights and negative weight cycles, use Bellman-Ford algorithm.
+
+## Bellman-Ford Algorithm
+
+# TODO: Learn.
+
+## Minimum Spanning Trees (MST)
+
+An MST of a graph is a spanning tree with the minimum weight.
+Two main algorithms for MST finding are:
+
+### Prim's Algorithm
+
+This algorithm examines a graph on a per-node basis and keep track of a MST.
+
+### Kruskal's Algorithm
+
+# TODO: Learn.
