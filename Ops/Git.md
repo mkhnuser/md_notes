@@ -73,3 +73,7 @@ This part of git allows you to automatically resolve conflicts which have been p
 ## Bisect
 
 A great binary search feature for bug introduction finding or performance shift finding.
+
+## Git Worktrees
+
+# TODO: Investigate this concept.
