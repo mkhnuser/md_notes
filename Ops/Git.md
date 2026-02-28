@@ -34,17 +34,18 @@ Having located a reflog entry, you can `git merge` it back to your branch.
 
 #### HEAD during Rebase
 
-When you do rebasing,
-HEAD points to a branch you are rebasing onto
+When you rebase,
+HEAD points to a branch you rebase onto,
 since this is the place from which commits start to be consecutively reapplied.
 
-Therefore, HEAD represents "ours" changes,
+Therefore, the branch on which you rebase represents "ours" changes,
 whereas the branch which is being rebased represents "theirs" changes.
 
 #### HEAD during Merge
 
 When you merge into your current branch,
-HEAD points to "ours" branch. "theirs" branch is a branch which is being merged.
+HEAD points to "ours" branch;
+"theirs" branch is a branch which is being merged.
 
 The text above motivates the usage of: `git checkout --ours` and `git checkout --theirs`.
 The commands above are used to specify that you want to only preserve "ours" changes

@@ -2,7 +2,12 @@
 
 ## Overview
 
-RabbitMQ is a message broker which rests on top of message delivery protocols such as AMQP, MQTT, or others.
+RabbitMQ is a message broker which rests on top of
+message delivery protocols such as:
+
+* AMQP;
+* MQTT;
+* Or others.
 
 ## Messages and Queues
 
