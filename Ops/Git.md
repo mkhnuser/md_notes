@@ -12,6 +12,13 @@ HEAD is a pointer which either:
 Understand: git remote add <name> <uri> means that URI can be anything.
 For example: git remote add secret_origin ../../secret_local_project.
 
+## Push
+
+`git push origin main` pushes your local branch main to an origin.
+Remote main will be created if it has not been already.
+
+`git push origin main:remote` pushes your local main branch to the remote branch.
+
 ## Config
 
 `git config` command by default applies to local level.
