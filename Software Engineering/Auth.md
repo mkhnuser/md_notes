@@ -31,7 +31,7 @@ Note that you respond with a header that signifies that you expect a user to obt
 
 Then, when a user wants to access a protected endpoint, it sends Authentication: Bearer <token>.
 You validate that a token hasn't been tempered with.
-If it hasn't, you grant access to the protected endpoint.
+If it hasn't been, you grant access to the protected endpoint.
 If it has, you ask user to authenticate again by raising 401 Unauthorized HTTP code.
 
 Remember that a JWT token is encoded, but not encrypted: anyone can see its content.
@@ -54,4 +54,4 @@ JWT allow you to make your server stateless:
 you don't need to store anything, you just issue a token and verify it upon each request.
 
 Cookie-based sessions can only exist within a browser.
-JWT are more general.
+Therefore, JWT is more versatile.
