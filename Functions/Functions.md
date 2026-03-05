@@ -5,6 +5,9 @@
 Note that since each function is a relation,
 each theorem which applies to relations also applies to a function.
 
+"How to prove it", Section 5.1, Functions.
+Exercises 16 onward are looking promising.
+
 ## One-to-one functions
 
 A horizontal line test can be used to determine whether a function is one-to-one or not.
@@ -14,11 +17,17 @@ Consider a semicircle, parabola, or a line, for example.
 
 You might want to use contradiction to show that something is not onto.
 
+"How to prove it", Section 5.2, One-to-one and Onto functions.
+Exercises 16 onward are looking promising.
+
 ## Inverse functions
 
 Inverse is symmetrical across `y = x` to the original function.
 Instead of directly proving that a function is one-to-one and onto,
 you can utilize utility theorems: see "How to prove it", Section 5.3, Inverse functions.
+
+"How to prove it", Section 5.3, Inverse functions,
+Exercises 13 onward are looking promising.
 
 ## Periodic Functions
 
