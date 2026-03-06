@@ -11,7 +11,7 @@ There are two ways to traverse a general tree: pre-order, post-order.
 
 In the case of a Binary Search Tree,
 there is a third option: Left-Middle-Right traversal (in-order traversal)
-or Right-Middle-Left traversal.
+or Right-Middle-Left traversal (reverse in-order traversal).
 
 ## A Binary Search Tree Analysis
 
