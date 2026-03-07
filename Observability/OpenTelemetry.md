@@ -37,4 +37,11 @@ understand what's going on, which is extremely hard and time-consuming.
 
 https://en.wikipedia.org/wiki/Information_silo
 
-# TODO: Reread Chapter 2.
+## Spans
+
+Trace is a group of spans with the same trace_id.
+One Trace is composed of multiple spans.
+
+## Semantic Conventions
+
+Use them to identify resources which you monitor.

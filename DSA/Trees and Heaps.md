@@ -39,6 +39,10 @@ The two main types of Balanced Binary Search Trees are AVL Trees and Red-Black T
 
 # TODO: Learn.
 
+## Tries
+
+# TODO: Learn.
+
 ## Priority Queues
 
 In some cases you want to associate an element of a queue with its weight;
