@@ -49,7 +49,3 @@ Polymorphism ~= many forms, the same function signature across multiple types,
 but different internal implementation.
 
 There are many types of polymorphism.
-
-## Conclusion
-
-Refer to Wikipedia articles on each topic.
