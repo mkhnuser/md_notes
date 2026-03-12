@@ -52,3 +52,14 @@ Often, a recursive step can be split into:
 1. Pre-recursive action;
 2. Actual Recursion;
 3. Post-recursive action.
+
+## Closures
+
+Closure refers to an ability of a function to access its enclosing scope.
+In Python, beware of `nonlocal` and `global`, you don't need these keywords
+to mutate mutable types: lists, dicts, etc.
+
+## Currying
+
+Currying is the process of transforming a function which takes multiple arguments
+into a series of functions which accept only one.
