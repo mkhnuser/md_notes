@@ -25,6 +25,14 @@ A function is a pure function if and only if:
 
 Naturally, it's easy to read, test, and write pure functions.
 
+### Memoization
+
+Pure functions can be safely memoized.
+
+### Parallelization
+
+Pure functions can be easily parallelized.
+
 ## First Class and Higher Order Functions
 
 Functions are oftentimes first-class citizens - they can be assigned to a variable.
@@ -34,16 +42,6 @@ Higher order functions are functions which accept or return other functions.
 
 A function invocation can be replaced with its value.
 If a function is not referentially transparent, we call it referentially opaque.
-
-https://www.baeldung.com/cs/referential-transparency#referential-transparency
-
-## Memoization
-
-Pure functions can be safely memoized.
-
-## Parallelization
-
-Pure functions can be easily parallelized.
 
 ## Recursion
 
@@ -63,3 +61,7 @@ to mutate mutable types: lists, dicts, etc.
 
 Currying is the process of transforming a function which takes multiple arguments
 into a series of functions which accept only one.
+
+## Links
+
+https://www.baeldung.com/cs/referential-transparency#referential-transparency
