@@ -30,7 +30,11 @@ both recursive and iterative implementations of DFS are possible.
 
 One uses topological sorting for ordering tasks if they can be ordered;
 topological sorting builds a dependency graph: a -> b -> c, which should be read as:
-a depends on b & b depends on c.
+c depends on b & b depends on a.
+
+In other words, if a DAG contains an edge (v, p), then
+v always comes before p in a topological sorting,
+since p depends on v.
 
 One constructs the ordering above my examining leave times of nodes in DFS procedure.
 
@@ -42,9 +46,13 @@ One can use DFS to solve Counting The Number of Connected Components problem.
 
 One might use this wave algorithm to find the shortest path from a starting vertex
 to another reachable vertex. Edge weights are not taken into account, but rather the
-number of edges are taken into account.
+number of edges are taken into account. You might find it useful to use distances and parents arrays.
 
 To calculate the shortest path based on edge weights, use Dijkstra's algorithm.
+
+### DFS and BFS on DAGs
+
+Observe: you don't need coloring if a graph in question is directed and acyclic.
 
 ### Dijkstra's Algorithm
 
