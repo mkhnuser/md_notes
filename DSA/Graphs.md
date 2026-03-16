@@ -1,13 +1,5 @@
 # Graphs
 
-## Overview
-
-Here are some examples of situations which can be modelled by graphs:
-
-* Railroad network;
-* Social network;
-* Dependency graph.
-
 ## Representation of Graphs in Memory
 
 ### Adjacency Matrix
@@ -17,7 +9,8 @@ Adjacency matrix requires O(V ** 2) space and is rarely used because of this.
 
 ### Adjacency List
 
-Adjacency List is another way to store a graph in memory and its more efficient in terms of memory consumption.
+Adjacency List is another way to store a graph in memory.
+It's more efficient than Adjacency Matrix in terms of memory.
 
 ## Algorithms on Graphs
 
@@ -44,9 +37,13 @@ One can use DFS to solve Counting The Number of Connected Components problem.
 
 ### BFS
 
-One might use this wave algorithm to find the shortest path from a starting vertex
-to another reachable vertex. Edge weights are not taken into account, but rather the
-number of edges are taken into account. You might find it useful to use distances and parents arrays.
+One might use this wave algorithm to find the shortest path
+from a starting vertex to another reachable vertex.
+
+Edge weights are not taken into account, but rather the
+number of edges is taken into account.
+
+You might find it useful to use distances and parents arrays.
 
 To calculate the shortest path based on edge weights, use Dijkstra's algorithm.
 
@@ -75,7 +72,7 @@ Two main algorithms for MST finding are:
 
 ### Prim's Algorithm
 
-This algorithm examines a graph on a per-node basis and keep track of a MST.
+Uses a greedy approach and incrementally constructs MST.
 
 ### Kruskal's Algorithm
 
