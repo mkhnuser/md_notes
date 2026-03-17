@@ -15,7 +15,7 @@ Encapsulation might refer to:
 
       The above concept also known as information hiding.
       This allows one to preserve state invariance -
-      an object won't end up in inconsistent state.
+      an object won't end up in an inconsistent state.
 
 ## Abstraction
 
@@ -39,13 +39,14 @@ can cause side effects in children.
 
 ### Inheritance vs Subtyping
 
-Type Substitution can be used instead of inheritance.
+Subtyping can be used instead of inheritance.
 
 # TODO: Investigate this concept in-depth.
 
 ## Polymorphism
 
-Polymorphism ~= many forms, the same function signature across multiple types,
+Polymorphism ~= many forms:
+the same function signature across multiple types,
 but different internal implementation.
 
 There are many types of polymorphism.
