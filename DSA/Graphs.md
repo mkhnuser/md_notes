@@ -1,5 +1,10 @@
 # Graphs
 
+## Use Cases
+
+* Game Development: tile is a vertex, and path is an edge;
+* AI Decisions: state is a vertex, and path is a transition.
+
 ## Representation of Graphs in Memory
 
 ### Adjacency Matrix
@@ -46,6 +51,13 @@ number of edges is taken into account.
 You might find it useful to use distances and parents arrays.
 
 To calculate the shortest path based on edge weights, use Dijkstra's algorithm.
+
+#### Applications of BFS
+
+* Web Crawling:
+
+      You want to visit the content of the current page
+      prior to visiting distant pages.
 
 ### DFS and BFS on DAGs
 
