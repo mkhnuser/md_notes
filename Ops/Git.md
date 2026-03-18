@@ -1,5 +1,9 @@
 # Git
 
+## Stage Area
+
+`git add -p` allows you to interactively select the changes to you want to add.
+
 ## HEAD
 
 HEAD is a pointer which either:
@@ -78,3 +82,5 @@ A great binary search feature for bug introduction finding or performance shift 
 ## Git Worktrees
 
 # TODO: Investigate this concept.
+
+LLMs can be run in a separate git worktree.

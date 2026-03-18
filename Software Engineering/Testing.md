@@ -11,3 +11,11 @@ test_register_user_with_existent_username_throws_exception;
 test_increase_balance_with_non_zero_deposit_balance_increased;
 test_add_note_with_empty_note_throws_exception;
 etc...
+
+## Testing External API
+
+There are several strategies to test an external API:
+
+* Run tests against an actual API (think twice!);
+* Create Mock Objects;
+* Record and replay the API interaction: see `pytest-vcr` for an example.
