@@ -4,21 +4,30 @@
 
 * Observe: `__iter__` can be a generator function itself:
 
-```
-class LinkedList:
-    def __init__(self):
-        self.head = None
+      class LinkedList:
+          def __init__(self):
+              self.head = None
 
-    def __iter__(self):
-        current = self.head
-        while current is not None:
-            yield current
-            current = current.next
-```
+          def __iter__(self):
+              current = self.head
+              while current is not None:
+                  yield current
+                  current = current.next
+
+It makes sense, since `__iter__` invocation returns a generator object,
+which is in turn an iterator, and so `__iter__` contract of returning an iterator holds.
+
+* Observe: `__iter__` can return `iter(iterable)`.
+
+It makes sense, since `iter` function returns an iterator.
 
 * Observe: files in Python are iterators.
 
 ## Iterable, Iterator, Generator
+
+### __iter__ dunder method
+
+`__iter__` dunder method must return an iterator.
 
 ### Iterable
 

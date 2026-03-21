@@ -69,7 +69,7 @@ One uses Dijkstra's Algorithm to construct a shortest path tree:
 given a starting vertex s, this tree contains the shortest paths to all
 other reachable vertices from s.
 
-The restriction for a graph is that a graph does not contain edges
+The restriction for a graph is that a graph is weighted and does not contain edges
 with negative weights;
 for negative weights and negative weight cycles, use Bellman-Ford algorithm.
 

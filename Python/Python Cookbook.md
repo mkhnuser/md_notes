@@ -63,4 +63,57 @@ The chapter discusses various discussions on
 number precision, formatting, and representation.
 It also contains useful information on `datetime` module.
 
-### Chapter 4 - Iterators and Generators
+## Chapter 4 - Iterators and Generators
+
+### Recipe 4.5
+
+Iterate a file in reverse.
+
+### Recipe 4.15
+
+Great usage of `heap.merge` function.
+
+### Chapter 4 Conclusion
+
+The chapter discusses `zip`, `reversed`, advanced iteration, and `itertools` module.
+When faced with a complex iteration pattern, consult `itertools` documentation.
+
+## Chapter 5 - Files and I/O
+
+### Recipe 5.4
+
+Discusses a gotcha when dealing with byte strings.
+
+### Recipe 5.5
+
+Discusses `io.StringIO` and `io.BytesIO`: these objects allow you to obtain a file-like
+interface to a string.
+
+### Recipe 5.8
+
+Discusses how to iterate a file in chunks.
+
+### Recipe 5.9
+
+Discusses `memoryview` function.
+
+### Recipe 5.10
+
+Discusses `mmap` module and briefly discusses memory mapping concept as such.
+
+### Recipe 5.21
+
+A great example of usage of `pickle` module for Python object serialization,
+which can later be stored in a DB, transferred over a network, or written to a file.
+
+### Chapter 5 Conclusion
+
+The chapter explains that bad file names or bad encoding can crush your program;
+it also explains that an interaction with a file system in Python is built in layers,
+and so you can hack it by accessing lower levels.
+
+## Chapter 6 - Data Encoding and Processing
+
+### Chapter 6 Overview
+
+The chapter teaches you to work with JSON, XML, and DB Drivers.
