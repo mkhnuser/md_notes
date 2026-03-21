@@ -2,7 +2,7 @@
 
 ## Pattern Matching and Enums
 
-Pattern Matching can be powerfully combined with Enums:
+Pattern Matching (a case statement) can be powerfully combined with Enums:
 
 ```
 from enum import Enum
