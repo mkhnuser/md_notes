@@ -117,3 +117,26 @@ and so you can hack it by accessing lower levels.
 ### Chapter 6 Overview
 
 The chapter teaches you to work with JSON, XML, and DB Drivers.
+
+## Chapter 7 - Function
+
+### Recipe 7.5
+
+A perfect usage of a sentinel `object()` pattern as the default parameter.
+There is a distinction between passing no value and passing a value of `None`,
+just like in many publisher-subscriber patterns, for example.
+
+The recipe also explains that any default arguments are calculated at
+a function definition time.
+
+### Recipe 7.7
+
+The recipe demonstrates how to capture variables while using `lambda` functions.
+
+### Recipe 7.8
+
+Greatly demonstrates the usage of `functools.partial`.
+
+### Chapter 7 Overview
+
+The chapter, toward the end, examines advanced usage of callback functions.

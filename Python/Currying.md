@@ -1,5 +1,7 @@
 # Currying
 
+## Overview
+
 Currying is the process of transforming a function which takes multiple arguments
 into a series of functions which accept only one.
 

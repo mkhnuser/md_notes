@@ -1,6 +1,6 @@
 # Builtins
 
-## Overview
+## Builtin Functions
 
 These notes highlight useful builtins.
 
@@ -16,7 +16,8 @@ These notes highlight useful builtins.
       Possible open flags:
             r, w, a;
             r+ or w+ - both reading and writing;
-            x - exclusive access.
+            x - exclusive access: open a file for write operations
+            if it does not exist. If it exists, raise an exception.
 
 * `memoryview`:
 

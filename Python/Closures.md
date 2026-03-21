@@ -1,5 +1,7 @@
 # Closures
 
+## Overview
+
 In Python, you have `nonlocal` and `global` keywords.
 Understand: you can always mutate mutable data types: lists, dicts, etc.
 You only need `nonlocal` or `global` to reassign immutable objects.
