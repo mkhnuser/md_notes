@@ -4,8 +4,8 @@
 
 ### Execution Order
 
-When you use `asyncio.create_task`, it acts as FIFO queue:
-the tasks are executed in the order you've defined them.
+When you use `asyncio.create_task`, it acts as a FIFO queue:
+the tasks are executed in the order you've instantiated them.
 
 ### Task Garbage Collection Problem
 

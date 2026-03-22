@@ -6,6 +6,9 @@ Functional paradigm tries to utilize declarative programming as much as possible
 OOP, on the other hand, relies on a procedural programming,
 which is a subset of imperative paradigm as such.
 
+The biggest difference between FP and OOP is that FP
+does not have a concept of inheritance.
+
 ## Side Effects
 
 Side effects are any effects caused by a function except for accepting
