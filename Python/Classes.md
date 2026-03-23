@@ -86,9 +86,11 @@ AttributeError: 'Point' object has no attribute 'z' and no __dict__ for setting 
 ```
 
 Consider using `NamedTuple` instead of `__slots__`.
+Also, be aware that many Python libraries rely on `__dict__` to be present.
 
 ## @property decorator
 
+`@property` allows you to add extra steps to an attribute access step.
 Understand: when you've marked something as property, it won't be stored in `__dict__`.
 It makes sense since `@property` is calculated on demand.
 
@@ -142,6 +144,35 @@ By default, hash is equal for two the same objects (`id`s are equal).
 
 # Lecture 1 ends here
 
+# Lecture 2 starts here
+
+## Descriptors
+
+Descriptors allow you to control how getting, update, and deletion of an attribute happens.
+They are similar to `@property` decorator, but allow you to eliminate copy-paste -
+see Python Cookbook Chapter 8 on this in particular.
+
+The second lecture also demonstrated how to implement a cached property.
+
+## Metaclasses
+
+The second lecture demonstrated the usage of metaclasses.
+Metaclasses are classes which have classes as their instances.
+
+## Subclassing built-in types
+
+Consider using `collection.abc` instead of inheriting directly from `dict`, `list`, etc,
+when you redefine dunder methods. The reason why is because the interpreter largely
+ignores your redefinitions since it relies on low-level C-implementations.
+
+If you don't redefine dunders, you can inherit from builtins.
+
+See: Fluent Python, Second Edition, Subclassing Built-in Types is Tricky.
+
+# Lecture 2 ends here
+
 ## Links
 
-https://www.youtube.com/watch?v=SJ8z-TF07s4&list=PLlb7e2G7aSpTTNp7HBYzCBByaE1h54ruW&index=6
+For descriptor's usage, see Python Cookbook Chapter 8.
+Lecture one: https://www.youtube.com/watch?v=SJ8z-TF07s4&list=PLlb7e2G7aSpTTNp7HBYzCBByaE1h54ruW&index=6
+Lecture two: https://www.youtube.com/watch?v=mTp2pLEoDaI&list=PLlb7e2G7aSpTTNp7HBYzCBByaE1h54ruW&index=10&t=4586s

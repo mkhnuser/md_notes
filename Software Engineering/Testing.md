@@ -12,10 +12,15 @@ test_increase_balance_with_non_zero_deposit_balance_increased;
 test_add_note_with_empty_note_throws_exception;
 etc...
 
+## Hypothesized Testing
+
+Python's `hypothesis` package, for example, creates hypothesized inputs for your tests.
+An advantage compared to randomized testing is that you obtain a minimum counterexample.
+
 ## Testing External API
 
 There are several strategies to test an external API:
 
 * Run tests against an actual API (think twice!);
 * Create Mock Objects;
-* Record and replay the API interaction: see `pytest-vcr` for an example.
+* Record and replay the API interaction: see `pytest-vcr` in Python, for an example.

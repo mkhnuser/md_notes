@@ -140,3 +140,39 @@ Greatly demonstrates the usage of `functools.partial`.
 ### Chapter 7 Overview
 
 The chapter, toward the end, examines advanced usage of callback functions.
+
+## Chapter 8 - Classes and Objects
+
+The chapter, toward the end, examines advanced usage of callback functions.
+
+### Recipe 8.3
+
+Shows how to use a context manager to create a lazy network connection.
+The potential to nest connections is also demonstrated.
+
+### Recipe 8.5
+
+Discusses name mangling.
+
+### Recipe 8.6
+
+Discusses `@property`.
+The authors suggest to use `@property` to either add extra steps to an attribute access,
+or to calculate an attribute on demand.
+
+### Recipe 8.15
+
+Discusses a Proxy pattern.
+
+### Recipe 8.18
+
+Discusses Mixins.
+
+### Recipe 8.19
+
+Discusses State Machine Implementation.
+
+## Chapter 8 Overview
+
+The chapter also discusses descriptors by providing numerous examples.
+It also teaches you how to use `weakref` module to break cyclic references.

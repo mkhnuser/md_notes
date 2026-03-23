@@ -63,6 +63,11 @@ for k in set(d):
     del d[k]
 ```
 
+## Optimizations
+
+`builtins` are written in C. Because of this, when you use them,
+your code becomes faster than it would have been otherwise:
+use as less Python code as possible, use as much builtins as possible.
 
 ## Links
 
