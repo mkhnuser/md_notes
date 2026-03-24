@@ -18,6 +18,10 @@ except Exception as e:
 
 Consider defining exception hierarchy for your library.
 
+## Exception Groups
+
+# TODO: Investigate this concept.
+
 ## Links
 
 https://www.youtube.com/watch?v=_vxcRfjyfgk&list=PLlb7e2G7aSpTTNp7HBYzCBByaE1h54ruW&index=7&t=6s

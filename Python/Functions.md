@@ -50,7 +50,7 @@ f()
 In the example above, in the function, x will still refer to 42,
 since default arguments are only initialized once.
 
-Refer to the Python Cookbook notes.
+Refer to the Python Cookbook notes you've written.
 
 ## LEGB rule variable lookup is dynamic
 
@@ -68,7 +68,8 @@ for i in range(5):
     f()
 ```
 
-The code above works since LEGB rule is dynamic.
+The code above works since LEGB rule is dynamic for variable lookup.
+There is a strong difference between a lookup and modification.
 
 ## Decorators
 

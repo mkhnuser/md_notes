@@ -90,6 +90,14 @@ you have to hit the `yield` by using `next` on the generator object.
 `return 42` raises `StopIteration(42)`.
 Note that you can't catch `return`, whereas you can catch `StopIteration`.
 
+## Async Iterators
+
+To implement async iterators, implement a sync `__aiter__` and an async `__anext__`.
+After that, you can use `async for` syntax to iterate over an async iterator.
+The iteration stops when `StopAsyncIteration` is raised from `__anext__`.
+
+https://realpython.com/python-async-iterators/
+
 ## References
 
 Python Cookbook by David Beazley.
