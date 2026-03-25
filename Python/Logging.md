@@ -2,7 +2,8 @@
 
 ## Overview
 
-Always create a separate logger per file. Remember to use QueueHandler and QueueListener so that your event loop is not blocked.
+Always create a separate logger per file.
+Remember to use `QueueHandler` and `QueueListener` so that your event loop is not blocked.
 
 ## Links
 

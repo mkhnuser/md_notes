@@ -35,3 +35,7 @@ https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html#a-conceptu
 `python -m asyncio` command can be used to access an asyncio REPL.
 
 https://docs.python.org/3/library/asyncio.html
+
+## Logging
+
+Don't forget to do logging in a separate thread using `QueueHandler` and `QueueListener`.

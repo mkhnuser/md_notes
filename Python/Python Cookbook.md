@@ -2,22 +2,13 @@
 
 ## Overview
 
-Below I note my personal favorite things from the book.
+Below I note my personal favorite recipes from the book.
 
 ## Chapter 1 - Data Structures and Algorithms
-
-### Recipe 1.10
-
-Deduplicates elements of an iterable while preserving the order.
 
 ### Recipe 1.18
 
 Use `._replace` method to create a brand-new named tuple with updated fields.
-
-### Recipe 1.19
-
-Just a quick reminder: `sum((x ** 2 for x in s))` is the same as `sum(x ** 2 for x in s)` if
-an outer function accepts only one argument.
 
 ### Recipe 1.20
 
@@ -143,8 +134,6 @@ The chapter, toward the end, examines advanced usage of callback functions.
 
 ## Chapter 8 - Classes and Objects
 
-The chapter, toward the end, examines advanced usage of callback functions.
-
 ### Recipe 8.3
 
 Shows how to use a context manager to create a lazy network connection.
@@ -160,6 +149,13 @@ Discusses `@property`.
 The authors suggest to use `@property` to either add extra steps to an attribute access,
 or to calculate an attribute on demand.
 
+Wrapping something up in a `@property` decorator in expensive in terms of access time.
+When you find yourself copying and pasting `@property`, consider using descriptors.
+
+## Recipe 8.9
+
+Provides a wonderful motivation for descriptor usage.
+
 ### Recipe 8.15
 
 Discusses a Proxy pattern.
@@ -172,7 +168,68 @@ Discusses Mixins.
 
 Discusses State Machine Implementation.
 
-## Chapter 8 Overview
+### Chapter 8 Overview
 
 The chapter also discusses descriptors by providing numerous examples.
 It also teaches you how to use `weakref` module to break cyclic references.
+
+## Chapter 12 - Concurrency
+
+### Recipe 12.1
+
+The recipe explains that having a separate task which encapsulates
+execution logic is better than inheriting from a `Thread` or a `Process`
+since it decouples the execution task from the execution context.
+
+### Recipe 12.3
+
+Shows the usage of a sentinel `object()` for queue termination.
+Important observation is that a sentinel is placed back to a queue.
+
+The recipe also discusses communication between threads and explains that
+`.size()`, `.full()`, `.empty()` methods of a queue are unreliable in multithreaded
+environments.
+
+### Recipe 12.4
+
+Provides a great example of usage for `RLock` and `Semaphore`.
+
+### Recipe 12.5
+
+Discusses how to avoid deadlocks and solve The Dining Philosophers Problem.
+
+### Recipe 12.6
+
+Shows how to use `threading.local` to create multithreaded TCP clients.
+
+### Recipe 12.7
+
+Explains why it is important to put an upper limit on the number of threads
+in a thread pool.
+
+### Recipe 12.8
+
+Discusses important considerations when you use a process pool.
+
+### Chapter 12 Conclusion
+
+The chapter briefly discusses synchronization primitives, queues for message passing.
+
+## Chapter 14 - Testing, Debugging, and Exceptions
+
+### Recipe 14.9
+
+Recall that you can use `raise ... from None` syntax to break exception chain.
+The usage of `raise ... from ...` makes your intention clear: you declare that
+you raise one exception from another.
+
+### Chapter 14 Conclusion
+
+The chapter contains information on `unittest` mocking, debugging, basic profiling.
+It also addresses common optimization techniques.
+
+## Chapter 15 - C Extensions
+
+### Chapter 15 Conclusion
+
+The chapter title is pretty self-explanatory.
