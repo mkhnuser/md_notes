@@ -31,14 +31,20 @@ Docker Compose works only on one host; use k8s for distributed orchestration.
 
 ## Docker Networking
 
+### Overview
+
 In Docker, containers have access to the Internet by default.
 However, containers are isolated from each other.
+
 To allow contains access each other, attach them to a common network;
 Docker Compose creates a common network by default.
 
-Understand: the default bridge network is considered a legacy.
-It does not provide DNS resolution between containers,
+### Default Bridge Network
+
+Understand: the default bridge network is considered a legacy:
+it does not provide DNS resolution between containers,
 so you can only use container's IP addresses.
+
 It does not isolate containers of your different projects,
 they all share the same network, which is bad in terms of security.
 
@@ -48,14 +54,19 @@ create user-defined bridge network.
 ## Multi-stage Builds
 
 Multi-stage builds are useful if you want to increase security of you application:
-Install the dependencies in the build step,
-Discard the dependency installer software in the production step.
+
+1. Install the dependencies in the build step,
+2. Discard the dependency installer software in the production step.
 
 ## Docker Commands
 
+### Overview
+
+Some useful Docker commands follow next.
+
 ### Docker Attach & Docker Exec
 
-Attach attaches you to an already existing process, whereas Exec creates a new one.
+`attach` attaches you to an already existing process, whereas `exec` creates a new one.
 
 Be careful when you exit a process to which you've been attached.
 If it was the only running process, then the container will exit.
@@ -66,8 +77,8 @@ Pauses all the running processes inside a container.
 
 ### Docker History & Docker Info
 
-History shows you the history of an image;
-where Info shows you how Docker is configured.
+`history` shows you the history of an image;
+whereas `info` shows you how Docker is configured.
 
 ### Docker Search
 

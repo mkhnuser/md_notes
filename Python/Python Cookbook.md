@@ -173,6 +173,10 @@ Discusses State Machine Implementation.
 The chapter also discusses descriptors by providing numerous examples.
 It also teaches you how to use `weakref` module to break cyclic references.
 
+## Chapter 9 - Metaprogramming
+
+# TODO: Read.
+
 ## Chapter 12 - Concurrency
 
 ### Recipe 12.1
@@ -213,7 +217,19 @@ Discusses important considerations when you use a process pool.
 
 ### Chapter 12 Conclusion
 
-The chapter briefly discusses synchronization primitives, queues for message passing.
+The chapter discusses threading, synchronization primitives & pub / sub architectures.
+It also teaches you how to implement your own event loop using generators.
+
+### Chapter 13 - Utility Scripting and System Administration
+
+### Recipe 13.6
+
+Demonstrates the usage of `subprocess` module for external command execution.
+
+### Chapter 13 Conclusion
+
+The chapter discusses how to limit CPU resources, open a web browser, and
+other common system administration tricks.
 
 ## Chapter 14 - Testing, Debugging, and Exceptions
 

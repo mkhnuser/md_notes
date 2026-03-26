@@ -1,6 +1,6 @@
 # Git
 
-## Stage Area
+## Patch Addition
 
 `git add -p` allows you to interactively select the changes to you want to add.
 
@@ -48,8 +48,10 @@ whereas the branch which is being rebased represents "theirs" changes.
 #### HEAD during Merge
 
 When you merge into your current branch,
-HEAD points to "ours" branch;
-"theirs" branch is a branch which is being merged.
+HEAD points to your current branch,
+
+"ours" is your current branch;
+"theirs" branch is a branch which is being merged into.
 
 The text above motivates the usage of: `git checkout --ours` and `git checkout --theirs`.
 The commands above are used to specify that you want to only preserve "ours" changes
