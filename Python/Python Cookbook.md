@@ -175,7 +175,15 @@ It also teaches you how to use `weakref` module to break cyclic references.
 
 ## Chapter 9 - Metaprogramming
 
-# TODO: Read.
+### Recipe 9.2
+
+Shows that a wrapped function can be accessed using `__wrapped__` dunder
+on a resulting decorator.
+
+### Chapter 9 Conclusion
+
+An in-depth treatment of decorators in Python, as well as
+does metaclasses treatment, `ast`, and bytecode disassembling.
 
 ## Chapter 12 - Concurrency
 
