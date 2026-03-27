@@ -185,6 +185,48 @@ on a resulting decorator.
 An in-depth treatment of decorators in Python, as well as
 does metaclasses treatment, `ast`, and bytecode disassembling.
 
+## Chapter 11 - Network and Web Programming
+
+### Recipe 11.1
+
+An example of how to send the second request with the cookies from the first:
+
+```
+import requests
+
+
+resp1 = requests.get(url)
+resp2 = requests.get(url, cookies=resp1.cookies)
+```
+
+### Recipe 11.4
+
+Discusses `ipaddress` package.
+
+### Recipe 11.5
+
+Discusses `wsgi` and `cgi`.
+
+### Recipe 11.6
+
+Discusses RPC implementation.
+
+### Recipe 11.7
+
+Discusses how to communicate between distributed Python Interpreters using `multiprocessing.connection` module.
+
+### Recipe 11.10
+
+Discusses `TLS` wrapper around a socket and certificates.
+
+### Recipe 11.11
+
+Discusses how to use `multiprocessing.Pipe` to communicate between separate processes.
+
+### Recipe 11.12
+
+Discusses how to implement your own event loop.
+
 ## Chapter 12 - Concurrency
 
 ### Recipe 12.1
