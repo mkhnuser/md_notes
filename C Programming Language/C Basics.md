@@ -110,3 +110,51 @@ int main() {
     x = 10; // compilation error: value change of a const is prohibited.
 }
 ```
+
+## Functions
+
+```
+#include <stdio.h>
+
+void printName(char *name) {
+    printf("Hello, %s!\n", name);
+}
+
+void justAlarm(void) {
+    // There are two use cases for void, as far as I know.
+    // The first tells that a function returns no arguments,
+    // The second tells that a function accepts no arguments.
+
+    printf("Danger! Danger! Danger!");
+}
+
+float get_average(int x, int y, int z) {
+  // Note the usage of 3.0 below.
+  // If you were to just write 3, integer arithmetic would be performed.
+
+  return (float)((x + y + z) / 3.0);
+}
+
+
+int main() {
+    printName("Vlad");
+    justAlarm();
+    return 0;
+}
+```
+
+## .c and .h files
+
+`.c` files are called C files or implementation files.
+`.h` files are called headers or interface files.
+
+https://utat-ss.readthedocs.io/en/master/c-programming/c_h_files.html
+
+## x++, x-- and ++x, --x
+
+These are called post-increment & post-decrement and
+pre-increment & pre-decrement, from left to right.
+
+Or, alternatively, it can be called as postfix and prefix notation.
+
+https://www.boot.dev/lessons/1e39fc85-e89f-454d-a324-d454bbced78d
