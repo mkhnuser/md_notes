@@ -1,17 +1,6 @@
 # C Basics
 
-## The simplest program
-
-```
-int main() {
-  return 0;
-}
-```
-
-The entry point to any C program is a main function;
-the return code of main determines whether the program finished successfully or not.
-
-## Hello, World! example
+## Entry Point
 
 ```
 #include <stdio.h>
@@ -23,6 +12,8 @@ int main() {
 }
 ```
 
+The entry point to any C program is a main function;
+the return code of main determines whether the program finished successfully or not.
 By the way, `printf` stands for print formatted.
 
 ## Comments
@@ -158,3 +149,37 @@ pre-increment & pre-decrement, from left to right.
 Or, alternatively, it can be called as postfix and prefix notation.
 
 https://www.boot.dev/lessons/1e39fc85-e89f-454d-a324-d454bbced78d
+
+## Short-Circuit Evaluation
+
+C has a short-circuit evaluation.
+
+```
+if (x != 0 && 10 / x > 2) {
+    // The division only happens if x != 0
+    // This prevents a division by zero error
+    printf("Safe!\n");
+}
+```
+
+## Operator Precedence
+
+`!` operator has a greater precedence than `&&`,
+whereas `&&` has a greater precedence than `||`.
+
+In general, use parentheses to avoid ambiguity.
+
+## Ternary Operator
+
+C has a ternary operator.
+
+`int max = a > b ? a : b;`
+
+JavaScript seems to have carefully borrowed it.
+
+## Type Sizes
+
+Sizes of types vary depending on the underlying architecture.
+However, some types have fixed size.
+
+# TODO: What does size_t really mean?
