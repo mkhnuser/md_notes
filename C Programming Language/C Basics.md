@@ -134,6 +134,11 @@ int main() {
 }
 ```
 
+In C, you are allowed to return only one value from a function.
+To emulate the return of multiple values, use structs:
+
+https://www.boot.dev/lessons/dba30100-5b2f-44a7-8469-e5bd1c0aad62
+
 ## .c and .h files
 
 `.c` files are called C files or implementation files.
@@ -183,3 +188,23 @@ Sizes of types vary depending on the underlying architecture.
 However, some types have fixed size.
 
 # TODO: What does size_t really mean?
+
+## Types of Loops in C
+
+C has to following types of loops:
+
+* for;
+* while;
+* do while.
+
+In do while loops, put `;` after the while condition.
+# TODO: In macros they for some reason omit `;`.
+
+https://www.boot.dev/lessons/83509cbe-b879-46c5-a04a-4e5959b7e1f3
+
+## Pragma Once
+
+Use this if you want to include a file only once.
+# TODO: Investigate how headers files work in C.
+
+https://www.boot.dev/lessons/167c2f37-26bf-4305-ae7e-6d2e54d4afa5
