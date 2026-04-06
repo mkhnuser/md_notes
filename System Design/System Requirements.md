@@ -35,7 +35,7 @@ CAP-Analysis:
 
 * Availability - no one wants to use a social net that is unavailable.
 * Partition Tolerance.
-* Inconsistency is allowed: it is OK if a user sees an a slightly outdated profile of someone else.
+* Inconsistency is allowed: it is OK if a user sees a slightly outdated profile of someone else.
 
 ##### URL Shortener
 
@@ -88,7 +88,7 @@ this service has much more read importance than write importance.
 * Restrict Storage Capacity per a user Account.
 * ACID-like handling of a file.
 
-##### Messanger
+##### Messenger
 
 CAP-Analysis:
 
