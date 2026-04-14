@@ -1,29 +1,51 @@
 # Trees
 
-## Overview
+## n-ary trees
 
 If a node has no more than n children, then we call such a tree an n-ary tree.
-A General Tree -> A Binary Tree -> A Binary Search Tree (BST).
+A General Tree -> A Binary Tree -> A Binary Search Tree.
 
-## Analysis of a General Tree
+## Binary Search Tree is an Online Data Structure
 
-There are two ways to traverse a general tree: pre-order, post-order.
+An advantage of using a tree over a binary search for searching
+is that a tree is an online data structure, whereas a binary search is an offline one.
 
-In the case of a Binary Search Tree,
-there is a third option: Left-Middle-Right traversal (in-order traversal)
-or Right-Middle-Left traversal (reverse in-order traversal).
-
-## A Binary Search Tree Analysis
-
-An advantage of using a tree over a binary search for searching is that
-a tree is an online data structure, whereas a binary search is offline.
-
-That is, you can expand a tree as your program executes,
+You can expand a tree as your program executes,
 whereas you cannot (or, at least should not)
-mutate an array when a binary search is running.
+mutate an array during a binary search.
 
-Note that deletion operation deletes the first found node.
-If you want to delete all the nodes, call this procedure multiple times.
+## Deletion in a Binary Search Tree
+
+Suppose you want to delete a node `D` from a binary tree.
+
+When you delete `D`, four cases are possible:
+
+* 0 subtrees remain;
+* 1 subtree remains;
+* 2 subtrees remain;
+* 3 subtrees remain.
+
+And so you have to reconnect these subtrees.
+
+### Two Simple Cases
+
+1. `D` has no children;
+2. `D` has precisely one child.
+
+### One Complex Case
+
+The complex case: `D` has two children.
+
+You have to find a node which is:
+
+1. Greater than all the nodes of the left subtree;
+2. Less than all the nodes from the right subtree.
+
+You can choose either the predecessor `P` of `D` or a successor `S` of `D`.
+Suppose you chose `S`, and so now two cases are possible:
+
+1. `S` is `D`'s immediate right child.
+2. `S` is somewhere in the `D`'s right subtree.
 
 ## Balanced Binary Search Trees
 
