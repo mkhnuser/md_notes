@@ -20,7 +20,7 @@ int main(void) {
 
 ## Memory Addresses
 
-Memory addresses are just numbers.
+Memory addresses are just numbers, they are usually written in hex.
 
 ## What are pointers?
 
