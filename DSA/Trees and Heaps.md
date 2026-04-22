@@ -1,11 +1,14 @@
 # Trees
 
-## n-ary trees
+## N-ary trees
 
 If a node has no more than n children, then we call such a tree an n-ary tree.
-A General Tree -> A Binary Tree -> A Binary Search Tree.
 
-## Binary Search Tree is an Online Data Structure
+* A General Tree;
+* A Binary Tree;
+* A Binary Search Tree.
+
+## Onlineliness
 
 An advantage of using a tree over a binary search for searching
 is that a tree is an online data structure, whereas a binary search is an offline one.
@@ -47,12 +50,6 @@ Suppose you chose `S`, and so now two cases are possible:
 1. `S` is `D`'s immediate right child.
 2. `S` is somewhere in the `D`'s right subtree.
 
-## Balanced Binary Search Trees
-
-A Binary Search Tree can become unbalanced.
-Balanced Binary Search Trees are trees which cut the search space by 2 while searching.
-The two main types of Balanced Binary Search Trees are AVL Trees and Red-Black Trees.
-
 ## AVL Trees
 
 # TODO: Learn.
@@ -65,8 +62,10 @@ The two main types of Balanced Binary Search Trees are AVL Trees and Red-Black T
 
 # TODO: Learn.
 
-## Priority Queues
+## Priority Queue
 
-In some cases you want to associate an element of a queue with its weight;
-based on its weight, you construct a max-heap or a min-heap,
-which define what's known as a Priority Queue.
+One sometimes wants to associate a node with a weight.
+In this case, you get a priority queue: efficiently obtain a max element or a min element.
+
+Priority Queue is usually built on a Heap Data Structure;
+there are many types of heaps.

@@ -13,6 +13,7 @@ For Chemistry, read "Chemistry The Central Science".
 Learn Domain-Driven Design.
 Learn Lean and TLA+.
 https://www.youtube.com/playlist?list=PLhgFs9q2EVg_rB-XT1zaJ3k9z0KVGrR2h - Designing Data Intensive Applications Book In-depth discussion.
+Latency: Reduce delay in software systems by Pekka Enberg (Author).
 https://frontendmasters.com/courses/realtime/
 https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design - A great resource on modern micro services best practices.
 https://www.youtube.com/watch?v=1KVa9UoPdCA&list=PLalrWAGybpB-UHbRDhFsBgXJM1g6T4IvO&index=18 - A wonderful course on RabbitMQ.
@@ -42,6 +43,11 @@ https://frontendmasters.com/courses/web-audio/
 https://frontendmasters.com/courses/vanilla-js-go/
 
 
+
+Learn C the Hard Way: Practical Exercises on the Computational Subjects You Keep Avoiding (Like C) (Zed Shaw's Hard Way Series) 1st Edition
+by Zed Shaw (Author)
+
+
 https://www.youtube.com/playlist?list=PL3BR09unfgchRxdDws74aY4mlSk9eYGEs - C course.
 https://www.youtube.com/watch?v=3S93uq63zlg&list=PLthfp5exSWEp5OGCCuPGu7Rj-SkTSKMv4&index=13 - Computer Networks course.
 OSSU online curriculum contains a guided learning on Operating Systems: Three Easy Pieces, and Computer Networks.
@@ -61,7 +67,7 @@ https://www.youtube.com/watch?v=Sx9zG7wa4FA&t=10383s - bash course.
 The Art of Multiprocessor Programming 2nd Edition.
 Advanced Programming in the UNIX Environment, 3rd Edition.
 System Programming in Linux: A Hands-On Introduction by Stewart Weiss.
-Hacking: The Art of Exploitation, 2nd Edition 2nd Edition.
+Hacking: The Art of Exploitation, 2nd Edition.
 
 OAuth 2 in Action First Edition.
 https://stackoverflow.com/questions/549/the-definitive-guide-to-form-based-website-authentication
