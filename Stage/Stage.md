@@ -8,6 +8,7 @@ Below is the blob of important but random notes.
 
 To learn differential geometry, first read "Introduction to Manifolds" and then "Differential Geometry".
 For Chemistry, read "Chemistry The Central Science".
+Principles of neuroscience.
 
 
 Learn Domain-Driven Design.
@@ -17,6 +18,7 @@ Latency: Reduce delay in software systems by Pekka Enberg (Author).
 https://frontendmasters.com/courses/realtime/
 https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design - A great resource on modern micro services best practices.
 https://www.youtube.com/watch?v=1KVa9UoPdCA&list=PLalrWAGybpB-UHbRDhFsBgXJM1g6T4IvO&index=18 - A wonderful course on RabbitMQ.
+h5bp - default nginx configuration.
 
 
 https://www.youtube.com/watch?v=1pkOgXD63yU&list=PLot-Xpze53leOBgcVsJBEGrHPd_7x_koV&index=1 -neetcode playlist on a sliding window technique.
@@ -87,3 +89,4 @@ https://github.com/fuodorov/yaalgorithms/ - some solutions to Yandex Praktikum A
 https://profi.ru/profile/ZaharovAV18/#prices - Yandex School of Data Analysis Private Tutor.
 galtsev@yandex-team.ru - Yandex School of Data Analysis Computer Architecture Course Tutor.
 https://www.youtube.com/watch?v=sbpCTjmw85g - Mathematics for Computer Science MIT course.
+https://gitlab.com/Lipovsky/concurrency-course - Yandex School of Data Analysis Concurrency course.
