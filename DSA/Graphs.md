@@ -17,24 +17,21 @@ Adjacency matrix requires O(V ** 2) space and is rarely used because of this.
 Adjacency List is another way to store a graph in memory.
 It's more efficient than Adjacency Matrix in terms of memory.
 
+### Edge List
+
+Store edges in a list.
+
 ## Algorithms on Graphs
 
 ### DFS
 
-To avoid cycles in DFS, you color vertices: white, gray, black;
-both recursive and iterative implementations of DFS are possible.
+To avoid cycles in DFS, you might color vertices: white, gray, black.
+Both recursive and iterative implementations of DFS are possible.
 
 ### Topological Sorting on DAGs
 
-One uses topological sorting for ordering tasks if they can be ordered;
-topological sorting builds a dependency graph: a -> b -> c, which should be read as:
-c depends on b & b depends on a.
-
-In other words, if a DAG contains an edge (v, p), then
-v always comes before p in a topological sorting,
-since p depends on v.
-
-One constructs the ordering above my examining leave times of nodes in DFS procedure.
+One uses topological sorting for ordering tasks on DAGs.
+One constructs the ordering above my examining leave times of nodes in the DFS procedure.
 
 ### Connected Components
 
@@ -59,9 +56,9 @@ To calculate the shortest path based on edge weights, use Dijkstra's algorithm.
       You want to visit the content of the current page
       prior to visiting distant pages.
 
-### DFS and BFS on DAGs
+### DFS and BFS on trees
 
-Observe: you don't need coloring if a graph in question is directed and acyclic.
+Observe: you don't need coloring if a graph is a tree.
 
 ### Dijkstra's Algorithm
 
