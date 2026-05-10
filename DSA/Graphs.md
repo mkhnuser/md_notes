@@ -39,15 +39,11 @@ One can use DFS to solve Counting The Number of Connected Components problem.
 
 ### BFS
 
-One might use this wave algorithm to find the shortest path
-from a starting vertex to another reachable vertex.
+BFS can be used to calculate shortest paths based on the number of edges.
+When you implement BFS, you might find it useful to keep parents and distances arrays.
 
-Edge weights are not taken into account, but rather the
-number of edges is taken into account.
-
-You might find it useful to use distances and parents arrays.
-
-To calculate the shortest path based on edge weights, use Dijkstra's algorithm.
+To calculate the shortest path based on edge weights,
+use Dijkstra's algorithm.
 
 #### Applications of BFS
 
@@ -56,19 +52,17 @@ To calculate the shortest path based on edge weights, use Dijkstra's algorithm.
       You want to visit the content of the current page
       prior to visiting distant pages.
 
+* Mazes.
+
 ### DFS and BFS on trees
 
-Observe: you don't need coloring if a graph is a tree.
+Observe: you don't need any cycle-detection mechanism
+such as coloring if a graph is a tree.
 
-### Dijkstra's Algorithm
+## Dijkstra's Algorithm
 
-One uses Dijkstra's Algorithm to construct a shortest path tree:
-given a starting vertex s, this tree contains the shortest paths to all
-other reachable vertices from s.
-
-The restriction for a graph is that a graph is weighted and does not contain edges
-with negative weights;
-for negative weights and negative weight cycles, use Bellman-Ford algorithm.
+Dijkstra's algorithm applies to both directed and undirected graphs.
+The restriction: no negative weights.
 
 ## Bellman-Ford Algorithm
 
@@ -77,12 +71,13 @@ for negative weights and negative weight cycles, use Bellman-Ford algorithm.
 ## Minimum Spanning Trees (MST)
 
 An MST of a graph is a spanning tree with the minimum weight.
-Two main algorithms for MST finding are:
+For a minimum spanning tree to exist,
+a graph is usually restricted to be connected.
 
-### Prim's Algorithm
+## Prim's Algorithm
 
 Uses a greedy approach and incrementally constructs MST.
 
-### Kruskal's Algorithm
+## Kruskal's Algorithm
 
 # TODO: Learn.

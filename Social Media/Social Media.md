@@ -11,7 +11,7 @@
 ## Begin at the Beginning
 
 Start with writing since it's the most convertible skill.
-You might start with text-based platforms which have feed.
+You can start with text-based platforms which have feed.
 
 ## Plan for a better writing
 
