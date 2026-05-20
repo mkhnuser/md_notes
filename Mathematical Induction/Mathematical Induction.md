@@ -18,3 +18,11 @@ It can be showed that every integer is either even or odd but not both.
 3. Finally, generalize by generic particular.
 
 See Velleman's "How to Prove It", third edition, Section 6.1 exercises on this.
+
+### Induction on the number of elements of a set
+
+See Velleman's "How to Prove It", third edition, Section 6.2.
+
+### Triangle Inequality Generalization
+
+See Velleman's "How to Prove It", third edition, Section 6.2.
