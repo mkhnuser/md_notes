@@ -26,3 +26,10 @@ See Velleman's "How to Prove It", third edition, Section 6.2.
 ### Triangle Inequality Generalization
 
 See Velleman's "How to Prove It", third edition, Section 6.2.
+
+## Strong Induction
+
+One can use strong induction when a set of values is required in the
+inductive step. Not just the previous value.
+
+See Velleman's "How to Prove It", third edition, Section 6.4, Fibonacci Numbers discussion.
