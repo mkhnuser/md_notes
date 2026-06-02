@@ -2,13 +2,13 @@
 
 ## System Requirements Gathering
 
-Be sure to gather requirements explicitly, not implicitly.
+Be sure to pin down system requirements precisely.
 What is obvious for you will not be obvious to others.
 A design document should explicitly state what's expected from the system.
 
-### Functional vs Non-Functional Requirements
+## Functional & Non-Functional Requirements
 
-Functional: what do you expect as a user?
+Functional: what do you expect as a user? What functions does your application provide?
 
 Non-Functional:
 
@@ -17,9 +17,9 @@ Non-Functional:
 * What delay can you afford between a user action and a result display?
 * How does CAP theorem apply to a system?
 
-#### Examples
+## Examples
 
-##### Social Network
+### Social Network
 
 Functional requirements:
 
@@ -29,7 +29,7 @@ Functional requirements:
 * Create a Public Channel;
 * Create Public Posts;
 
-Non-Functional Requirements
+Non-Functional Requirements:
 
 CAP-Analysis:
 
@@ -37,37 +37,7 @@ CAP-Analysis:
 * Partition Tolerance.
 * Inconsistency is allowed: it is OK if a user sees a slightly outdated profile of someone else.
 
-##### URL Shortener
-
-Functional requirements:
-
-* An ability to post a long link and obtain a small one;
-* An ability to access the shortened resource through a browser.
-* Delete an obtained short link;
-
-Non-Functional Requirements
-
-CAP-analysis:
-
-* Availability - users have to be able to access a resource which is associated with a short URL.
-* Partition Tolerance.
-* Inconsistency is possible: it is OK if a user accesses an expired link.
-
-##### Search Autocomplete
-
-Functional Requirements:
-
-* An ability to type text;
-* An ability to see ranked search results;
-* An ability to choose any search result.
-
-Non-Functional Requirements:
-
-* High Speed of Searching;
-* Relevance of Results based on how popular they are;
-* Optionality - if this service fails, it should not affect the main service.
-
-##### Online File Storage
+### Online File Storage
 
 Functional Requirements:
 
@@ -78,25 +48,11 @@ Functional Requirements:
 
 Non-Functional Requirements:
 
-CAP-Analysis:
-
-* Availability - Partition Tolerance - Inconsistency is possible.
-I allow inconsistency since it seems to me that
-this service has much more read importance than write importance.
-
 * Restrict File Size upload;
 * Restrict Storage Capacity per a user Account.
 * ACID-like handling of a file.
 
-##### Messenger
-
-CAP-Analysis:
-
-* ? Consistency - you want to have the same chats on all devices.
-* Partition Tolerance.
-* Unavailability might be the case if you want to achieve consistency.
-
-##### X
+### X
 
 CAP-Analysis:
 
@@ -116,34 +72,16 @@ Non-Functional Requirements
 * Reliability - if a user posts something, it has to be available for ever (well, at least for some long time).
 * Instant Display of the Feed.
 
-##### Netflix
-
-Low latency.
-
-##### Restaurants Nearby
-
-Fast Search.
-Locality.
-
-##### A Taxi Service
-
-Driver / user separation.
-Locality.
-High Availability.
-Low waiting time.
-
-##### Video-streaming Service
-
-### Load on a System Assessment
+## Load on a System Assessment
 
 Load on a system can be calculated based on these metrics:
 
 * User Load;
 * Network Load;
 * Computational Load;
-* Storage Space.
+* Storage Requirements.
 
-#### User Load
+### User Load
 
 Consider this:
 
@@ -153,21 +91,9 @@ Consider this:
 * How much content does a user generate per day?
 * Calculate READ / WRITE Ratio.
 
-Calculate this:
+When you do the calculation, use powers of ten to simplify your calculations.
 
-* RPS;
-* QPS (Search Engine, DB);
-* CPS (Connections Per Second);
-* How many connections are open simultaneously?
-
-      Recall what c10K problem, c1M problem means.
-
-* Network Load (mbps, gbps);
-* Storage Space Requirements (TB);
-* Calculate Server Costs;
-* https://en.wikipedia.org/wiki/Web_server#Performance_metrics
-
-#### Network Load
+### Network Load
 
 To calculate network load, consider these metrics:
 
@@ -185,18 +111,17 @@ There are various performance metrics one can assess:
 * Video: https://medium.com/tinder/taming-video-delivery-through-http-live-streaming-5a4d6e543c85
 * General SRE book: https://sre.google/sre-book/service-level-objectives/
 
-#### Computational Load
+### Computational Load
 
-Investigate: https://www.techempower.com/benchmarks/#section=data-r23&l=zijzen-pa7&test=update
-You should analyze what you expect from your system: is it read or write heavy or neither?
-Based on this analysis you should estimate RPS that one instance can handle.
+Estimate how much RPS one instance can handle.
+RPS capacity: https://www.techempower.com/benchmarks/#section=data-r23&l=zijzen-pa7&test=update
 
 Ask this:
 
 * How much load can one cloud instance handle based on the benchmark?
 * How many instances do you need to buy?
 
-#### Storage Space
+### Storage Space
 
 There the three main types of storage devices:
 
@@ -205,7 +130,7 @@ There the three main types of storage devices:
 3. RAM.
 
 * You should know their read / write speed and cost.
-* One server might have up to 1TB of RAM, up to 50TB of SSD, up to 200TB of HDD.
+* Roughly, one server might have up to 1TB of RAM, up to 50TB of SSD, and up to 200TB of HDD.
 * You should know L1 cache access time, RAM access time, etc.
 * Average Failure Rate (AFR) of a storage device is around 1 percent.
-* Information should be replicated across multiple disks.
+* Information should be replicated across multiple disks (RAID).
