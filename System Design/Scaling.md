@@ -4,7 +4,7 @@
 
 ### Types of Load Balancing
 
-* Client-side load balancing (your application);
+* Client-side load balancing (your application code);
 * Server-side load balancing (nginx, apache, etc).
 
 ### Balancing Strategies

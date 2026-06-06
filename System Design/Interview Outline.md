@@ -30,3 +30,4 @@ Here is a rough outline of how a system design interview should go:
                   to determine a shard to which data is to be sent.
 
         5. Increase System Responsiveness.
+        6. Add observability.

@@ -10,9 +10,9 @@ To learn differential geometry, first read "Introduction to Manifolds" and then 
 For Chemistry, read "Chemistry The Central Science".
 Principles of neuroscience.
 
-
 Learn Domain-Driven Design.
 Learn Lean and TLA+.
+
 https://www.youtube.com/playlist?list=PLhgFs9q2EVg_rB-XT1zaJ3k9z0KVGrR2h - Designing Data Intensive Applications Book In-depth discussion.
 Latency: Reduce delay in software systems by Pekka Enberg (Author).
 https://frontendmasters.com/courses/realtime/
@@ -57,8 +57,6 @@ https://ops-class.org/slides/2017-02-10-forksynch/ - Operating Systems course.
 Computer Science Center YT channel has lectures on Concurrent Programming.
 Build your own X github is also an interesting repo.
 
-habr, vc.ru.
-
 Cybersecurity Ops with bash: Attack, Defend, and Analyze from the Command Line 1st Edition.
 Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Systems Using Kubernetes 2nd Edition.
 Web API Cookbook: Level Up Your JavaScript Applications 1st Edition.
@@ -90,3 +88,8 @@ https://profi.ru/profile/ZaharovAV18/#prices - Yandex School of Data Analysis Pr
 galtsev@yandex-team.ru - Yandex School of Data Analysis Computer Architecture Course Tutor.
 https://www.youtube.com/watch?v=sbpCTjmw85g - Mathematics for Computer Science MIT course.
 https://gitlab.com/Lipovsky/concurrency-course - Yandex School of Data Analysis Concurrency course.
+
+Investigate further:
+
+* Floyd's Tortoise and Hoare Algorithm;
+* Sliding window.

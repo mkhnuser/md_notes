@@ -1,45 +1,54 @@
 # Responsiveness
 
-The problem: you want to make your system more responsive (fast).
-
 ## Cache
 
-Cache can be used at any level of your system.
-Use 80 / 20 rule: 20 percent of data caching give you 80 percent of responsiveness increase.
-You might want to store the most frequently accessed cache in memory,
-but at the same time use SSD or HDD for less popular cache.
+Roughly, if you cache 20% of data, you get 80% increase in responsiveness.
 
-## Cache Invalidation
+## Why do you cache?
 
-Sometimes you want to invalidate cache.
-Cache invalidation refers to a fact that cache might become stale
-and therefore does not represent the state of your system.
+* Increase response time;
+* Decrease load on other external services;
 
-To invalidate cache, you might:
-
-* Write both to DB and cache.
-* Write to DB first and then sync cache with DB.
-* Write to cache first and then sync DB with cache.
-
-## Cache Rotation
-
-To reclaim cache space you might want to consider LRU or LFU strategies.
-
-## What one might cache?
+## But what do you cache?
 
 * Requests to other services.
 * Requests to DB or other storage.
-* Web pages.
+* Web pages;
+* Requests, based on a set of parameters.
+
+## Cache Strategies
+
+There are various cache strategies one can use.
+
+## Cache Invalidation
+
+Sometimes you have to invalidate stale useless data:
+
+* TTL invalidation;
+
+      Remember about the thundering herd problem:
+      always create TTL with some jitter.
+
+* Invalidation by event;
+* Invalidation by versioning;
+* Invalidation by taging.
+
+## Cache Rotation
+
+To reclaim cache space you might want to consider LRU, LFU, etc.
 
 ## CDN
 
 Content Delivery Network allows you to speed up resource acquisition process.
 
-## Indexes
+## Database Indexes
 
 Consider the usage of indexes to increase responsiveness.
 
 ## Connection types
 
 Consider using the appropriate connection type for your service:
-websocket, HTTP request-response, etc.
+
+* Websocket;
+* HTTP request-response;
+* Server-sent events.
