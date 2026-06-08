@@ -14,6 +14,13 @@ upon insertion and deletion.
 * LRU Cache;
 * Collision Resolution in Hash Tables.
 
+### Head and Tail pointers
+
+Sometimes, instead of having head and tail pointer,
+it makes sense to create two boundary dummy nodes:
+
+https://neetcode.io/problems/lru-cache/solution
+
 ## Stack (LIFO Abstract Data Type)
 
 A stack might be based on a dynamic array or a linked list.

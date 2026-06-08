@@ -14,3 +14,7 @@ Multiplication is error-prone for mutable objects.
 * A reverse in-order traversal can be used to find kth-largest element of a BST:
 
       https://www.algoexpert.io/questions/find-kth-largest-value-in-bst
+
+* You can cleverly serialize a binary tree (pattern matching / string):
+
+      https://neetcode.io/problems/subtree-of-a-binary-tree/solution
