@@ -45,6 +45,33 @@ Place a load balancer behind a DNS record.
 A load balancer can perform health checks against servers.
 Alternatively, k8s, for example, can be used for this.
 
+## Message Brokers
+
+Message brokers allow:
+
+* Asynchronous communication;
+
+      You don't need to wait for some tasks.
+
+* Decouple your services and hence allow easier scaling;
+* Reliability;
+
+      If one service dies, a message broker will still contain a message you've sent.
+
+* Data Flow.
+
+You should be ready to handle message duplicates. There are
+various strategies for this:
+
+* At least once;
+* At most once;
+* Exactly once.
+
+Consider the usage to the idempotency key to handle a message only once.
+
+You can also put a message broker in front of database:
+if a database fails, you won't lose a message.
+
 ## Data Scaling
 
 ### Shards
