@@ -73,8 +73,6 @@ OAuth 2 in Action First Edition.
 https://stackoverflow.com/questions/549/the-definitive-guide-to-form-based-website-authentication
 https://frontendmasters.com/courses/permission-systems/
 
-https://kodekloud.com/learning-path/devops-engineer - devops courses.
-
 Tech blogs to read:
 https://mitchellh.com/writing
 https://carlosbecker.com/posts/
@@ -96,3 +94,4 @@ Investigate further:
 * Morris Traversal:
 
       https://neetcode.io/problems/kth-smallest-integer-in-bst/solution
+      https://neetcode.io/problems/binary-tree-inorder-traversal/solution

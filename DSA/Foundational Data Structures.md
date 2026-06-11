@@ -12,7 +12,8 @@ upon insertion and deletion.
 ### Linked List Applications
 
 * LRU Cache;
-* Collision Resolution in Hash Tables.
+* Collision Resolution in Hash Tables;
+* Browser History (two stacks can be used as well).
 
 ### Head and Tail pointers
 
