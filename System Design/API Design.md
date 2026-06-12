@@ -52,4 +52,6 @@ A client sends a request which contains a callback URL to which data should be s
 When you don't want to perform some operation more than once,
 you might want to use an idempotency key.
 
+For example, you wouldn't want to book the same flight twice.
+
 ! Generate the key only on the client.

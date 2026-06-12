@@ -1,51 +1,44 @@
 # Postgres
 
-## Primary Keys
+## MVCC
 
-PK = NOT NULL + UNIQUE CONSTRAINT.
-Recall that a PK can be natural and surrogate.
-You might want to consider the usage of UUIDs for ease of sharding.
+MVCC creates a snapshot of a database before you execute a transaction.
+Hence, transactions are isolated, but the level of isolation can be controlled.
 
-## NULL
+## Postgres Transactions
 
-COUNT(*) counts all strings, whereas COUNT(COLUMN) counts only NOT NULL strings.
-Use IS NULL or IS NOT NULL for NULL comparison. != behaviour is tricky for NULL.
-When you do ORDER BY remember about NULLS LAST, NULLS FIRST.
+Transaction isolation levels:
 
-## Normalization
+* READ UNCOMMITTED:
 
-Normalization allows you to reduce data redundancy within a table; remove duplicates.
-Normalization is achieved through a table schema restructuring.
-Normalization is a gradual process; there are many normal forms.
-If a table is in a normal form, it satisfies some set of constraints which is imposed on the table.
+      In Postgres, in mode is equivalent to READ COMMITTED due to MVCC.
+      In other databases, dirty reads are possible.
 
-You usually use 1NF, 2NF, 3NF.
+* READ COMMITTED:
 
-## Foreign References
+      Solves dirty reads problem;
+      allows phantom reads and non-repeatable reads.
 
-You can implement one-to-one relation using REFERENCES with UNIQUE constraint.
-A foreign key must reference a primary key or a unique column.
+* REPEATABLE READ:
 
-## Transactions
+      Solves non-repeatable reads;
+      solves phantom reads (in PostgreSQL, other databases might not solve it);
+      does not prevent serialization errors.
 
-MVCC creates a snapshot of a DB before you execute a transaction.
-Transaction isolation levels allow you to control how isolated a particular
-transaction is compared to other concurrent transactions.
-
-SQL Standard describes the following Transaction Isolation Levels:
-
-* READ UNCOMMITTED: allows dirty reads.
-* READ COMMITTED: solves dirty reads; allows phantom reads and non-repeatable reads.
-* REPEATABLE READ: solves non-repeatable reads; allows phantom reads IN SOME DBs (not PostgreSQL); does not prevent serialization errors.
 * SERIALIZABLE.
 
-SERIALIZABLE = the executing of multiple concurrent transaction equals the execution of these transactions in some order. SERIALIZEBLE isolation level doesn't guarantee a specific order of execution; it guarantees that there is order.
+SERIALIZABLE checks whether the executing of multiple concurrent transaction equals the execution of these transactions in some order.
+SERIALIZABLE isolation level doesn't guarantee a specific order of execution of transactions; it guarantees that there is order.
 
-Transactions fail, so you should be ready to rerun them in your code.
-The whole idea of atomicity is to rerun transactions.
+! Transactions fail, so you should be ready to rerun them in your code.
+The whole idea of atomicity is to be able to rerun transactions.
+So, be prepared to rerun REPEATABLE READ and SERIALIZABLE transactions.
 
-Postgres doesn't allow Dirty Reads to happen due to MVCC.
-Postgres doesn't allow Phantom Reads to happen in REPEATABLE READ transaction isolation level. Other databases, however, may allow it.
+Postgres doesn't allow dirty reads to happen due to MVCC.
+Postgres doesn't allow phantom reads to happen in a REPEATABLE READ transaction isolation level. Other databases, however, may allow it.
+
+Ideally, transactions should be short-lived:
+only one HTTP-request-response cycle so that transactions do not become idle.
 
 ## Locks
 
@@ -61,23 +54,11 @@ One should be ready to handle deadlocks, which sometimes are automatically detec
 and the whole transaction is rolled back;
 it is possible to set timeouts for statements which involve locks.
 
-## Indexes
+## psql
 
-Consider these disadvantages of using indexes:
-
-* Indexes require disk space;
-* Insertion and update speed decreases since indexes need to be updated.
-
-In general,
-if number of writes is drastically more than number of reads,
-you shouldn't use indexes.
+`psql -h 127.0.0.1 -U app -d movies_database -f movies_database.ddl` - execute a file.
+*psql* terminal client uses the current user for the role and the database name to be connected to.
 
 ## Misc
 
-Perhaps transactions should be short-lived: one HTTP-request-response cycle so that transactions do not become idle.
-
-`psql -h 127.0.0.1 -U app -d movies_database -f movies_database.ddl` - execute a file.
-
-*psql* terminal client uses the current user for the role and the database name to be connected to.
-
-Always add created_at, updated_at, deleted_at attributes.
+An outline of postgres: https://proselyte.net/postgres-for-devs/.

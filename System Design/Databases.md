@@ -75,6 +75,8 @@ Because of this, it makes sense to use separate databases based on these types o
 ## Database Backups
 
 Consider using database backups.
+You should have two or three backup files, ideally.
+Understand: it takes some time to spin up a new database instance with backups applied.
 
 ## Database Replication
 
@@ -84,7 +86,7 @@ is an ongoing process, whereas backups are stored cold.
 If a malicious actor decides to delete some data, replication is going to reflect these change across all replicas. However, backups will be intact.
 
 Replication does not allow you to scale writing to a database,
-only only allows you to scale reading from it.
+it only only allows you to scale reading from it.
 
 ### Replication Types
 
@@ -122,8 +124,7 @@ Warm standby: followers don't accept read requests, they are merely receiving th
 
 ### Logical Replication vs Physical Replication
 
-Physical replication copies the whole files,
-whereas logical one copies records.
+Physical replication copies the whole files, whereas logical one copies records.
 
 Logical replication is represented by:
 
@@ -133,72 +134,50 @@ Logical replication is represented by:
 
 ## Data Partitioning
 
-Partitioning allows you to partition a table into multiple ones.
-This usually implies partitioning within the same schema (within one physical machine).
+Partitioning allows you to partition (to split) a table into multiple ones.
+Partitioning happens on precisely on machine.
 
-Vertical partitioning splits a table vertically;
-you get two or more tables each containing a subset of columns of the original table.
+Vertical partitioning splits a table vertically: you get two or more tables,
+each containing a subset of columns of the original table.
 
-Horizontal partitioning splits a table horizontally;
-you get two or more tables each containing a subset of rows of the original table.
+Horizontal partitioning splits a table horizontally: you get two or more tables,
+each containing a subset of rows of the original table.
+
+### How do you choose a partition key?
+
+The process of choosing a partition key is identical
+to the process of choosing a sharding key.
 
 ## Data Sharding
 
 Sharding is the process of splitting data into datasets across multiple nodes.
+Thus, a centralized point of failure is eliminated.
+
 For example, we can use sharding to partition a database as follows:
-all users data is on machine number one;
-all products data is on machine number two.
 
-Each sharding zone has to be replicated separately.
+* All users data is on machine number one;
+* All products data is on machine number two.
 
-## Consistent Hashing
+So, each shard has its own portion of data,
+whereas each replica contains its own copy of data.
+Even further, each shard can contains its own replicas.
 
-Given many shards of data, we need to route the request to a particular shard
-based on some field in this request. This is where classical (hashing + mod) might fail
-if you want to add a new shard. To solve this problem, you introduce consistent hashing.
+Therefore, sharding is used to increase write throughput of your application.
 
-## Database Terminology
+### How do you choose a sharding key?
 
-### ACID (Transactions)
+* Range-based sharding;
+* Hash-based sharding;
+* Directory-based sharding;
+* Geographical sharding.
 
-An operation within a DB which satisfies ACID principles is called a transaction.
+### Resharding
 
-#### Atomicity
+* Vbuckets (virtual shards);
+* Consistent hashing.
+* Rendezvous hashing.
 
-A transaction either fails or succeeds exclusively. The whole transaction is one unit.
-
-#### Consistency
-
-Consistency ensures that a DB transitions from one consistent state into another.
-All constraints, cascades, triggers, etc. are applied.
-
-#### Isolation
-
-Isolation ensures that a state of a DB after concurrent transactions have been applied
-is the same as it would have been if the transaction were executed sequentially.
-There are many isolation levels.
-
-#### Durability
-
-Once a transaction commits, the data is permanently stored.
-
-### Eventual Consistency (BASE)
-
-If no new updates are made to data, eventually you will have access to the most recent state.
-
-#### Basically Available
-
-Basically Available state that read and writes are possible but you may not get the most recent state.
-
-#### Soft-state
-
-No consistency is guaranteed. We can only guess the current state of the system.
-
-#### Eventually Consistent
-
-If we wait long enough, we will get the most recent data.
-
-### CAP Theorem
+## CAP Theorem
 
 Partition-tolerant distributed data store may provide at most two of the following aspects:
 
@@ -215,22 +194,17 @@ When a network partition failure happens, you have to choose between the two opt
 Important observation: in the absence of network partitioning, both aspects can be satisfied.
 Modern technologies allow you to reduce network partitions to a minimum. That's why it is important to consider PACELC theorem.
 
-### CAP theorem and databases
+## PACELC theorem
 
-#### CA systems
+PACELC theorem expands the CAP theorem:
+if partition happens, you choose between consistency and availability.
+Else, you choose between latency and consistency.
 
-Relational DBs are Consistent and Available, they are not Partition Tolerant by design.
-This implies that these systems are often vertically scaled, but not horizontally.
+## BASE acronym
 
-#### CP systems
+BASE = basically available, soft state, and eventually consistent.
+BASE is the opposite to ACID.
 
-HBase, MongoDB, Redis.
+## Misc
 
-#### AP systems
-
-Cassandra, CouchDB, Dynamo.
-
-### PACELC Theorem
-
-PACELC Theorem expands CAP theorem.
-If partition happens, you choose between consistency and availability. Else, you choose between latency and consistency.
+A wonderful article which goes in depth on sharding: https://proselyte.net/sharding-postgresql/
