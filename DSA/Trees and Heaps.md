@@ -62,10 +62,31 @@ Suppose you chose `S`, and so now two cases are possible:
 
 # TODO: Learn.
 
-## Priority Queue
+## Heaps & Priority Queues
 
-One sometimes wants to associate a node with a weight.
-In this case, you get a priority queue: efficiently obtain a max element or a min element.
+Understand the heap structure property:
+heaps are to be populated from left to right so that they are complete.
 
-Priority Queue is usually built on a Heap Data Structure;
-there are many types of heaps.
+Heap operations:
+
+* push an element to the heap:
+
+      Add element to the end of the heap thus maintaining the heap structure,
+      then sift this element up thus maining the heap ordering property.
+
+* pop min / max:
+
+      Prior to returning the top min / max element,
+      place the last element at the root thus maining the heap structure,
+      and then sift this element down thus maintaining the heap ordering property.
+
+* heapify:
+
+      Given an input array, construct a min / max heap efficiently.
+
+* heap sort:
+
+      Sort an array using heap operations.
+
+Make sure you handle the case when a heap is empty or it has only one element.
+Heap operations can be implemented both recursively and iteratively.
