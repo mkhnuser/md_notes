@@ -177,22 +177,37 @@ Therefore, sharding is used to increase write throughput of your application.
 * Consistent hashing.
 * Rendezvous hashing.
 
+## Consistent Hashing
+
+Understand: consistent hashing is applied not only to resharding.
+For example, it can be used if new buckets are to be added to the hash table:
+
+        https://neetcode.io/problems/design-hashset/solution
+
 ## CAP Theorem
 
-Partition-tolerant distributed data store may provide at most two of the following aspects:
+Partition tolerant distributed data store can provide at most two of the following:
 
-1. Consistency: every client reading from any node receives the most recent information.
-For a write operation to be successful, it has to be forwarded / replicated to all other nodes.
+1. Consistency:
 
-2. Availability: every request received by a non-failing node must produce a response.
+        Every client reading from any node receives the most recent information.
+        For a write operation to be successful,
+        it has to be forwarded / replicated to all other nodes first.
+
+2. Availability:
+
+        Every request received by a non-failing node must produce a response.
 
 When a network partition failure happens, you have to choose between the two options:
 
 1. Abort the operation and therefore reduce availability in favor of consistency.
 2. Proceed with the operation and provide availability possibly introducing inconsistency.
 
-Important observation: in the absence of network partitioning, both aspects can be satisfied.
-Modern technologies allow you to reduce network partitions to a minimum. That's why it is important to consider PACELC theorem.
+Understand: in the absence of network partitioning, both aspects can be satisfied;
+consider an application which runs on precisely one host.
+
+Modern technologies allow you to reduce network partitions to a minimum.
+That's why it is important to consider PACELC theorem.
 
 ## PACELC theorem
 
