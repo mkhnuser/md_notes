@@ -34,3 +34,27 @@ Multiplication is error-prone for mutable objects.
 Neetcode contains iterative heap implementations:
 
       https://neetcode.io/courses/dsa-for-beginners/25
+
+## Investigate further:
+
+* Floyd's Tortoise and Hoare Algorithm;
+* Sliding window;
+* Morris Traversal:
+
+      https://neetcode.io/problems/kth-smallest-integer-in-bst/solution
+      https://neetcode.io/problems/binary-tree-inorder-traversal/solution
+      https://neetcode.io/problems/binary-tree-preorder-traversal/solution
+      https://neetcode.io/problems/binary-tree-postorder-traversal/solution
+      https://neetcode.io/problems/binary-tree-from-preorder-and-inorder-traversal/solution
+
+* Quick Select:
+
+      Quick Select is similar to the quick sort algorithm.
+
+      https://neetcode.io/problems/k-closest-points-to-origin/solution
+      https://neetcode.io/problems/kth-largest-element-in-an-array/solution
+
+
+* A postorder traversal can be seen as a slight modification of a preorder one:
+
+      https://neetcode.io/problems/binary-tree-postorder-traversal/solution

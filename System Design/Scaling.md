@@ -69,5 +69,7 @@ various strategies for this:
 
 Consider the usage to the idempotency key to handle a message only once.
 
-You can also put a message broker in front of database:
-if a database fails, you won't lose a message.
+You can also put a message broker in front of database;
+if a database fails, you won't lose a message:
+
+      service -> message broker -> broker reader service -> database.

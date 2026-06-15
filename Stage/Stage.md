@@ -86,13 +86,3 @@ https://profi.ru/profile/ZaharovAV18/#prices - Yandex School of Data Analysis Pr
 galtsev@yandex-team.ru - Yandex School of Data Analysis Computer Architecture Course Tutor.
 https://www.youtube.com/watch?v=sbpCTjmw85g - Mathematics for Computer Science MIT course.
 https://gitlab.com/Lipovsky/concurrency-course - Yandex School of Data Analysis Concurrency course.
-
-Investigate further:
-
-* Floyd's Tortoise and Hoare Algorithm;
-* Sliding window;
-* Morris Traversal:
-
-      https://neetcode.io/problems/kth-smallest-integer-in-bst/solution
-      https://neetcode.io/problems/binary-tree-inorder-traversal/solution
-      https://neetcode.io/problems/binary-tree-from-preorder-and-inorder-traversal/solution

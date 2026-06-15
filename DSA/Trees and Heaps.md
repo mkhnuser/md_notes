@@ -64,10 +64,14 @@ Suppose you chose `S`, and so now two cases are possible:
 
 ## Heaps & Priority Queues
 
-Understand the heap structure property:
+### Heap Properties
+
+The heap structure property:
 heaps are to be populated from left to right so that they are complete.
 
-Heap operations:
+The heap ordering property.
+
+### Heap operations
 
 * push an element to the heap:
 
@@ -90,3 +94,9 @@ Heap operations:
 
 Make sure you handle the case when a heap is empty or it has only one element.
 Heap operations can be implemented both recursively and iteratively.
+
+### Heap Use Cases
+
+* Maintain a global minimum or a global maximum;
+* K largest / k smallest elements;
+* Task scheduling.
