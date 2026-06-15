@@ -164,6 +164,13 @@ Even further, each shard can contains its own replicas.
 
 Therefore, sharding is used to increase write throughput of your application.
 
+Further, you should store all the relevant data on one shard - data locality:
+
+      For example, in a social media application, one might choose a user id as a sharding key.
+      Then all the records which contains the same user id will be present within one shard.
+      It's important since it allows you to perform JOINs easily.
+      All data is local to only one shard, no other shards have to be queried.
+
 ### How do you choose a sharding key?
 
 * Range-based sharding;
@@ -174,6 +181,9 @@ Therefore, sharding is used to increase write throughput of your application.
 ### Resharding
 
 * Vbuckets (virtual shards);
+
+      Consider connecting to a set of virtual buckets, not an actual shards.
+
 * Consistent hashing.
 * Rendezvous hashing.
 
