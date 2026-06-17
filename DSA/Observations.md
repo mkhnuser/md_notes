@@ -15,6 +15,8 @@ Multiplication is error-prone for mutable objects.
 
 ## Binary Trees
 
+Important: carefully understand whether you are dealing with a BST or just a binary tree.
+
 * A reverse in-order traversal can be used to find kth-largest element of a BST:
 
       https://www.algoexpert.io/questions/find-kth-largest-value-in-bst
@@ -58,3 +60,6 @@ Neetcode contains iterative heap implementations:
 * A postorder traversal can be seen as a slight modification of a preorder one:
 
       https://neetcode.io/problems/binary-tree-postorder-traversal/solution
+      https://neetcode.io/problems/delete-leaves-with-a-given-value/question
+
+* Investigate RMQ and LCA problems.

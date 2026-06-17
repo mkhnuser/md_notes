@@ -30,13 +30,17 @@ Use cases:
 ### Document-oriented
 
 The primary advantage of document-oriented databases is that they are schemaless.
+
 The second advantage is that they allow data locality:
-you store everything you need in one document.
+you store everything you need in one document,
+so you don't have to perform JOINs
+across multiple documents to fetch data,
+which is critical for read-heavy applications.
 
 Use cases:
 
 * JSON Blobs;
-* Catalogs, documents.
+* Catalogs, documents, resumes.
 
 ### Graph
 
@@ -229,6 +233,23 @@ Else, you choose between latency and consistency.
 
 BASE = basically available, soft state, and eventually consistent.
 BASE is the opposite to ACID.
+
+## Two Phase Commit (2PC)
+
+You can use 2PC if you want to perform a distributed transaction.
+
+## SAGA
+
+You can use SAGA if you want to perform a distributed transaction.
+
+## Transaction Outbox
+
+You can use transaction outbox if you want to guarantee that
+a message will be published to a queue.
+
+## Transaction Inbox
+
+Similar to the outbox.
 
 ## Misc
 

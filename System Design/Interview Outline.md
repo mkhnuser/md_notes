@@ -8,6 +8,11 @@ Here is a rough outline of how a system design interview should go:
         1. MAU; DAU; READ / WRITE RATIO.
         2. The number of requests per month for read / write operations.
         3. RPS; QPS.
+
+                 Make sure you do it on a per-entity basis.
+                 For example, calculate it for accounts, photos,
+                 and other entities separetely.
+
         4. Storage Requirements.
         5. Network Requirements.
         6. Storage Requirements for 5 years of work.
@@ -19,15 +24,12 @@ Here is a rough outline of how a system design interview should go:
         2. Choose a DB considering CAP restrictions.
         3. Conduct a modular design considering Functional Requirements.
 
-                 Consider the usage of a message broker or a message bus.
-                 This achieves decoupling and enables scalability.
+                 Consider the usage of a message broker.
 
         4. Add scaling to the system.
 
                   Discuss Load Balancing.
-                  Consider Database Shards and Replicas.
-                  Understand that you should use consistent hashing strategy
-                  to determine a shard to which data is to be sent.
+                  Consider Database sharding and replication.
 
         5. Increase System Responsiveness.
         6. Add observability.

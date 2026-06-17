@@ -108,8 +108,6 @@ There are various performance metrics one can assess:
 
 * https://en.wikipedia.org/wiki/Time_to_first_byte
 * Bit Rate and Resolution for video-streaming.
-* Video: https://medium.com/tinder/taming-video-delivery-through-http-live-streaming-5a4d6e543c85
-* General SRE book: https://sre.google/sre-book/service-level-objectives/
 
 ### Computational Load
 
