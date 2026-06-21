@@ -6,12 +6,12 @@ Here are collected hard mathematical induction problems:
 
 * Velleman's "How to Prove It", third edition, Section 6.2 exercises.
 
-      This chapter teaches utilizes induction to solve geometric problems;
+      This chapter utilizes induction to solve geometric problems;
       arithmetic-geometric-harmonic means.
 
 * Velleman's "How to Prove It", third edition, Section 6.3 exercises.
 
-      Contains some combinatorics problems.
+      Contains some combinatorics identities to prove.
 
 * Velleman's "How to Prove It", third edition, Section 6.4.
 

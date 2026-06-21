@@ -6,7 +6,7 @@ This note contains observations and useful problems.
 
 ## General
 
-!!! Always use for loops for comprehensions:
+! Always use for loops for comprehensions:
 
         visited_matrix = [[False for _ in range(m)] for __ in range(n)]
 
@@ -63,3 +63,10 @@ Neetcode contains iterative heap implementations:
       https://neetcode.io/problems/delete-leaves-with-a-given-value/question
 
 * Investigate RMQ and LCA problems.
+* Prefix Sums:
+
+      https://neetcode.io/problems/range-sum-query-2d-immutable/question
+
+* Iterative backtracking:
+
+      Investigate how iteration can be used to solve backtracking problems.
