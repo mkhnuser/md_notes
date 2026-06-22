@@ -73,3 +73,32 @@ or does it have a deeper, ancestral, cultural foundation?
 
 Modernists believe in the former, whereas ethnosymbolism claims the latter.
 Moreover, there is a view which is based on biology, which is called primordialism.
+
+## Nation-building
+
+### How do you build nations?
+
+Anthony D. Smith describes the formation of nation
+out of an ethnic group as the Triple Revolution:
+
+* Politics:
+
+      Bureaucracy.
+      Mass conscription.
+
+* Economic:
+
+      The control of money and economic processes.
+      Railroads allow for faster communication.
+
+* Culture:
+
+      A standardization of a language.
+      Education system.
+      Holidays, a national flag, a national anthem.
+
+In France and other countries,
+the case of a language is particularly interesting because of:
+
+1. Social mobility a standardized language provides.
+2. A prestige of a language.

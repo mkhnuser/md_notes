@@ -70,3 +70,7 @@ Neetcode contains iterative heap implementations:
 * Iterative backtracking:
 
       Investigate how iteration can be used to solve backtracking problems.
+
+* Frequency count:
+
+      https://neetcode.io/problems/reorganize-string/question

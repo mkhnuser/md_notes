@@ -23,3 +23,9 @@ The most dangerous books are not on public lists.
 * Better Money: gold, fiat, or bitcoin?
 * Broken Money: why our financial system is failing.
 * Ayn Rand: Capitalism.
+
+## Nationalism and Ethnicity
+
+* National Identity by Anthony D. Smith.
+* Nations and Nationalism by Geller.
+* Theories of Nationalism by Umut Ozkirimli.
