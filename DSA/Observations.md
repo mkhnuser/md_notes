@@ -6,12 +6,14 @@ This note contains observations and useful problems.
 
 ## General
 
-! Always use for loops for comprehensions:
+* Always use for loops for comprehensions:
 
         visited_matrix = [[False for _ in range(m)] for __ in range(n)]
 
 Don't use multiplication syntax.
 Multiplication is error-prone for mutable objects.
+
+* When you pass a counter in DFS / BFS, make sure it does not have to be updated.
 
 ## Binary Trees
 
