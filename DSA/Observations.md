@@ -33,6 +33,12 @@ Important: carefully understand whether you are dealing with a BST or just a bin
 
       https://neetcode.io/problems/lowest-common-ancestor-in-binary-search-tree/question?list=neetcode150
 
+## Graphs
+
+* You can use BFS to conduct level-order traversal on graphs and trees:
+
+      https://neetcode.io/problems/matrixBFS/solution
+
 ## Heaps and Priority Queues
 
 Neetcode contains iterative heap implementations:

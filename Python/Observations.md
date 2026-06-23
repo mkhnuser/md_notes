@@ -19,6 +19,8 @@ Plus or minus sign do not count as numbers so the check will fail.
     >>> pathlib.Path("https%3A%2F%2Fgithub.com%2Ffoo.json").stem
     'https%3A%2F%2Fgithub.com%2Ffoo'
 
+Consider the usage of .removeprefix, .removesuffix.
+
 ## Sorting
 
 Sorting is always stable in Python.

@@ -52,7 +52,12 @@ use Dijkstra's algorithm.
       You want to visit the content of the current page
       prior to visiting distant pages.
 
-* Mazes.
+* Mazes:
+
+      Since BFS is a wave algorithm, you can use it to find the shortest path
+      if an edge weight is not considered.
+
+* Graph and Tree level-order traversal.
 
 ### DFS and BFS on trees
 

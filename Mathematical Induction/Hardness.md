@@ -15,5 +15,5 @@ Here are collected hard mathematical induction problems:
 
 * Velleman's "How to Prove It", third edition, Section 6.4.
 
-      Contains the well-ordering principle discussion
+      Contains the well-ordering principle (the WOP) discussion
       and the division algorithm discussion.
