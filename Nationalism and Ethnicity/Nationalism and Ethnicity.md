@@ -102,3 +102,31 @@ the case of a language is particularly interesting because of:
 
 1. Social mobility a standardized language provides.
 2. A prestige of a language.
+
+## Ethnic Diversity
+
+Can abstract ideas replace history, religion, and culture as the basis of society?
+
+## National Identity
+
+Understand: nationalism can be civic and ethnic;
+civic one relies on a state, whereas an ethnic one relies on culture & people.
+
+## Everyday Nationalism
+
+### Bottom up nationalism
+
+Nationalism can be fostered by everyday activities and rituals
+such as sports, consumption of goods, common places. In this sense,
+nationalism can emerge from bottom up.
+
+### Perception
+
+People perceive national symbols differently.
+
+In the case of a national flag, different groups might use it to achieve different objectives;
+the meaning behind the usage of a Canadian flag during Canadian farmers protest is quite different from the meaning behind the usage of this flag by the Canadian government.
+
+## Nationalism and Populism
+
+...
