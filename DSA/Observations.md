@@ -39,6 +39,17 @@ Important: carefully understand whether you are dealing with a BST or just a bin
 
       https://neetcode.io/problems/matrixBFS/solution
 
+* DFS considerations:
+
+      When you do DFS, make sure:
+
+      1. You visit all white nodes.
+      2. You don't get key error when you try to access neighbors of a given node.
+
+* Topological Sorting:
+
+      Investigate Kahn's algorithm.
+
 ## Heaps and Priority Queues
 
 Neetcode contains iterative heap implementations:

@@ -57,7 +57,10 @@ use Dijkstra's algorithm.
       Since BFS is a wave algorithm, you can use it to find the shortest path
       if an edge weight is not considered.
 
-* Graph and Tree level-order traversal.
+* Graph and Tree level-order traversal:
+
+      Recall that you might traverse the whole level
+      by examining all the elements which currently can be found in a queue.
 
 ### DFS and BFS on trees
 

@@ -5,3 +5,5 @@ Daft Punk - Derezzed
 Daft Punk - The Prime Time of your Life
 The Stoogers - I Wanna Be Your Dog
 Derek & The Dominos - Layla
+
+https://www.youtube.com/watch?v=KX2BCrPo7g4 - techno mix.
