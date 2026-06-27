@@ -23,3 +23,7 @@ https://neetcode.io/problems/task-scheduling/question
 ## General
 
 https://contest.yandex.ru/contest/34147/problems/
+
+## Graphs
+
+https://neetcode.io/problems/course-schedule-iv/question

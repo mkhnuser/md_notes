@@ -50,6 +50,13 @@ Important: carefully understand whether you are dealing with a BST or just a bin
 
       Investigate Kahn's algorithm.
 
+* DFS Cycle Detection:
+
+      DFS cycle detection for directed graphs is different from undirected ones.
+      Keep the parent reference in an undirected graph case.
+
+      https://neetcode.io/problems/valid-tree/question
+
 ## Heaps and Priority Queues
 
 Neetcode contains iterative heap implementations:
@@ -93,3 +100,7 @@ Neetcode contains iterative heap implementations:
 * Frequency count:
 
       https://neetcode.io/problems/reorganize-string/question
+
+* Union Find:
+
+      https://neetcode.io/problems/count-connected-components/solution
