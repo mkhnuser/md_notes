@@ -29,3 +29,10 @@ The most dangerous books are not on public lists.
 * National Identity by Anthony D. Smith.
 * Nations and Nationalism by Geller.
 * Theories of Nationalism by Umut Ozkirimli.
+
+## Human Progress
+
+* Enlightenment Now.
+* The Rational Optimist.
+* Open How Collaboration and Curiosity Shaped Humankind.
+* Super Abundance.
