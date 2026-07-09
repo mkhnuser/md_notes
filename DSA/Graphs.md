@@ -1,10 +1,5 @@
 # Graphs
 
-## Use Cases
-
-* Game Development: tile is a vertex, and path is an edge;
-* AI Decisions: state is a vertex, and path is a transition.
-
 ## Representation of Graphs in Memory
 
 ### Adjacency Matrix
@@ -19,72 +14,41 @@ It's more efficient than Adjacency Matrix in terms of memory.
 
 ### Edge List
 
-Store edges in a list.
+Store edges as a list of lists.
 
-## Algorithms on Graphs
-
-### DFS
-
-To avoid cycles in DFS, you might color vertices: white, gray, black.
-Both recursive and iterative implementations of DFS are possible.
+## Applications of Graph Algorithms
 
 ### Topological Sorting on DAGs
 
-One uses topological sorting for ordering tasks on DAGs.
-One constructs the ordering above my examining leave times of nodes in the DFS procedure.
+One uses topological sorting for ordering tasks given a DAG.
+
+The topological sorting ensures that for every edge a -> b,
+in topological ordering a comes before b.
 
 ### Connected Components
 
-One can use DFS to solve Counting The Number of Connected Components problem.
+One can use DFS with coloring to calculate the number of connected components.
 
-### BFS
+### Graph Level-order traversal
 
-BFS can be used to calculate shortest paths based on the number of edges.
-When you implement BFS, you might find it useful to keep parents and distances arrays.
-
-To calculate the shortest path based on edge weights,
-use Dijkstra's algorithm.
-
-#### Applications of BFS
-
-* Web Crawling:
-
-      You want to visit the content of the current page
-      prior to visiting distant pages.
-
-* Mazes:
-
-      Since BFS is a wave algorithm, you can use it to find the shortest path
-      if an edge weight is not considered.
-
-* Graph and Tree level-order traversal:
-
-      Recall that you might traverse the whole level
-      by examining all the elements which currently can be found in a queue.
-
-### DFS and BFS on trees
-
-Observe: you don't need any cycle-detection mechanism
-such as coloring if a graph is a tree.
+You might use BFS for level-order traversal:
+examine all the elements which currently can be found in a queue.
 
 ## Dijkstra's Algorithm
 
 Dijkstra's algorithm applies to both directed and undirected graphs.
-The restriction: no negative weights.
+
+The restriction on graphs: no negative weights, and hence no negative weights cycles.
+To overcome this restriction, use Bellman-Ford.
 
 ## Bellman-Ford Algorithm
 
 # TODO: Learn.
 
-## Minimum Spanning Trees (MST)
-
-An MST of a graph is a spanning tree with the minimum weight.
-For a minimum spanning tree to exist,
-a graph is usually restricted to be connected.
-
 ## Prim's Algorithm
 
-Uses a greedy approach and incrementally constructs MST.
+Prim's operates on a weighted undirected graph.
+Therefore, any starting vertex can be chosen.
 
 ## Kruskal's Algorithm
 

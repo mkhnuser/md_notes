@@ -74,6 +74,7 @@ https://stackoverflow.com/questions/549/the-definitive-guide-to-form-based-websi
 https://frontendmasters.com/courses/permission-systems/
 
 Tech blogs to read:
+
 https://mitchellh.com/writing
 https://carlosbecker.com/posts/
 https://hamvocke.com/blog/
@@ -86,3 +87,5 @@ https://profi.ru/profile/ZaharovAV18/#prices - Yandex School of Data Analysis Pr
 galtsev@yandex-team.ru - Yandex School of Data Analysis Computer Architecture Course Tutor.
 https://www.youtube.com/watch?v=sbpCTjmw85g - Mathematics for Computer Science MIT course.
 https://gitlab.com/Lipovsky/concurrency-course - Yandex School of Data Analysis Concurrency course.
+
+Epp's Discrete Mathematics and Applications has treatment of an analysis of algorithms.

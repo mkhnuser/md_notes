@@ -3,24 +3,7 @@
 ## Overview
 
 A data structure is a way of organizing information in computer memory.
-
-## Linked List (Data Structure)
-
-There is no `O(n)` reallocation routine which happens in dynamic arrays
-upon insertion and deletion.
-
-### Linked List Applications
-
-* LRU Cache;
-* Collision Resolution in Hash Tables;
-* Browser History (two stacks can be used as well).
-
-### Head and Tail pointers
-
-Sometimes, instead of having head and tail pointer,
-it makes sense to create two boundary dummy nodes:
-
-https://neetcode.io/problems/lru-cache/solution
+Whereas, an abstract data type defines an interface to a data structures.
 
 ## Stack (LIFO Abstract Data Type)
 

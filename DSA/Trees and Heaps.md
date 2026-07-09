@@ -10,12 +10,8 @@ If a node has no more than n children, then we call such a tree an n-ary tree.
 
 ## Onlineliness
 
-An advantage of using a tree over a binary search for searching
+An advantage of using a binary search tree over a binary search
 is that a tree is an online data structure, whereas a binary search is an offline one.
-
-You can expand a tree as your program executes,
-whereas you cannot (or, at least should not)
-mutate an array during a binary search.
 
 ## Deletion in a Binary Search Tree
 
@@ -50,15 +46,15 @@ Suppose you chose `S`, and so now two cases are possible:
 1. `S` is `D`'s immediate right child.
 2. `S` is somewhere in the `D`'s right subtree.
 
+## Tries
+
+# TODO: Learn.
+
 ## AVL Trees
 
 # TODO: Learn.
 
 ## Red-Black Trees
-
-# TODO: Learn.
-
-## Tries
 
 # TODO: Learn.
 
