@@ -8,7 +8,6 @@
 ## Performance Analysis
 
 `perf` utility allows you to examine hotspots of your program.
-
 Flame Graphs are convenient tools for performance visualization.
 
 ## Links

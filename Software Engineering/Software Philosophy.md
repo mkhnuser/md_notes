@@ -1,4 +1,6 @@
-# Philosophy
+# Software Philosophy
+
+## Overview
 
 Brian W. Kernighan and P. J. Plauger, The Elements of Programming Style:
 

@@ -22,7 +22,7 @@ https://docs.python.org/3/library/asyncio-task.html#coroutine
 
 ### Awaiting a task vs awaiting a coroutine object
 
-"Unlike tasks, awaiting a coroutine does not hand control back to the event loop!"
+> "Unlike tasks, awaiting a coroutine does not hand control back to the event loop!"
 As such, an event loop is an abstraction which is introduced by the `asyncio` library.
 
 https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html#a-conceptual-overview-of-asyncio

@@ -2,9 +2,7 @@
 
 ## Functional Programming vs Object Oriented Programming
 
-The biggest difference between
-Functional Programming and Object Oriented Programming
-is that the former does not have the concept of inheritance.
+Functional programming does not have the concept of inheritance.
 
 ## Side Effects
 
@@ -12,10 +10,6 @@ Side effects are any effects caused by a function except for accepting
 a user input and returning an output.
 
 The absence of side effects makes a formal verification of your program much easier.
-
-### I/O
-
-Understand: I/O is a side effect too and should be avoided as much as possible.
 
 ## Pure Functions
 
@@ -43,14 +37,6 @@ Higher order functions are functions which accept or return other functions.
 
 A function invocation can be replaced with its value.
 If a function is not referentially transparent, we call it referentially opaque.
-
-## Recursion
-
-Often, a recursive step can be split into:
-
-1. Pre-recursive action;
-2. Actual Recursion;
-3. Post-recursive action.
 
 ## Closures
 

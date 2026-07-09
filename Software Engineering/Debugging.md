@@ -1,9 +1,8 @@
 # Debugging
 
-## Logs
+## Structured Logs
 
-Structured logs with the correct logging level allow you to
-easily assess what's going on with you program.
+Always consider the usage of structured logging.
 
 ## Debugging Utilities
 

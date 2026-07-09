@@ -4,10 +4,10 @@
 
 * Always use the default close in the switch / case statement
 which generates a custom runtime error which signifies to you
-that something is wrong.
+that something is wrong;
 * Always use the else statement in the if / else statement
 which generates a custom runtime error which signifies to you
-that something is wrong.
+that something is wrong;
 * Fail fast.
 
 ## Exception Handling

@@ -5,7 +5,7 @@
 MVCC creates a snapshot of a database before you execute a transaction.
 Hence, transactions are isolated, but the level of isolation can be controlled.
 
-## Postgres Transactions
+## Transactions in Postgres
 
 Transaction isolation levels:
 
@@ -37,28 +37,7 @@ So, be prepared to rerun REPEATABLE READ and SERIALIZABLE transactions.
 Postgres doesn't allow dirty reads to happen due to MVCC.
 Postgres doesn't allow phantom reads to happen in a REPEATABLE READ transaction isolation level. Other databases, however, may allow it.
 
-Ideally, transactions should be short-lived:
-only one HTTP-request-response cycle so that transactions do not become idle.
-
-## Locks
-
-There are situations where you want to have a finer-grade control over transactions (MVCC does not help). You use locks in these cases.
-
-One acquires locks only within a transaction;
-there is an explicit and an implicit locking.
-
-* Implicit locking refers to the fact that certain PostgreSQL commands acquire locks automatically.
-* One can explicitly lock the whole table or a specific row. The stricter locking is, the less performant your app is.
-
-One should be ready to handle deadlocks, which sometimes are automatically detected
-and the whole transaction is rolled back;
-it is possible to set timeouts for statements which involve locks.
-
 ## psql
 
 `psql -h 127.0.0.1 -U app -d movies_database -f movies_database.ddl` - execute a file.
 *psql* terminal client uses the current user for the role and the database name to be connected to.
-
-## Misc
-
-An outline of postgres: https://proselyte.net/postgres-for-devs/.

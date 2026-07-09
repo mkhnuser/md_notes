@@ -1,4 +1,4 @@
-# Exception
+# Exceptions
 
 ## except can accept an expression
 
