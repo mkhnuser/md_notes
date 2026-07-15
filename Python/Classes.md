@@ -129,6 +129,8 @@ When you access an attribute of an instance, you first invoke `__getattribute__`
 If an attribute has not been found in an object, a class, and all superclasses,
 you invoke `__getattr__`.
 
+https://stackoverflow.com/questions/3278077/difference-between-getattr-and-getattribute
+
 There are also `__setattr__` and `__delattr__` - these method are more straightforward:
 they are invoked when you set an attribute and delete an attribute respectively.
 
@@ -174,5 +176,6 @@ See: Fluent Python, Second Edition, Subclassing Built-in Types is Tricky.
 ## Links
 
 For descriptor's usage, see Python Cookbook Chapter 8.
+
 Lecture one: https://www.youtube.com/watch?v=SJ8z-TF07s4&list=PLlb7e2G7aSpTTNp7HBYzCBByaE1h54ruW&index=6
 Lecture two: https://www.youtube.com/watch?v=mTp2pLEoDaI&list=PLlb7e2G7aSpTTNp7HBYzCBByaE1h54ruW&index=10&t=4586s

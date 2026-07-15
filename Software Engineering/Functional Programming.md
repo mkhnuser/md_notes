@@ -41,8 +41,8 @@ If a function is not referentially transparent, we call it referentially opaque.
 ## Closures
 
 Closure refers to an ability of a function to access its enclosing scope.
-In Python, beware of `nonlocal` and `global`, you don't need these keywords
-to mutate mutable types: lists, dicts, etc.
+In Python, beware of `nonlocal` and `global`,
+you don't need these keywords to mutate mutable types: lists, dicts, etc.
 
 ## Currying
 

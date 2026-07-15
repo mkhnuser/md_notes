@@ -2,8 +2,7 @@
 
 ## Overview
 
-The primary advantage of using a context manager is to carefully
-initialize a resource on demand.
+The primary advantage of using a context manager is to carefully initialize a resource on demand.
 
 ## Exceptions within the given context
 

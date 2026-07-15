@@ -2,7 +2,7 @@
 
 ## OOP vs Functional Programming
 
-Instead of creating a stream of data in case of Functional Programming,
+Instead of creating a stream of data in the case of Functional Programming,
 you change state of objects, which is complex to track and test,
 which is a drawback of Object Oriented Programming.
 

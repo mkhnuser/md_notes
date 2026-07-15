@@ -16,23 +16,14 @@ It's more efficient than Adjacency Matrix in terms of memory.
 
 Store edges as a list of lists.
 
-## Applications of Graph Algorithms
-
-### Topological Sorting on DAGs
+## Topological Sorting on DAGs
 
 One uses topological sorting for ordering tasks given a DAG.
+The DAG does not have to be connected; there might be more than one component,
+and, therefore, there might be more than one correct ordering.
 
 The topological sorting ensures that for every edge a -> b,
 in topological ordering a comes before b.
-
-### Connected Components
-
-One can use DFS with coloring to calculate the number of connected components.
-
-### Graph Level-order traversal
-
-You might use BFS for level-order traversal:
-examine all the elements which currently can be found in a queue.
 
 ## Dijkstra's Algorithm
 
@@ -48,8 +39,9 @@ To overcome this restriction, use Bellman-Ford.
 ## Prim's Algorithm
 
 Prim's operates on a weighted undirected graph.
-Therefore, any starting vertex can be chosen.
+Choose any starting vertex and greedily build a tree.
 
 ## Kruskal's Algorithm
 
-# TODO: Learn.
+Kruskal's operates on a weighted undirected graph.
+Sort edges and then utilize DSU.

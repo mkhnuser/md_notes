@@ -3,6 +3,7 @@
 ## Primary Keys
 
 PK = NOT NULL + UNIQUE CONSTRAINT.
+
 Recall that a PK can be natural and surrogate.
 You might want to consider the usage of UUID for a primary key.
 It has the following advantages over a plain id:

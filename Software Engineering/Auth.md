@@ -9,7 +9,7 @@ You've decided to use OAuth2 for this, where Auth stands for authorization.
 
 Let's say you have /login endpoint.
 Then a user must send form-encoded `username` and `password` to /login.
-Note that these fields have to be named precisely in this way.
+Note that these fields have to be named precisely this way.
 If a user is authenticated successfully, you issue a token.
 
 ```Python
@@ -36,9 +36,9 @@ If it has, you ask user to authenticate again by raising 401 Unauthorized HTTP c
 
 Remember that a JWT token is encoded, but not encrypted: anyone can see its content.
 
-## Cookie-based Sessions
+## Cookie-based sessions
 
-Here is a flow for a cookie-based authentication:
+A flow for a cookie-based authentication:
 
 1. A user logs in successfully;
 2. You create a unique session ID which you are associating with a user;
@@ -48,7 +48,7 @@ Here is a flow for a cookie-based authentication:
 3. You store this session ID in a cookie;
 4. When a cookie expires, go to step 1.
 
-## JWT vs Cookie-based Sessions
+## JWT vs Cookie-based sessions
 
 JWT allow you to make your server stateless:
 you don't need to store anything, you just issue a token and verify it upon each request.

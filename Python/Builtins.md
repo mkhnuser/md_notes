@@ -26,20 +26,6 @@ These notes highlight useful builtins.
 
 ## Builtin Types
 
-### Lists
-
-When you do as follows:
-
-```
-matrix = [[0]] * 2
-```
-
-You actually copy a reference to the same mutable object.
-Use list comprehensions to overcome this issue.
-
-There is no problem doing something as follows: `[None] * 42`,
-since `None` is an immutable singleton.
-
 ### Sets and Frozensets
 
 You can use set intersections to exclude curtain keys from a dict:
@@ -51,8 +37,6 @@ d = {k: outer_dict[k] for k in (outer_dict.keys() & keys_to_include)}
 
 Python Cookbook, Chapter 1, contains a lot of examples as the one above.
 
-If you want to include sets in other sets, for example, consider using `frozenset`.
-
 ### Dictionaries
 
 A captain informs: you should not modify a mutable sequence while iterating over it.
@@ -62,12 +46,6 @@ Instead, iterate over a copy:
 for k in set(d):
     del d[k]
 ```
-
-## Optimizations
-
-`builtins` are written in C. Because of this, when you use them,
-your code becomes faster than it would have been otherwise:
-use as less Python code as possible, use as much builtins as possible.
 
 ## Links
 

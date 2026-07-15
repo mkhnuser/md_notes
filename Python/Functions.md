@@ -17,8 +17,11 @@ def read(fp, /, arg, *, auto_close):
     pass
 ```
 
-In the example above: `fp` is positional only, `arg` can be any,
-and `auto_close` is keyword-only.
+In the example above:
+
+* `fp` is positional only;
+* `arg` can be any,
+* and `auto_close` is keyword-only.
 
 Note the usage of only one star.
 

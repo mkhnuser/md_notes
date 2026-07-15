@@ -16,7 +16,7 @@ except Exception as e:
 
 ## Exception Hierarchy
 
-Consider defining exception hierarchy for your library.
+Always consider defining exception hierarchy for your library.
 
 ## Exception Groups
 

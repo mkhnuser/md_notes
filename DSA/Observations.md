@@ -4,34 +4,11 @@
 
 This note contains observations and useful problems.
 
-## General
-
-* Always use for loops for comprehensions:
-
-        visited_matrix = [[False for _ in range(m)] for __ in range(n)]
-
-Don't use multiplication syntax.
-Multiplication is error-prone for mutable objects.
-
-* When you pass a counter in DFS / BFS, make sure it does not have to be updated.
-
 ## Binary Trees
-
-Important: carefully understand whether you are dealing with a BST or just a binary tree.
 
 * A reverse in-order traversal can be used to find kth-largest element of a BST:
 
       https://www.algoexpert.io/questions/find-kth-largest-value-in-bst
-
-* You can cleverly serialize a binary tree (pattern matching / string):
-
-      https://neetcode.io/problems/subtree-of-a-binary-tree/solution
-
-* Lowest Common Ancestor (LCA):
-
-      One can try to find LCA in a general tree or in a binary search tree.
-
-      https://neetcode.io/problems/lowest-common-ancestor-in-binary-search-tree/question?list=neetcode150
 
 ## Graphs
 
@@ -46,10 +23,6 @@ Important: carefully understand whether you are dealing with a BST or just a bin
       1. You visit all white nodes.
       2. You don't get key error when you try to access neighbors of a given node.
 
-* Topological Sorting:
-
-      Investigate Kahn's algorithm.
-
 * DFS Cycle Detection:
 
       DFS cycle detection for directed graphs is different from undirected ones.
@@ -57,16 +30,25 @@ Important: carefully understand whether you are dealing with a BST or just a bin
 
       https://neetcode.io/problems/valid-tree/question
 
+* Prim's vs Kruskal's:
+
+      The main advantage of Kruskal's over Prim's
+      is that one can control inclusion / exclusion of edges:
+
+      * Introduce an edge into a minimum spanning tree (force an edge to be present);
+      * Exclude an edge from a minimum spanning tree.
+
+      https://neetcode.io/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/question.
+
 ## Heaps and Priority Queues
 
-Neetcode contains iterative heap implementations:
+* Neetcode contains iterative heap implementations:
 
       https://neetcode.io/courses/dsa-for-beginners/25
 
 ## Investigate further:
 
 * Floyd's Tortoise and Hoare Algorithm;
-* Sliding window;
 * Morris Traversal:
 
       https://neetcode.io/problems/kth-smallest-integer-in-bst/solution
@@ -100,7 +82,3 @@ Neetcode contains iterative heap implementations:
 * Frequency count:
 
       https://neetcode.io/problems/reorganize-string/question
-
-* Union Find:
-
-      https://neetcode.io/problems/count-connected-components/solution

@@ -73,10 +73,6 @@ might still be processing the task.
 
 One can use `Future` object to obtain a result from a thread.
 
-## Logging
-
-Don't forget to do logging in a separate thread using `QueueHandler` and `QueueListener`.
-
 ## `threading.local`
 
 Use `threading.local` to store information specific to a thread -

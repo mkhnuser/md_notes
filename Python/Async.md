@@ -14,12 +14,6 @@ the tasks are usually executed in the order you've instantiated them.
 
 https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html#a-conceptual-overview-of-asyncio
 
-### Task Groups
-
-Task Groups allow you to automatically await the tasks you spawned.
-
-https://docs.python.org/3/library/asyncio-task.html#coroutine
-
 ### Awaiting a task vs awaiting a coroutine object
 
 > "Unlike tasks, awaiting a coroutine does not hand control back to the event loop!"
