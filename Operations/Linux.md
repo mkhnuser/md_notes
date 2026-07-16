@@ -1,5 +1,33 @@
 # Linux
 
+## Users and permissions
+
+### Services
+
+Ideally, each service should have its own user and group.
+
+### Permission flags
+
+* r = 4 = 100;
+* w = 2 = 010;
+* x = 1 = 001;
+
+### Permission commands
+
+* chmod - change file permissions;
+* chown - change an owner or a group of a file.
+
+### sudoers file
+
+To change this file, use `sudo visudo` only.
+
+## File System
+
+### Inodes
+
+When you do `ls`, you see inode names.
+These, in turn, point to the actual files on a hard drive and contain file metadata.
+
 ## Devices and File Systems
 
 Linux lists all available devices in `/dev` directory.

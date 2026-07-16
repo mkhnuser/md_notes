@@ -1,13 +1,14 @@
 # Dynamic Programming
 
-## Overview
+## How does one approach dynamic programming problems?
 
-DP is concerned with breaking the problem into manageable pieces.
+One can oftentimes utilize recursion as the first step to solve dynamic programming problems.
+Recursion can be further optimized using memoization: a top-down dynamic programming.
+Memoization can be further improved with an iterative bottom-up dynamic programming.
 
-### Memoization
+## Memoization
 
-Understand: the advantage of memoization is not only speed,
-but also that a call stack will hopefully not overflow during recursion.
+Memoization speeds up your solution and prevents the recursion stack from overflowing.
 
 # Greedy
 
