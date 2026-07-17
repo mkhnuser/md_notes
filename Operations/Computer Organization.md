@@ -40,8 +40,6 @@ A processor operates in two modes:
 
         Kernel mode has direct access to the file system, network drivers, memory, etc.
 
-# TODO: Investigate Virtual Memory, File Systems, & Access Control.
-
 ## Computer Networking
 
 Network gateway is the default switch your devices will use for cross-network communication.
