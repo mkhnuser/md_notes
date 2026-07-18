@@ -12,7 +12,7 @@ Memoization speeds up your solution and prevents the recursion stack from overfl
 
 ## Iteration: a bottom-up approach
 
-...
+Consider the usage of gutters from which you can bottom-up.
 
 # Greedy
 
