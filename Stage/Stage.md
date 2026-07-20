@@ -88,5 +88,4 @@ galtsev@yandex-team.ru - Yandex School of Data Analysis Computer Architecture Co
 https://www.youtube.com/watch?v=sbpCTjmw85g - Mathematics for Computer Science MIT course.
 https://gitlab.com/Lipovsky/concurrency-course - Yandex School of Data Analysis Concurrency course.
 
-Epp's Discrete Mathematics and Applications has treatment of an analysis of algorithms.
 https://youkn0wwho.academy/topic-list - CodeForces Problems List.

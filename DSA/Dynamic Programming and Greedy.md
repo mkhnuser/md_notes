@@ -5,17 +5,19 @@
 One can oftentimes utilize recursion as the first step to solve dynamic programming problems.
 Recursion can be further optimized using memoization: a top-down dynamic programming.
 Memoization can be further improved with an iterative bottom-up dynamic programming.
+From there, you can optimize your solution by only using a constant number of rows.
 
 ## Recursion + Memoization: a top-down approach
 
+A top-down approach first considers the whole problem.
+Then the whole problem is broken down into subproblems.
 Memoization speeds up your solution and prevents the recursion stack from overflowing.
 
 ## Iteration: a bottom-up approach
 
-Instead of relying on recursive descent,
-an iterative bottom-up approach starts from the recursive base case.
-Then, starting from the base, you solve trivial problems, and then you use solutions to
-these trivial problems to solve larger problems and so on until you obtain an answer.
+A bottom-up approach solves small problems first.
+After that, larger problems can be solved.
+Eventually, an answer is obtained.
 
 ## Recursion vs a bottom-up approach
 
@@ -38,6 +40,14 @@ Conceptually:
       an answer to a large problem.
 
 So, a bottom-up approach inverts recursion.
+
+## Problem decomposition
+
+Consider breaking down the original problem into subproblems by:
+
+* prefixes - X\[:i\];
+* suffixes - X\[i:\];
+* substrings - X\[i:j\].
 
 # Greedy
 
