@@ -25,3 +25,7 @@ It's both LIFO ADT and FIFO ADT.
 
 A deque allows you to push and pop from both sides of a deque.
 A deque can be implemented using a circular buffer with two pointers or using a doubly linked list with two pointers.
+
+## Disjoint Set Union
+
+Disjoint Set Union allows you to union disjoint elements and find their representatives.

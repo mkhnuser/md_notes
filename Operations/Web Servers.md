@@ -27,20 +27,20 @@ whereas dynamic web server does document processing.
 ### Overview
 
 One NGINX instance can handle multiple sites.
-You should define sites using `server` directive.
+You should define sites using `server` block.
 A site is called a virtual host.
 
 When NGINX starts,
 if contains a master process which spawns worker processes which handle requests.
 You configure NGINX using directives, and directives become available by NGINX modules.
 
-### Server Directive
+### server_name Directive
 
 The server -> server_name directive assigns one or more host names to a virtual host.
 When NGINX receives an HTTP request,
 it tries to match the `Host` header of the request against all server blocks;
 the first appropriate server block to match this header is selected.
 
-### Location Directive
+### location Directive
 
 # TODO: Complete this section.

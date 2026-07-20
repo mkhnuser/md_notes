@@ -12,17 +12,6 @@ This note contains observations and useful problems.
 
 ## Graphs
 
-* You can use BFS to conduct level-order traversal on graphs and trees:
-
-      https://neetcode.io/problems/matrixBFS/solution
-
-* DFS considerations:
-
-      When you do DFS, make sure:
-
-      1. You visit all white nodes.
-      2. You don't get key error when you try to access neighbors of a given node.
-
 * DFS Cycle Detection:
 
       DFS cycle detection for directed graphs is different from undirected ones.
@@ -46,6 +35,10 @@ This note contains observations and useful problems.
 
       https://neetcode.io/courses/dsa-for-beginners/25
 
+## Dynamic Programming
+
+* To optimize a bottom-up solution, consider the usage of only two rows at a time.
+
 ## Investigate further:
 
 * Floyd's Tortoise and Hoare Algorithm;
@@ -63,7 +56,6 @@ This note contains observations and useful problems.
 
       https://neetcode.io/problems/k-closest-points-to-origin/solution
       https://neetcode.io/problems/kth-largest-element-in-an-array/solution
-
 
 * A postorder traversal can be seen as a slight modification of a preorder one:
 

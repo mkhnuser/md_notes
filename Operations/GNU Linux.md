@@ -61,7 +61,7 @@ You can see who runs which processes using `ps`:
 
       ps -o pid,uid,gid,comm
 
-That's the reason why you should run processes rootless.
+That's the reason why you should run processes rootless - the principle of least privilege.
 
 ### setuid
 

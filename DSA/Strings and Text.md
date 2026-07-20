@@ -2,7 +2,7 @@
 
 ## Terminology
 
-### Substring or a subarray vs subsequence
+### Substring or subarray vs subsequence
 
 Understand: substring or a subarray is contiguous, whereas a subsequence is not.
 A relative order is always preserved in both cases.

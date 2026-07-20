@@ -12,7 +12,32 @@ Memoization speeds up your solution and prevents the recursion stack from overfl
 
 ## Iteration: a bottom-up approach
 
-Consider the usage of gutters from which you can bottom-up.
+Instead of relying on recursive descent,
+an iterative bottom-up approach starts from the recursive base case.
+Then, starting from the base, you solve trivial problems, and then you use solutions to
+these trivial problems to solve larger problems and so on until you obtain an answer.
+
+## Recursion vs a bottom-up approach
+
+Conceptually:
+
+* Recursion:
+
+      A large step 1 ->
+      a slightly smaller step 2 ->
+      and even slightly smaller step 3 ->
+      ... ->
+      a base case.
+
+* A bottom-up approach:
+
+      a base case ->
+      a trivial problem (of size 1, for example) ->
+      a lightly bigger problem ->
+      ... ->
+      an answer to a large problem.
+
+So, a bottom-up approach inverts recursion.
 
 # Greedy
 
