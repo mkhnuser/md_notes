@@ -36,3 +36,9 @@ The most dangerous books are not on public lists.
 * The Rational Optimist.
 * Open How Collaboration and Curiosity Shaped Humankind.
 * Super Abundance.
+
+## Introduction to Philosophy
+
+* The Republic by Plato;
+* Meditations and other Metaphysical Writings by Rene Descartes;
+* Introduction to World Philosophy.
