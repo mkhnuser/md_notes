@@ -38,6 +38,9 @@ https://www.youtube.com/watch?v=4-0GTazM5rY&t=1746s - C programming language qui
 Build typing asteroids game to practice C programming.
 
 
+Overall, examine web api course.
+https://frontendmasters.com/courses/web-auth-apis/
+
 https://frontendmasters.com/courses/mcp/
 https://frontendmasters.com/courses/vite/
 https://frontendmasters.com/courses/data-visualization/

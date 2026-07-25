@@ -10,18 +10,28 @@ It tries to answer the question: how should one live a good life?
 Virtue ~= behaviour or attitudes of high moral standards.
 By logical extension, a person can be too virtuous, which is bad for their circumstances.
 
+Key figures: Confucius, Aristotle.
+
+### Are there universal rules?
+
+If you admit that there are no universal rules when it comes to ethics,
+can every rule become an exception?
+
 ### On Deontology
 
-Agent's intention is a foremost marker of whether a deed is good or bad.
+Agent's norms are a foremost marker of whether a deed is good or bad.
 
-There are no universal rules when it comes to ethics?
-For example, most people would agree that lying is bad.
-However, lying in a corrupt institution to save your loved one is OK by most people.
-In this example an ethical dilemma is confronted if one believes in universal rules:
-should one lie or tell the truth and hurt the loved one?
-If there are no universal rules, then there are exceptions,
-but how often can you make an exceptions? What if every rule can become an exception?
+Key figures: Kant.
 
 ### On Consequentialism
 
-The final result is what really defines if a deed is good or bad.
+The final result is what really defines if a deed is good or bad:
+
+      X is better than Y if X leads to better consequences than Y.
+
+One might wish to maximize different metric: happiness, beauty, desire satisfaction, etc.
+
+#### Utilitarianism
+
+Bentham and Mill are creators of utilitarianism: happiness maximization.
+Mill claimed that there are different levels of pleasure: some are higher than the other.

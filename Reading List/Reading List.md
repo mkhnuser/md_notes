@@ -42,3 +42,9 @@ The most dangerous books are not on public lists.
 * The Republic by Plato;
 * Meditations and other Metaphysical Writings by Rene Descartes;
 * Introduction to World Philosophy.
+
+## Philosophy of Ethics
+
+* Groundwork of the Metaphysics of Morals by Kant;
+* Natural Goodness by Philippa Foot.
+* Utilitarianism by Mill.
