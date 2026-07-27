@@ -1,10 +1,5 @@
 # Regular Expressions and Finite State Automata
 
-## Regular Expressions
-
-When you define regular expressions, make sure to specify the order of operator precedence.
-Also, if an alphabet includes a special character, make sure to escape one: `\(`.
-
 ## The relation between a regular expression and a language
 
 Understand: each reg. exp. defines a language.

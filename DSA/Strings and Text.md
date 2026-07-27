@@ -2,10 +2,10 @@
 
 ## Terminology
 
-### Substring or subarray vs subsequence
+### (Substring or subarray) vs subsequence
 
 Understand: substring or a subarray is contiguous, whereas a subsequence is not.
-A relative order is always preserved in both cases.
+Howerver, a relative order is always preserved in both cases.
 
 Given: `s1 = "abcde"`, `s2 = "ace"`,
 the longest common subsequence is `"ace"`, but `"ace"` is not a substring of `"abcde"`.

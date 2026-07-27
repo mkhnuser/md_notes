@@ -35,6 +35,7 @@ https://frontendmasters.com/courses/rust/
 https://frontendmasters.com/learn/browser-apis/
 https://frontendmasters.com/courses/mongodb/
 https://www.youtube.com/watch?v=4-0GTazM5rY&t=1746s - C programming language quick start.
+Tiny C projects - a book on the C programming language.
 Build typing asteroids game to practice C programming.
 
 
