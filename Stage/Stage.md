@@ -93,3 +93,4 @@ https://www.youtube.com/watch?v=sbpCTjmw85g - Mathematics for Computer Science M
 https://gitlab.com/Lipovsky/concurrency-course - Yandex School of Data Analysis Concurrency course.
 
 https://youkn0wwho.academy/topic-list - CodeForces Problems List.
+https://usaco.guide/ - learn C++ and use this resource for competitive programming journey.

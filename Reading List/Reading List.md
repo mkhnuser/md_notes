@@ -48,3 +48,10 @@ The most dangerous books are not on public lists.
 * Groundwork of the Metaphysics of Morals by Kant;
 * Natural Goodness by Philippa Foot.
 * Utilitarianism by Mill.
+
+## Intro to Metaphysics and Epistemology
+
+* History of Philosophy by Frederick Charles Copleston;
+* A History of Philosophy: The Condensed Copleston by Anthony Carroll, Frederick Copleston;
+* Metaphysics: A Guide and Anthology by Tim Crane, Katalin Farkas;
+* The Theory of Knowledge: Classic and Contemporary Readings by Louis P. Pojman.

@@ -2,8 +2,18 @@
 
 ## Function nomenclature
 
-1. Power functions - `x ** 2` - степенные функции;
-2. Exponential functions - `2 ** x` - показательные функции;
+1. Power functions - степенные функции;
+
+        x ** (1/2), x ** -(2/3), x ** -14, x ** 3, etc.
+        Understand: some texts impose restrictions on the base to be >= 0
+        if the exponent is a fraction.
+
+2. Exponential functions - показательные функции;
+
+        2 ** x, (1/2) ** x, etc.
+        Understand: some texts impose restrictions on the base to be > 0 and not equal to one.
+        The restriction comes from the definition of a rational exponent.
+
 3. Root functions are inverses to power functions;
 4. Logarithmic functions are inverses to exponential functions.
 
@@ -11,32 +21,47 @@
 
 ### Root properties
 
-Understand: the nth root properties are proven for non-negative bases.
-One can use the nth root properties for any real numbers if n is odd.
-However, when n is even, the domain restriction can happen.
-
 See Mordkovich Algebra, 11th grade, Page 47-48 and exercise 6 after the chapter.
 See domain restriction on logarithms for similarities.
 
-### Rational Exponent
+## Rational Exponent
 
-#### Rational Exponent definition
+### Rational Exponent Careful Definition
 
-The expression `a ** (p / q)` makes sense if `a >= 0`.
-The expression `a ** -(p / q)` makes sense if `a > 0`.
-Obviously, the domain restriction also applies to equations and inequalities.
+In some texts, the expression `a ** (p / q)` makes sense only if `a >= 0`.
+In some texts, the expression `a ** -(p / q)` makes sense only if `a > 0`.
+Obviously, the domain restriction has to be applied to equations and inequalities which contain these expressions.
 
 See Mordkovich Algebra, 11th grade, Page 54-55.
 See Mordkovich Algebra, 11th grade, Page 56, example 1 on the important of restriction on the base `a >= 0`.
-See Mordkovich Algebra, 11th grade, Page 58, example 3 on the important of restriction on the base `a >= 0`.
+See Mordkovich Algebra, 11th grade, Page 58, example 3.
 
-### Domain restriction on expressions
+Understand: some texts don't impose such a restriction
+if the resulting root expression is not even, so be especially careful with the definition they use.
+
+## Domain restriction on expressions
 
 When someone writes the even root of `x`, it's implied that `x >= 0`.
 Similarly, if someone writes `a ** (1/3)`, `a >= 0` is implied, etc.
 
 See Mordkovich Algebra, 11th grade, the top of Page 52.
 See Mordkovich Algebra, 11th grade, the top of Page 57, example 2.
+
+## Exponential Functions
+
+### Overview
+
+One can consider exponential functions when the concept of irrational exponent has been discussed.
+That is, given the base `a`, one can examine a function `a ** x`, where `x` is a real number.
+Understand: some texts impose restrictions on the base to be > 0 and not equal to one:
+`a > 0 and a != 1`.
+
+### Exponential Equations
+
+Understand: some texts impose restrictions on the base of the equation
+to be > 0 and not equal to one: `a > 0 and a != 1`.
+
+There are no restrictions on the exponent: it can be any real.
 
 ## Logarithms
 
@@ -49,10 +74,10 @@ bases of logarithms must be positive numbers not equal to one.
 
 ### Domain restriction
 
-A graphical approach to algebra and trigonometry, Section 5.4, Exercise 51.
 It's important to ensure that an argument to a logarithm function is always positive;
 one should use modulus for this.
 
+A graphical approach to algebra and trigonometry, Section 5.4, Exercise 51.
 https://math.stackexchange.com/questions/3732407/logarithm-power-rule-does-not-provide-a-complete-solution-have-the-logarithm-ru
 See Mordkovich Algebra, 11th grade, Page 47-48 for examples on roots.
 

@@ -1,6 +1,6 @@
 # Dynamic Programming
 
-## Iterative Bottom-Up DP
+## Iterative Bottom-Up DP optimization
 
 You can optimize a bottom-up DP by only using a constant number of rows of a DP matrix.
 
