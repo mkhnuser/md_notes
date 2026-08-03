@@ -1,46 +1,31 @@
 # Web Servers
 
-## Different kinds of Web Servers
+## nginx
 
-There is a separation between an HTTP server and an application server.
-Here are examples of HTTP servers: nginx, apache.
-Examples of application servers: gunicorn, uwsgi.
+### Sites
 
-Your project will usually have both types of servers:
-
-* HTTP server handles HTTP related stuff;
-* Application server transforms HTTP request into a programming language entities and vice versa.
-
-      For example, uvicorn python application aerver will transform
-      an incoming HTTP request into a python entity which a framework will then use.
-
-      The reverse is also true: a python entity will be transformed
-      into an HTTP response, which will be later handled by an HTTP server.
-
-## Static and Dynamic Web Servers
-
-Static web servers just return the requested document,
-whereas dynamic web server does document processing.
-
-## NGINX
-
-### Overview
-
-One NGINX instance can handle multiple sites.
-You should define sites using `server` block.
+One nginx instance can handle multiple sites.
+One defines sites using `server` block.
 A site is called a virtual host.
 
-When NGINX starts,
-if contains a master process which spawns worker processes which handle requests.
-You configure NGINX using directives, and directives become available by NGINX modules.
+### Processes
 
-### server_name Directive
+When nginx starts, a master process will spawn worker processes to handle requests.
+You configure nginx using directives, and directives become available through nginx modules.
 
-The server -> server_name directive assigns one or more host names to a virtual host.
+### server_name directive
+
+`server_name` directive assigns one or more host names to a virtual host.
+
 When NGINX receives an HTTP request,
-it tries to match the `Host` header of the request against all server blocks;
+it will match the `Host` header of the request against all server blocks found;
 the first appropriate server block to match this header is selected.
 
-### location Directive
+### location directive
 
-# TODO: Complete this section.
+Each location directive has its priority depending on its type.
+
+### Upstream load balancing
+
+Nginx can route traffic to multiple hosts depending on routing strategy.
+We specify these hosts under `upstream` directive.

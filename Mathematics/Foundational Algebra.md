@@ -60,8 +60,18 @@ Understand: some texts impose restrictions on the base to be > 0 and not equal t
 
 Understand: some texts impose restrictions on the base of the equation
 to be > 0 and not equal to one: `a > 0 and a != 1`.
-
 There are no restrictions on the exponent: it can be any real.
+
+To solve an exponential equation, arrive at the common base, and equate exponents.
+
+### Exponential Inequalities
+
+Understand: some texts impose restrictions on the base of the inequality
+to be > 0 and not equal to one: `a > 0 and a != 1`.
+There are no restrictions on the exponent: it can be any real.
+
+To solve an exponential equation, arrive at the common base
+and consider a strategy depending on whether the base `0 < a < 1` or `a > 1`.
 
 ## Logarithms
 

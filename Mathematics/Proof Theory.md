@@ -1,6 +1,6 @@
 # Proof Theory
 
-## Division into cases & Contradiction
+## Division into Cases & Contradiction
 
 See Velleman's "How to Prove It", third edition, Section 6.1 exercises, exercise 20. b)
 shows that when you reach a contradiction in both cases,

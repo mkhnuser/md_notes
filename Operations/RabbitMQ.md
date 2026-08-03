@@ -85,4 +85,4 @@ Conceptually, your data flow looks like this: Publisher <-> RabbitMQ <-> Consume
 
 ## Data Deduplication
 
-You should be ready to handle data duplicates.
+You should be ready to handle message duplicates.
