@@ -38,3 +38,13 @@ What we we have a different perspective on what's good and bad, compared to God?
 One differentiates between a direct realism and an indirect one.
 Direct realism maintains that you have a clear one-to-one representation of the world.
 Whereas indirect realism claims that you have only a limited representation of the world.
+
+## Then Conceptions
+
+...
+
+## What is faith?
+
+Natural theology does not require a concept of faith;
+It derives the existence of God from nature.
+Some religions require a leap of faith, however.

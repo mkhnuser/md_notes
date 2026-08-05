@@ -5,8 +5,8 @@
 1. Power functions - степенные функции;
 
         x ** (1/2), x ** -(2/3), x ** -14, x ** 3, etc.
-        Understand: some texts impose restrictions on the base to be >= 0
-        if the exponent is a fraction.
+        Understand: if the exponent is a fraction,
+        some texts impose restrictions on the base to be >= 0.
 
 2. Exponential functions - показательные функции;
 

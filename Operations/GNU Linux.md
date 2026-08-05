@@ -66,3 +66,13 @@ That's the reason why you should run processes rootless - the principle of least
 ### setuid
 
 `setuid` changes process' `uid` which lowers process' privileges or escalates them.
+
+## Process Isolation
+
+`chroot` - change process's root directory.
+`namespaces` (NS) - isolate one process from other processes.
+`cgroups` (control groups) - limit process's resource consumption: CPU, Memory, I/O, etc.
+
+## Network Isolation
+
+`ip netns` - create a network namespace to which network interfaces can be attached.

@@ -22,3 +22,4 @@ Alternatively, it may represent a metric on suffixes `s1[i:]` and `s2[j:]`.
 ## Overview
 
 Greedy algorithms are concerned with tactics and not so much with strategy.
+One prioritizes local choices compared to global ones.
