@@ -48,3 +48,25 @@ Whereas indirect realism claims that you have only a limited representation of t
 Natural theology does not require a concept of faith;
 It derives the existence of God from nature.
 Some religions require a leap of faith, however.
+
+## The Human Being
+
+There are three main approaches to see what a human being is:
+
+* Dualism says the spirit and the flesh (psychological and physical are two separate entities).
+
+      Martin Luther is a proponent of this position.
+
+* Integrationism strives to combine psyche and brain (psychological and physical).
+* Reductive Materialism maintains that mind is only a product of one's brain.
+
+## The Meaning of It All
+
+Buridan's Ass is a paradox which contains a donkey
+equidistantly positioned between two equally attractive piles of hay.
+
+When it comes to free will, there is a deterministic tradition which splits into:
+
+* Biological Determinism.
+* Environmental Determinism.
+* Divine Determinism.

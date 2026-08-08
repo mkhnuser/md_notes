@@ -82,3 +82,12 @@ https://medium.com/@jayphelps/backpressure-explained-the-flow-of-data-through-so
 
 One might want to disable some services of your system
 in order to preserve other critical components of your system.
+
+## Transaction Outbox
+
+You can use transaction outbox if you want to guarantee that
+a message will be published to a queue.
+
+## Transaction Inbox
+
+Similar to the outbox.

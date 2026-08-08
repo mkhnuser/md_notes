@@ -5,17 +5,23 @@
 1. Power functions - степенные функции;
 
         x ** (1/2), x ** -(2/3), x ** -14, x ** 3, etc.
-        Understand: if the exponent is a fraction,
+
+        Understand:
+
+        * if the exponent is a positive fraction,
         some texts impose restrictions on the base to be >= 0.
+        * if the exponent is a negative fraction,
+        some texts impose restriction on the base to be > 0.
 
 2. Exponential functions - показательные функции;
 
         2 ** x, (1/2) ** x, etc.
-        Understand: some texts impose restrictions on the base to be > 0 and not equal to one.
-        The restriction comes from the definition of a rational exponent.
+        Understand: some texts impose restrictions on the base to be > 0 and != 1.
+        The first part of the restriction comes from the definition of a rational exponent.
+        The second part comes from a uselessness of a usage of 1 as the base.
 
-3. Root functions are inverses to power functions;
-4. Logarithmic functions are inverses to exponential functions.
+3. Root functions are inverses to power ones;
+4. Logarithmic functions are inverses to exponential ones.
 
 ## Roots
 
@@ -37,9 +43,10 @@ See Mordkovich Algebra, 11th grade, Page 56, example 1 on the important of restr
 See Mordkovich Algebra, 11th grade, Page 58, example 3.
 
 Understand: some texts don't impose such a restriction
-if the resulting root expression is not even, so be especially careful with the definition they use.
+if the resulting root expression is not even,
+so be especially careful with the definition of a rational exponent.
 
-## Domain restriction on expressions
+### Domain restriction on expressions
 
 When someone writes the even root of `x`, it's implied that `x >= 0`.
 Similarly, if someone writes `a ** (1/3)`, `a >= 0` is implied, etc.
@@ -51,36 +58,47 @@ See Mordkovich Algebra, 11th grade, the top of Page 57, example 2.
 
 ### Overview
 
-One can consider exponential functions when the concept of irrational exponent has been discussed.
-That is, given the base `a`, one can examine a function `a ** x`, where `x` is a real number.
-Understand: some texts impose restrictions on the base to be > 0 and not equal to one:
-`a > 0 and a != 1`.
+One can consider exponential functions when an irrational exponent has been discussed.
+That is, given the base `a`, one can examine a function `a ** x`, where `x` is any real number.
+Some texts impose restrictions on the base to be > 0 and != 1: `a > 0 and a != 1`.
+
+Observe that `a > 0`, and not just `a >= 0`,
+to accommodate for a potential negative fraction in the exponent.
 
 ### Exponential Equations
 
-Understand: some texts impose restrictions on the base of the equation
-to be > 0 and not equal to one: `a > 0 and a != 1`.
-There are no restrictions on the exponent: it can be any real.
-
+Some texts impose restriction on the base of the equation to be > 0 and != 1: `a > 0 and a != 1`.
+There are no restrictions on the exponent: it can be any real number.
 To solve an exponential equation, arrive at the common base, and equate exponents.
 
 ### Exponential Inequalities
 
-Understand: some texts impose restrictions on the base of the inequality
-to be > 0 and not equal to one: `a > 0 and a != 1`.
-There are no restrictions on the exponent: it can be any real.
+Some texts impose restriction on the base of the inequality to be > 0 and != 1: `a > 0 and a != 1`.
+There are no restrictions on the exponent: it can be any real number.
 
-To solve an exponential equation, arrive at the common base
-and consider a strategy depending on whether the base `0 < a < 1` or `a > 1`.
+To solve an exponential equation:
 
-## Logarithms
+1. Arrive at the common base;
+2. Consider a strategy depending on whether the base `0 < a < 1` or `a > 1`.
+
+## Logarithmic functions
 
 ### Overview
 
-Logarithms are defined only for positive numbers
-since logarithmic functions are inverse functions for exponential ones.
-Also, because logarithms are inverses to exponential functions,
-bases of logarithms must be positive numbers not equal to one.
+Logarithmic functions are inverse functions to exponential ones.
+Because of this, one must restrict:
+
+1. The argument.
+
+        The argument must be > 0.
+        That's because exponential functions map onto positive reals.
+
+2. The logarithm base.
+
+        The base must be > 0 and != 1.
+        That's because exponential functions impose restrictions on the base.
+
+To summarize, log base a of b equals c <=> a ** c = b.
 
 ### Domain restriction
 

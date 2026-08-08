@@ -241,16 +241,3 @@ You can use 2PC if you want to perform a distributed transaction.
 ## SAGA
 
 You can use SAGA if you want to perform a distributed transaction.
-
-## Transaction Outbox
-
-You can use transaction outbox if you want to guarantee that
-a message will be published to a queue.
-
-## Transaction Inbox
-
-Similar to the outbox.
-
-## Misc
-
-A wonderful article which goes in depth on sharding: https://proselyte.net/sharding-postgresql/
