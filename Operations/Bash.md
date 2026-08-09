@@ -12,7 +12,7 @@ The shell examines the directories in this environment variable from left to rig
 To add a command to only one user, place it in `/home/username/bin`.
 To add a command globally, consider adding a command into `/usr/local/bin`.
 
-### How does one locate the command?
+### How does one locate the command or a file?
 
 You can try using `plocate` command to locate the location of commands.
 `which` and bash-builtin `type` are also handy, but are more limited.
@@ -72,7 +72,3 @@ One can use metacharacters to perform file expansions.
 3. `2>` redirects the standard error output into a file.
 4. `&>` redirects both standard output and standard error into a file.
 5. `>>` append the standard output to a file.
-
-## References
-
-Consult "The Linux Bible", 11th edition.
