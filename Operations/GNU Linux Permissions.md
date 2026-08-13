@@ -8,13 +8,19 @@ Understand: a process inherits privileges of a user who runs this process.
 Ideally, each service should have its own user and group when it runs.
 It allows one to restrict what a service can and cannot do.
 
+### What happens when a user runs a command?
+
+When a user runs a command,
+then a process which represents this command inherits user's permissions.
+
+If a user has a read access or a write access to a file,
+then the process will also have it.
+
 ### Permission flags
 
 * r = 4 = 100;
 * w = 2 = 010;
 * x = 1 = 001;
-
-# TOOD: Learn about a sticky bit, set UID, set GID.
 
 ### What do these flags mean for a file or a directory?
 
@@ -57,3 +63,17 @@ One can use `chown` recursively `chown -R joe:joe /mnt/mystuff`.
 ### umask
 
 One can use `umask` to change the default permissions.
+
+## ACL
+
+### Overview
+
+ACL stands for access control list.
+ACL allows one to fine-tune access to files or directories to a specific user or a specific group.
+ACL has to be enabled on the filesystem during mounting phase.
+
+## Set user id, set group id, set sticky bit
+
+SUID allows one to obtain permissions of a user who owns a file.
+SGUID allows one to collaborate within a given directory.
+Finally, a sticky bit allows one to restrict deletion within a directory.

@@ -94,3 +94,27 @@ https://gitlab.com/Lipovsky/concurrency-course - Yandex School of Data Analysis 
 
 https://youkn0wwho.academy/topic-list - CodeForces Problems List.
 https://usaco.guide/ - learn C++ and use this resource for competitive programming journey.
+
+I.
+Algos 1.
+ML 1.
+Python.
+Computer Architecture and OS 1.
+
+II.
+ML 2.
+Statistics.
+Computer Architecture and OS 2.
+Concurrency.
+
+III.
+NLP.
+CV.
+Bayesian Methods in ML.
+Distributed Systems.
+
+IV.
+RL.
+Deep Learning.
+A/B Testing.
+Computer Networks.

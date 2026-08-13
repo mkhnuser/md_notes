@@ -1,6 +1,6 @@
-# GNU Linux Services
+# GNU Linux Installation and Booting
 
-## System Initialization
+## Booting
 
 When you press the power button, here is what happens:
 

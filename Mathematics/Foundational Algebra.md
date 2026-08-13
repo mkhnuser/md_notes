@@ -100,14 +100,10 @@ Because of this, one must restrict:
 
 To summarize, log base a of b equals c <=> a ** c = b.
 
-### Domain restriction
+### Logarithmic Properties
 
-It's important to ensure that an argument to a logarithm function is always positive;
-one should use modulus for this.
-
-A graphical approach to algebra and trigonometry, Section 5.4, Exercise 51.
-https://math.stackexchange.com/questions/3732407/logarithm-power-rule-does-not-provide-a-complete-solution-have-the-logarithm-ru
-See Mordkovich Algebra, 11th grade, Page 47-48 for examples on roots.
+Logarithmic properties (sum, difference, etc.) are proved for strictly positive arguments.
+Notice that the root properties are proved for non-negative arguments.
 
 ### Inverses to Logarithms
 
@@ -117,6 +113,17 @@ Contains exercises for finding inverse functions for logarithms and exponential 
 ### Applications of Logarithms
 
 See A graphical approach to algebra and trigonometry, Section 5.6, for applications of logarithms.
+
+## Domain restrictions
+
+It's important to ensure that an argument to a logarithm function is always positive.
+It's important to ensure that an argument to an even root is non-negative.
+One should use modulus for this or an explicit domain restriction.
+
+See Mordkovich Algebra, 11th grade, Page 47-48 for examples on roots.
+See Mordkovich Algebra, 11th grade, Page 124 for examples on logarithms.
+See "A graphical approach to algebra and trigonometry", Section 5.4, Exercise 51.
+https://math.stackexchange.com/questions/3732407/logarithm-power-rule-does-not-provide-a-complete-solution-have-the-logarithm-ru
 
 ## Logical equivalences of equations
 

@@ -8,9 +8,22 @@ To see logged in users:
 
     who -aH
 
-### Groups
+### /etc/passwd file
 
-By default, on many distributions, a user will be given a group of the same name.
+`/etc/passwd` file contains user accounts.
+
+### the same uid for two different usernames
+
+Two different usernames might be assigned to the same uid.
+Examine `-u` and `-o` options for `useradd` command.
+
+### Group
+
+By default, on many distributions, a user will be given a primary group of the same name.
+
+### Why do you need groups?
+
+One can use groups to efficiently share directories.
 
 ### root user
 
@@ -24,10 +37,9 @@ Fedora and Ubuntu give access to `sudo` to the first user created on a system.
 
 One can use `su` command applied to any user on the system.
 
-### sudo
+### sudo and resource creation
 
-Run the command as if you are a root user.
-Observe: if one creates a file, a root user will be an owner.
+Observe: if one creates a file with `sudo`, a root user will be an owner.
 
 ### sudo vs root
 
@@ -41,3 +53,8 @@ Advantages of using `sudo` are:
 
 Sudoers file allows you to control who has access to `sudo` and which rights are granted.
 To change this file, use `sudo visudo` only.
+
+### /etc/skel
+
+`/etc/skel` directory contains files
+which are copied into a new user's home directory when a user is created.
