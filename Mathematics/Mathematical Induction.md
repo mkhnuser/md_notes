@@ -49,3 +49,9 @@ Here are collected hard mathematical induction problems:
 
       Contains the well-ordering principle (the WOP) discussion
       and the division algorithm discussion.
+
+* Tao, "Analysis", 4th edition, Chapter 2.2.
+
+      Contains exercises on proving strong induction,
+      backwards induction,
+      the base case induction.

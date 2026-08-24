@@ -77,6 +77,8 @@ OAuth 2 in Action First Edition.
 https://stackoverflow.com/questions/549/the-definitive-guide-to-form-based-website-authentication
 https://frontendmasters.com/courses/permission-systems/
 
+Prometheus: Up & Running: Infrastructure and Application Performance Monitoring by Julien Pivotto (Author), Brian Brazil (Author).
+
 Tech blogs to read:
 
 https://mitchellh.com/writing
