@@ -12,7 +12,7 @@ whereas relational ones load rows from a hard drive.
 
 Use cases:
 
-* Analytics;
+* Analytics - aggregate queries over a column;
 * Sparse data.
 
 Concrete examples:
@@ -25,7 +25,8 @@ Concrete examples:
 Use cases:
 
 * Sessions;
-* Cart in an online shop.
+* Cart in an online shop;
+* Cache.
 
 ### Document-oriented
 
@@ -33,8 +34,7 @@ The primary advantage of document-oriented databases is that they are schemaless
 
 The second advantage is that they allow data locality:
 you store everything you need in one document,
-so you don't have to perform JOINs
-across multiple documents to fetch data,
+so you don't have to perform JOINs across multiple documents to fetch data,
 which is critical for read-heavy applications.
 
 Use cases:
@@ -84,13 +84,16 @@ Understand: it takes some time to spin up a new database instance with backups a
 
 ## Database Replication
 
-The main difference between replication and backups is that replication
-is an ongoing process, whereas backups are stored cold.
+The main difference between replication and backups is that
+replication is an ongoing process, whereas backups are stored cold.
 
-If a malicious actor decides to delete some data, replication is going to reflect these change across all replicas. However, backups will be intact.
+If a malicious actor decides to delete data,
+replication is going to reflect these change across all replicas.
+However, backups will be intact.
+That's the reason why ideally you should have replication and backups.
 
 Replication does not allow you to scale writing to a database,
-it only only allows you to scale reading from it.
+only reading throughput increases.
 
 ### Replication Types
 
@@ -111,8 +114,14 @@ it only only allows you to scale reading from it.
 
 ### How do you synchronize data between replicas?
 
-* Sync replication (strong consistency - high latency);
-* Async replication (eventual consistency - low latency).
+* Synchronous replication;
+
+      Strong consistency - high latency.
+
+* Asynchronous replication;
+
+      Eventual consistency - low latency.
+
 * Semisync.
 
 A database cluster might have both sync and async replicas.
@@ -139,12 +148,14 @@ Logical replication is represented by:
 ## Data Partitioning
 
 Partitioning allows you to partition (to split) a table into multiple ones.
-Partitioning happens on precisely on machine.
+Partitioning happens on precisely one machine.
 
-Vertical partitioning splits a table vertically: you get two or more tables,
+Vertical partitioning splits a table vertically:
+you get two or more tables,
 each containing a subset of columns of the original table.
 
-Horizontal partitioning splits a table horizontally: you get two or more tables,
+Horizontal partitioning splits a table horizontally:
+you get two or more tables,
 each containing a subset of rows of the original table.
 
 ### How do you choose a partition key?
@@ -154,8 +165,9 @@ to the process of choosing a sharding key.
 
 ## Data Sharding
 
-Sharding is the process of splitting data into datasets across multiple nodes.
-Thus, a centralized point of failure is eliminated.
+### Overview
+
+Data sharding = split data writes into datasets across multiple nodes using a sharding key.
 
 For example, we can use sharding to partition a database as follows:
 
@@ -166,21 +178,22 @@ So, each shard has its own portion of data,
 whereas each replica contains its own copy of data.
 Even further, each shard can contains its own replicas.
 
-Therefore, sharding is used to increase write throughput of your application.
-
-Further, you should store all the relevant data on one shard - data locality:
-
-      For example, in a social media application, one might choose a user id as a sharding key.
-      Then all the records which contains the same user id will be present within one shard.
-      It's important since it allows you to perform JOINs easily.
-      All data is local to only one shard, no other shards have to be queried.
-
 ### How do you choose a sharding key?
 
 * Range-based sharding;
 * Hash-based sharding;
 * Directory-based sharding;
 * Geographical sharding.
+
+### Data Locality
+
+When you choose a sharding key, consider the locality of your data.
+
+      For example, in a social media application, one might choose a user id as a sharding key.
+      Then all data entities which contains the same user id will be present within one shard.
+
+      JOINs and analytics can be performed easily:
+      all data is local to only one shard, no other shards have to be queried.
 
 ### Resharding
 
@@ -200,7 +213,7 @@ For example, it can be used if new buckets are to be added to the hash table:
 
 ## CAP Theorem
 
-Partition tolerant distributed data store can provide at most two of the following:
+Partition tolerant distributed data store can provide at most one of the following guarantees:
 
 1. Consistency:
 
@@ -226,8 +239,9 @@ That's why it is important to consider PACELC theorem.
 ## PACELC theorem
 
 PACELC theorem expands the CAP theorem:
-if partition happens, you choose between consistency and availability.
-Else, you choose between latency and consistency.
+
+      If partition happens, you choose between consistency and availability.
+      Else, you choose between latency and consistency.
 
 ## BASE acronym
 

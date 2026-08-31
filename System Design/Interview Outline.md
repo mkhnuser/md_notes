@@ -22,7 +22,7 @@ Here is a rough outline of how a system design interview should go:
 
         1. Draw a basic schema of the system.
         2. Choose a DB considering CAP restrictions.
-        3. Conduct a modular design considering Functional Requirements.
+        3. Conduct a modular design considering the Functional Requirements.
 
                  Consider the usage of a message broker.
 

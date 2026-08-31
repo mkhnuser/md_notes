@@ -58,7 +58,7 @@ For example, you wouldn't want to book the same flight twice.
 
 ## Timeouts
 
-Specify timeouts for your requests.
+Specify timeouts for all your requests.
 
 ## Session-level error handling
 

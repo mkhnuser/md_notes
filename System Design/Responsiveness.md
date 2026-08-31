@@ -9,7 +9,7 @@ Roughly, if you cache 20% of data, you get 80% increase in responsiveness.
 * Increase response time;
 * Decrease load on other external services;
 
-## But what do you cache?
+## What do you cache?
 
 * Requests to other services.
 * Requests to DB or other storage.

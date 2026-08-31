@@ -6,9 +6,11 @@ Be sure to pin down system requirements precisely.
 What is obvious for you will not be obvious to others.
 A design document should explicitly state what's expected from the system.
 
-## Functional & Non-Functional Requirements
+## Functional Requirements
 
 Functional: what do you expect as a user? What functions does your application provide?
+
+## Non-Functional Requirements
 
 Non-Functional:
 
@@ -98,7 +100,7 @@ When you do the calculation, use powers of ten to simplify your calculations.
 To calculate network load, consider these metrics:
 
 1. Traffic Load (mbps, gbps);
-2. Number of open connections (perhaps less significant).
+2. Number of open connections.
 
 On average, to transfer 1GB of traffic, you have to pay $0.1.
 One web server instance can handle 100 thousand connections.
@@ -129,6 +131,5 @@ There the three main types of storage devices:
 
 * You should know their read / write speed and cost.
 * Roughly, one server might have up to 1TB of RAM, up to 50TB of SSD, and up to 200TB of HDD.
-* You should know L1 cache access time, RAM access time, etc.
 * Average Failure Rate (AFR) of a storage device is around 1 percent.
-* Information should be replicated across multiple disks (RAID).
+* Information can be replicated across multiple disks (RAID).

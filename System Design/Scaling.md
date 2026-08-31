@@ -60,8 +60,8 @@ Message brokers allow:
 
 * Data Flow.
 
-You should be ready to handle message duplicates. There are
-various strategies for this:
+You should be ready to handle message duplicates.
+There are various strategies for this:
 
 * At least once;
 * At most once;
