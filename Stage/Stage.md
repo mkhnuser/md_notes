@@ -11,17 +11,12 @@ For Chemistry, read "Chemistry The Central Science".
 Principles of neuroscience.
 
 Learn Domain-Driven Design.
-Learn Lean and TLA+.
+Read SICP while you are doing JS.
 
-https://www.youtube.com/playlist?list=PLhgFs9q2EVg_rB-XT1zaJ3k9z0KVGrR2h - Designing Data Intensive Applications Book In-depth discussion.
 Latency: Reduce delay in software systems by Pekka Enberg (Author).
 https://frontendmasters.com/courses/realtime/
 https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design - A great resource on modern micro services best practices.
-https://www.youtube.com/watch?v=1KVa9UoPdCA&list=PLalrWAGybpB-UHbRDhFsBgXJM1g6T4IvO&index=18 - A wonderful course on RabbitMQ.
 h5bp - default nginx configuration.
-
-
-https://www.youtube.com/watch?v=1pkOgXD63yU&list=PLot-Xpze53leOBgcVsJBEGrHPd_7x_koV&index=1 -neetcode playlist on a sliding window technique.
 
 
 https://frontendmasters.com/courses/c-fundamentals/why-c-is-popular/

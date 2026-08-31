@@ -39,9 +39,9 @@ To overcome this restriction, use Bellman-Ford.
 ## Prim's Algorithm
 
 Prim's operates on a weighted undirected graph.
-Choose any starting vertex and greedily build a tree.
+It chooses any starting vertex and greedily builds a tree using a min heap.
 
 ## Kruskal's Algorithm
 
 Kruskal's operates on a weighted undirected graph.
-Sort edges and then utilize DSU.
+It sorts edges and then utilizes the DSU data structure.

@@ -26,11 +26,11 @@ a set `{3, 3, 3, 4, 4, 5}` is possible, but it possesses redundancy.
 
 ### Russell's Paradox
 
-The chapter contains hard exercises on proving axioms from axioms.
+The chapter contains hard exercises on proving set theoretic axioms from axioms.
 
 ### Functions
 
-Tao differentiates between range of a function and its codomain.
+...
 
 ### Images and Inverse Images
 
@@ -46,3 +46,23 @@ The section contains exercises on proving axioms from other axioms.
 
 Remark 3.5.9 explains that an n-tuple is in fact a finite sequence.
 Or, in other words, an ordered sequence of n elements.
+
+### Cardinality of Sets
+
+Cardinality of finite sets is discusses in this section.
+A lot of enumerative combinatorics principles are proved here.
+
+Exercise 3.6.6 is challenging.
+Exercise 3.6.12 discusses permutations.
+
+## Integers and Rationals
+
+### The Integers
+
+One has to define integers to perform an operation of subtraction.
+a - b = c - d iff a + d = c + b.
+
+### The Rationals
+
+a/b = c/d iff a * d = c * b
+The rational number equals to zero iff its numerator equals to zero.
