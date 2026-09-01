@@ -1,52 +1,4 @@
-# Computer Networks
-
-## Addressing
-
-### MAC address - Media Access Control
-
-MAC address uniquely identifies a device in a network.
-
-## ARP - Address Resolution Protocol
-
-### Overview
-
-ARP maps IP addresses to MAC addresses.
-
-### Protocol
-
-Given an IP address,
-ARP answers a question of which MAC is given to a machine with this IP address;
-an ARP request contains information about a sender IP, a desired IP, a sender MAC;
-an ARP reply will have information about a desired IP's MAC.
-
-ARP acts within a local network.
-
-### ARP Spoofing
-
-An attacker might reply to an ARP request with its own IP address.
-
-## IP protocol
-
-### Overview
-
-IP protocol uniquely identifies a host in a network.
-
-### Packet Fragmentation
-
-IP protocol is responsible for data fragmentation into packets.
-If the total length of a packet exceeds MTU, then a fragmentation happens.
-
-## TCP and UDP
-
-### Overview
-
-The TCP ensures:
-
-1. Reliability of transmission;
-2. Bitrate negotiation with a receiver through a `Window size` option.
-3. In-order transmission of data segments.
-
-Whereas UDP is faster.
+# Application Layer
 
 ## DHCP - Dynamic Host Configuration Protocol
 
@@ -115,9 +67,3 @@ There are multiple types of DNS records:
     ;; MSG SIZE  rcvd: 135
 
     user:~$
-
-## STP - Spanning Tree Protocol
-
-### Overview
-
-To avoid cycles, STP constructs a spanning tree for switches in your local network.
