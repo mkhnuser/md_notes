@@ -1,5 +1,25 @@
 # Internet Layer
 
+## Devices
+
+### Routers
+
+#### Overview
+
+Routers operate on an Internet Layer.
+
+#### Properties
+
+Routers consult the routing table when they are routing a packet.
+So, routers operate on IP packets.
+
+#### Objectives
+
+Routers allow one to:
+
+1. Connect networks.
+2. Efficiently route packets based on a routing table.
+
 ## IP protocol
 
 ### Overview

@@ -1,4 +1,24 @@
-# Link Layer
+# Data Link Layer
+
+## Devices
+
+### Switches
+
+#### Overview
+
+Switches operate on a Data Link Layer.
+
+#### Properties
+
+Switches maintain a CAM table to associate a given switch port with a MAC address.
+That said, switches operate on data frames.
+
+#### Objectives
+
+Switches allow one to:
+
+1. Physically connect devices within a LAN.
+2. Efficiently route frames within a LAN.
 
 ## Addressing
 
@@ -25,8 +45,16 @@ ARP acts within a local network.
 
 An attacker might reply to an ARP request with its own IP address.
 
+## VLAN - Virtual Local Area Network
+
+### Overview
+
+VLANs allow one to groups hosts in a logical network.
+
 ## STP - Spanning Tree Protocol
 
 ### Overview
 
-To avoid cycles, STP constructs a spanning tree for switches in your local network.
+To avoid cycles while data frames are routed,
+STP constructs a spanning tree for switches in your local network,
+which breaks cycles.

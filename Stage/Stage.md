@@ -115,3 +115,9 @@ RL.
 Deep Learning.
 A/B Testing.
 Computer Networks.
+
+289 - Патрон
+500 - Патрон+
+1500 - Спонсор
+3000 - Меценат
+10000 - Сэр
