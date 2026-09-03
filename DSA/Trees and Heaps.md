@@ -62,10 +62,11 @@ Suppose you chose `S`, and so now two cases are possible:
 
 ### Heap Properties
 
-The heap structure property:
-heaps are to be populated from left to right so that they are complete.
+* The heap structure property:
 
-The heap ordering property.
+      Heaps are to be populated from left to right so that they are complete.
+
+* The heap weak ordering property.
 
 ### Heap operations
 

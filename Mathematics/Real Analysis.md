@@ -66,3 +66,14 @@ a - b = c - d iff a + d = c + b.
 
 a/b = c/d iff a * d = c * b
 The rational number equals to zero iff its numerator equals to zero.
+
+### Absolute Value and Exponentiation
+
+A first notion of epsilon and delta closeness is introduced.
+Further, important results on inequalities are proved.
+
+Pay special attention to Exercise 4.3.4 on proving inequalities.
+
+### Gaps in the Rational Numbers
+
+Discusses the principle of infinite descent which is similar to the WOP.

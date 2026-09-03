@@ -41,3 +41,12 @@ Majoritarian system says that a party wins by a majority vote.
 ### Proportional Representation
 
 PR system is usually found in ethnically divided regions.
+
+## Electoral Studies
+
+...
+
+## Politics and Conflict
+
+Interestingly enough,
+Canada and Venezuela have more proven oil reserves than Russia.
