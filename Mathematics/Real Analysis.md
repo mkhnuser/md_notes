@@ -77,3 +77,16 @@ Pay special attention to Exercise 4.3.4 on proving inequalities.
 ### Gaps in the Rational Numbers
 
 Discusses the principle of infinite descent which is similar to the WOP.
+
+## Real Numbers
+
+### Overview
+
+Rational numbers are fine for algebra.
+However, real numbers are needed for geometry and trigonometry.
+Further, real numbers fill in the gaps of a rational number line.
+
+### Cauchy Sequences
+
+By definition, a sequence is meant to be infinite.
+Proposition 5.1.11 assumes the existence of an object and then defines this object.

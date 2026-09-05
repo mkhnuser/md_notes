@@ -30,3 +30,15 @@ IP protocol uniquely identifies a host in a network.
 
 IP protocol is responsible for data fragmentation into packets.
 If the total length of a packet exceeds MTU, then a fragmentation happens.
+
+## Static Routing
+
+...
+
+## Dynamic Routing
+
+### Dynamic Routing Protocols
+
+* OSPF;
+* RIP;
+* BGP.

@@ -21,7 +21,7 @@ For example: git remote add secret_origin ../../secret_local_project.
 `git push origin main` pushes your local branch main to an origin.
 Remote main will be created if it has not been already.
 
-`git push origin main:remote` pushes your local main branch to the remote branch.
+`git push origin main:abc` pushes your local main branch to the remote abc branch.
 
 ## Config
 
@@ -86,3 +86,4 @@ A great binary search feature for bug introduction finding or performance shift 
 # TODO: Investigate this concept.
 
 LLMs can be run in a separate git worktree.
+https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/
