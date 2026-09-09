@@ -2,11 +2,15 @@
 
 ## Primary Keys
 
+### Overview
+
 PK = NOT NULL + UNIQUE CONSTRAINT.
 
 Recall that a PK can be natural and surrogate.
-You might want to consider the usage of UUID for a primary key.
-It has the following advantages over a plain id:
+
+### UUID as a primary key
+
+UUID has the following advantages over a plain sequential id:
 
 * UUID can be generated on a client:
 
@@ -19,11 +23,15 @@ It has the following advantages over a plain id:
 
 ## NULL
 
+### Overview
+
 COUNT(*) counts all rows, whereas COUNT(COLUMN) counts only NOT NULL rows.
 Use IS NULL or IS NOT NULL for NULL comparison. != behaviour is tricky for NULL.
 When you do ORDER BY remember about NULLS LAST, NULLS FIRST.
 
 ## Normalization
+
+### Overview
 
 Normalization allows you to reduce data redundancy within a table.
 You usually consider the usage of 1NF, 2NF, 3NF.
@@ -38,6 +46,8 @@ You can implement one-to-one relation using REFERENCES with UNIQUE constraint.
 
 A foreign key must reference a primary key or a unique column.
 
-## Misc
+## Schema Design
+
+### Timestamps
 
 Always add created_at, updated_at, deleted_at columns.

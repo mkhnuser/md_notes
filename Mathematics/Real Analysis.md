@@ -3,6 +3,9 @@
 ## Overview
 
 Here I note my observations on Real Analysis based on Terence Tao's "Analysis" book, 4th edition.
+Errata on the book can be found here:
+
+https://teorth.github.io/tao-web/analysis-i.html
 
 ## Starting at the Beginning: the Natural Numbers
 
@@ -86,7 +89,26 @@ Rational numbers are fine for algebra.
 However, real numbers are needed for geometry and trigonometry.
 Further, real numbers fill in the gaps of a rational number line.
 
+Observe: to prove the epsilon-delta propositions,
+Proposition 4.3.7 can sometimes be used.
+
 ### Cauchy Sequences
 
 By definition, a sequence is meant to be infinite.
 Proposition 5.1.11 assumes the existence of an object and then defines this object.
+
+### Equivalent Cauchy Sequences
+
+As Tao notes, if we are to define real numbers a limits of a sequence of rationals,
+we need to understand when two sequences of rationals are equivalent.
+
+Proposition 5.2.8 assumes the existence of an object and then defines this object.
+
+### The Construction of the Real Numbers
+
+Define a real number to be a limit of a Cauchy sequence of rational numbers.
+Then two reals are equal iff their Cauchy Sequences are equivalent.
+
+### Ordering the Reals
+
+Discussion of the Archimedean property is present.
