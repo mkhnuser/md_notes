@@ -2,4 +2,4 @@
 
 ## Overview
 
-Dev containers are especially important in LLM era.
+Dev containers are especially important in an LLM era.

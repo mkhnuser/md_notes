@@ -12,11 +12,6 @@ The shell examines the directories in this environment variable from left to rig
 To add a command to only one user, place it in `/home/username/bin`.
 To add a command globally, consider adding a command into `/usr/local/bin`.
 
-### How does one locate the command or a file?
-
-You can try using `plocate` command to locate the location of commands.
-`which` and bash-builtin `type` are also handy, but are more limited.
-
 ## Shell Variables
 
 To see shell variables: `set`, to see environment variables: `env`.
@@ -63,7 +58,7 @@ Use `man 8 mount` to obtain a man page on a mount system administration command.
 
 ## File Name Expansions
 
-One can use metacharacters to perform file expansions.
+One can use meta characters to perform file expansions.
 
 ## Output redirection
 

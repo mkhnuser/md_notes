@@ -50,3 +50,9 @@ PR system is usually found in ethnically divided regions.
 
 Interestingly enough,
 Canada and Venezuela have more proven oil reserves than Russia.
+
+## Designing Democracy
+
+### Homogeneous vs heterogeneous societies
+
+Democracy in western culture largely evolved from homogeneous societies.

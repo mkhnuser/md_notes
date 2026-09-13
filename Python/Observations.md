@@ -27,3 +27,7 @@ Sorting is always stable in Python.
 Python uses PowerSort algorithm which is based on TimSort.
 
 https://docs.python.org/3/howto/sorting.html#sortinghowto
+
+## tuples and list comparison
+
+    [4, 4, 4, 4] == (4, 4, 4, 4)  # False.

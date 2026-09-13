@@ -108,7 +108,15 @@ Proposition 5.2.8 assumes the existence of an object and then defines this objec
 
 Define a real number to be a limit of a Cauchy sequence of rational numbers.
 Then two reals are equal iff their Cauchy Sequences are equivalent.
+In this paragraph, the laws of algebra for reals are proved.
 
 ### Ordering the Reals
 
-Discussion of the Archimedean property is present.
+In this paragraph, the laws of order for reals are proved.
+Proposition 5.4.8 proves that if x > y > 0, then the inverse operation reverses the order.
+Corollary 5.4.10 proves a limit property.
+Corollary 5.4.13 proves Archimedean property.
+
+A solution to Exercise 5.4.3 is hard to justify.
+
+Overall, quite an important chapter on inequalities and limit properties.

@@ -70,7 +70,7 @@ One can use `umask` to change the default permissions.
 
 ACL stands for access control list.
 ACL allows one to fine-tune access to files or directories to a specific user or a specific group.
-ACL has to be enabled on the filesystem during mounting phase.
+ACL has to be enabled on a file system during mounting phase.
 
 ## Set user id, set group id, set sticky bit
 

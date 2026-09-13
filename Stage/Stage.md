@@ -92,6 +92,8 @@ https://gitlab.com/Lipovsky/concurrency-course - Yandex School of Data Analysis 
 https://youkn0wwho.academy/topic-list - CodeForces Problems List.
 https://usaco.guide/ - learn C++ and use this resource for competitive programming journey.
 
+Python, Bash, Go, JavaScript, TypeScript, C, C++, Rust.
+
 I.
 Algos 1.
 ML 1.
@@ -120,4 +122,4 @@ Computer Networks.
 500 - Патрон+;
 1500 - Благодетель;
 3000 - Меценат;
-10000 - Сэр.
+10000 - Сир.
