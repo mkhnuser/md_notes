@@ -19,6 +19,18 @@ This note contains observations and useful problems.
 
       https://neetcode.io/problems/valid-tree/question
 
+* BFS Level-Order Traversal:
+
+      When you do level-order traversal, make sure to preserve FIFO property.
+
+              d.append((w, d))
+
+              while d:
+                  for _ in range(len(d)):
+                      c_w, c_d = d.popleft()
+
+      It is incorrect to call `d.pop()`.
+
 * Prim's vs Kruskal's:
 
       The main advantage of Kruskal's over Prim's
@@ -35,13 +47,8 @@ This note contains observations and useful problems.
 
       https://neetcode.io/courses/dsa-for-beginners/25
 
-## Dynamic Programming
-
-* To optimize a bottom-up solution, consider the usage of only two rows at a time.
-
 ## Investigate further:
 
-* Floyd's Tortoise and Hoare Algorithm;
 * Morris Traversal:
 
       https://neetcode.io/problems/kth-smallest-integer-in-bst/solution
@@ -61,15 +68,6 @@ This note contains observations and useful problems.
 
       https://neetcode.io/problems/binary-tree-postorder-traversal/solution
       https://neetcode.io/problems/delete-leaves-with-a-given-value/question
-
-* Investigate RMQ and LCA problems.
-* Prefix Sums:
-
-      https://neetcode.io/problems/range-sum-query-2d-immutable/question
-
-* Iterative backtracking:
-
-      Investigate how iteration can be used to solve backtracking problems.
 
 * Frequency count:
 

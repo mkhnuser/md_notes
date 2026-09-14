@@ -117,6 +117,14 @@ Proposition 5.4.8 proves that if x > y > 0, then the inverse operation reverses 
 Corollary 5.4.10 proves a limit property.
 Corollary 5.4.13 proves Archimedean property.
 
-A solution to Exercise 5.4.3 is hard to justify.
-
 Overall, quite an important chapter on inequalities and limit properties.
+
+### The Least Upper Bound Property
+
+One of the main advantages of the real numbers is that
+every non-empty upper-bounded subset of reals will have the least upper bound.
+
+Page 100, an aside note, is plus infinity a number in extended R?
+See Remark 5.5.11 on this as well.
+
+Hence, the continuous number line has been constructed.

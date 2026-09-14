@@ -1,9 +1,5 @@
 # Dynamic Programming
 
-## Iterative Bottom-Up DP optimization
-
-You can optimize a bottom-up DP by only using a constant number of rows of a DP matrix.
-
 ## Problem decomposition
 
 Consider breaking down the original problem into subproblems by:
@@ -16,6 +12,11 @@ Consider breaking down the original problem into subproblems by:
 For example, given two strings `s1` and `s2`,
 `dp[i][j]` may represent a metric on the prefixes `s1[:i]` and `s2[:j]`.
 Alternatively, it may represent a metric on suffixes `s1[i:]` and `s2[j:]`.
+
+## Iterative Bottom-Up DP optimization
+
+You can optimize a bottom-up DP by only using a constant number of rows of a DP matrix.
+For example, one can use only two rows instead of the whole DP matrix.
 
 # Greedy
 

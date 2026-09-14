@@ -46,7 +46,23 @@ Suppose you chose `S`, and so now two cases are possible:
 1. `S` is `D`'s immediate right child.
 2. `S` is somewhere in the `D`'s right subtree.
 
-## Tries
+## Tries (Prefix Tree)
+
+### Operations
+
+A prefix tree allows one to:
+
+1. See whether a given word is present in a trie;
+2. See whether a given prefix is present in a trie.
+3. Insert a new word.
+
+All the operations listed above are achieved in constant time.
+
+### Applications
+
+A trie allows one to efficiently build an autocomplete system or a spellchecking system.
+
+## Segment Trees
 
 # TODO: Learn.
 
@@ -55,6 +71,10 @@ Suppose you chose `S`, and so now two cases are possible:
 # TODO: Learn.
 
 ## Red-Black Trees
+
+# TODO: Learn.
+
+## B-Trees
 
 # TODO: Learn.
 
