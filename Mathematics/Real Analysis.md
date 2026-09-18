@@ -110,6 +110,11 @@ Define a real number to be a limit of a Cauchy sequence of rational numbers.
 Then two reals are equal iff their Cauchy Sequences are equivalent.
 In this paragraph, the laws of algebra for reals are proved.
 
+In this sense, every real number is an equivalence class.
+
+    https://math.stackexchange.com/questions/4887565/proposition-5-4-9-analysis-i-terence-tao?rq=1
+    https://math.stackexchange.com/questions/2825726/confusion-about-taos-construction-of-reals?rq=1
+
 ### Ordering the Reals
 
 In this paragraph, the laws of order for reals are proved.
@@ -126,5 +131,7 @@ every non-empty upper-bounded subset of reals will have the least upper bound.
 
 Page 100, an aside note, is plus infinity a number in extended R?
 See Remark 5.5.11 on this as well.
+
+Exercise 5.5.4 shows a proper Corollary 5.4.10 usage.
 
 Hence, the continuous number line has been constructed.

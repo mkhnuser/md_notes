@@ -1,12 +1,12 @@
 # Dynamic Programming
 
-## Problem decomposition
+## Problem decomposition into a DP matrix
 
 Consider breaking down the original problem into subproblems by:
 
 * prefixes - X\[:i\];
 * suffixes - X\[i:\];
-* substrings - X\[i:j\].
+* substrings and subarrays - X\[i:j\].
 * submatrices.
 
 For example, given two strings `s1` and `s2`,

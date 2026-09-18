@@ -6,11 +6,11 @@ Below is the blob of important but random notes.
 
 ## Blob
 
-To learn differential geometry, first read "Introduction to Manifolds" and then "Differential Geometry".
+To learn differential geometry,
+first read "Introduction to Manifolds" and then "Differential Geometry".
 For Chemistry, read "Chemistry The Central Science".
-Principles of neuroscience.
+"Principles of neuroscience".
 
-Learn Domain-Driven Design.
 Read SICP while you are doing JS.
 
 Latency: Reduce delay in software systems by Pekka Enberg (Author).
@@ -91,8 +91,6 @@ https://gitlab.com/Lipovsky/concurrency-course - Yandex School of Data Analysis 
 
 https://youkn0wwho.academy/topic-list - CodeForces Problems List.
 https://usaco.guide/ - learn C++ and use this resource for competitive programming journey.
-
-Python, Bash, Go, JavaScript, TypeScript, C, C++, Rust.
 
 I.
 Algos 1.

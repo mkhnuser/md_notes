@@ -19,18 +19,6 @@ This note contains observations and useful problems.
 
       https://neetcode.io/problems/valid-tree/question
 
-* BFS Level-Order Traversal:
-
-      When you do level-order traversal, make sure to preserve FIFO property.
-
-              d.append((w, d))
-
-              while d:
-                  for _ in range(len(d)):
-                      c_w, c_d = d.popleft()
-
-      It is incorrect to call `d.pop()`.
-
 * Prim's vs Kruskal's:
 
       The main advantage of Kruskal's over Prim's
@@ -72,3 +60,7 @@ This note contains observations and useful problems.
 * Frequency count:
 
       https://neetcode.io/problems/reorganize-string/question
+
+* DSU + the Sieve + prime numbers:
+
+      https://neetcode.io/problems/greatest-common-divisor-traversal/
