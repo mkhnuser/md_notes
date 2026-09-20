@@ -3,21 +3,22 @@
 ## Overview
 
 Here I note my observations on Real Analysis based on Terence Tao's "Analysis" book, 4th edition.
-Errata on the book can be found here:
-
 https://teorth.github.io/tao-web/analysis-i.html
+
+## Progress
+
+* The book has been started on Aug 18, 2026.
+* The first five chapters, which construct the number line, have been finished on Sep 20, 2026.
 
 ## Starting at the Beginning: the Natural Numbers
 
 ### Addition
 
-The Five Peano Axioms allow one to define a set of natural numbers.
+The Five Peano Axioms give rise to a set of natural numbers.
 
 ### Multiplication
 
-Just as an increment operation gives rise to the addition,
-addition gives rise to multiplication,
-and finally multiplication gives rise to exponentiation.
+Incrementation -> Addition -> Multiplication -> Exponentiation.
 
 ## Set Theory
 
@@ -96,11 +97,9 @@ Proposition 4.3.7 can sometimes be used.
 
 By definition, a sequence is meant to be infinite.
 Proposition 5.1.11 assumes the existence of an object and then defines this object.
+Lemma 5.1.15 asserts that every Cauchy Sequence is bounded.
 
 ### Equivalent Cauchy Sequences
-
-As Tao notes, if we are to define real numbers a limits of a sequence of rationals,
-we need to understand when two sequences of rationals are equivalent.
 
 Proposition 5.2.8 assumes the existence of an object and then defines this object.
 
@@ -115,23 +114,42 @@ In this sense, every real number is an equivalence class.
     https://math.stackexchange.com/questions/4887565/proposition-5-4-9-analysis-i-terence-tao?rq=1
     https://math.stackexchange.com/questions/2825726/confusion-about-taos-construction-of-reals?rq=1
 
+Exercise 5.3.5 shows that a limit of n approaching infinity of 1 over n equals zero.
+
 ### Ordering the Reals
 
-In this paragraph, the laws of order for reals are proved.
 Proposition 5.4.8 proves that if x > y > 0, then the inverse operation reverses the order.
-Corollary 5.4.10 proves a limit property.
+
+Proposition 5.4.9 says that if a Cauchy Sequence is entirely non-negative,
+then its limit is a non-negative real number.
+
+Corollary 5.4.10 proves a limit property:
+if terms of one Cauchy Sequence greater than or equal to the terms of the other,
+then the limit of the first is greater than or equal to the limit of the other.
+
+Proposition 5.4.12 proves that given a positive real x,
+there will be a rational q < x and there will be a positive integer N > x.
+
 Corollary 5.4.13 proves Archimedean property.
 
-Overall, quite an important chapter on inequalities and limit properties.
+Proposition 5.4.14 proves that given any two reals, there is a rational between them.
+
+Now we can use the usual order on reals.
 
 ### The Least Upper Bound Property
 
-One of the main advantages of the real numbers is that
-every non-empty upper-bounded subset of reals will have the least upper bound.
-
-Page 100, an aside note, is plus infinity a number in extended R?
-See Remark 5.5.11 on this as well.
+One of the main advantages of the real numbers is the presence of the supremum.
+Every non-empty upper-bounded subset of reals will have the l.u.b.
 
 Exercise 5.5.4 shows a proper Corollary 5.4.10 usage.
+Exercise 5.5.5 extends Proposition 5.4.14
+by saying that given any two reals, there is a real between them.
 
-Hence, the continuous number line has been constructed.
+### Real Exponentiation
+
+Definition 5.6.4 defines an nth root of a non-negative real x.
+Observe: Tao explicitly notes that nth roots are defined for a non-negative arguments in his text.
+
+Lemma 5.6.6 and Lemma 5.6.9 present a number of important inequalities.
+
+Now we can assume usual laws of algebra, order, and exponentiation for reals.
