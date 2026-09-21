@@ -21,11 +21,7 @@ Here are examples of supranational organizations:
 
 ### Checks and Balances
 
-Within an ideal state, the power is separated among:
-
-1. Legislative branch.
-2. Executive branch.
-3. Judiciary branch.
+...
 
 ### The UK and the USA
 
@@ -56,3 +52,11 @@ Canada and Venezuela have more proven oil reserves than Russia.
 ### Homogeneous vs heterogeneous societies
 
 Democracy in western culture largely evolved from homogeneous societies.
+
+## Evolution of the Nation-State
+
+...
+
+## Navigating Globalization
+
+...

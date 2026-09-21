@@ -7,8 +7,9 @@ https://teorth.github.io/tao-web/analysis-i.html
 
 ## Progress
 
-* The book has been started on Aug 18, 2026.
+* The book has been started on Aug 17, 2026.
 * The first five chapters, which construct the number line, have been finished on Sep 20, 2026.
+* The "Limits and Sequences" chapter has been started on Sep 21, 2026.
 
 ## Starting at the Beginning: the Natural Numbers
 
@@ -151,5 +152,16 @@ Definition 5.6.4 defines an nth root of a non-negative real x.
 Observe: Tao explicitly notes that nth roots are defined for a non-negative arguments in his text.
 
 Lemma 5.6.6 and Lemma 5.6.9 present a number of important inequalities.
+Exercise 5.6.1, which proves Lemma 5.6.6, is challenging.
 
 Now we can assume usual laws of algebra, order, and exponentiation for reals.
+
+## Limits of Sequences
+
+### Convergence and Limit Laws
+
+Proposition 6.1.12 and Theorem 6.4.18 say that
+a sequence is convergent iff it's a Cauchy sequence of reals.
+
+Corollary 6.1.17, which relies on Lemma 5.1.15 and Proposition 6.1.12,
+cleverly notes that every convergent sequence is bounded.
