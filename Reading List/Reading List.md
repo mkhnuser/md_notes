@@ -55,3 +55,9 @@ The most dangerous books are not on public lists.
 * A History of Philosophy: The Condensed Copleston by Anthony Carroll, Frederick Copleston;
 * Metaphysics: A Guide and Anthology by Tim Crane, Katalin Farkas;
 * The Theory of Knowledge: Classic and Contemporary Readings by Louis P. Pojman.
+
+## Monetary Theory
+
+* Denationalization of Money;
+* Free Banking in Britain: theory, experience, and debate;
+* The Theory of Monetary Institutions.

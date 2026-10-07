@@ -19,10 +19,6 @@ Here are examples of supranational organizations:
 
 ## Comparative Political Institutions
 
-### Checks and Balances
-
-...
-
 ### The UK and the USA
 
 In the UK, the legislature (the majority) party chooses a Prime Minister.
@@ -38,10 +34,6 @@ Majoritarian system says that a party wins by a majority vote.
 
 PR system is usually found in ethnically divided regions.
 
-## Electoral Studies
-
-...
-
 ## Politics and Conflict
 
 Interestingly enough,
@@ -52,11 +44,3 @@ Canada and Venezuela have more proven oil reserves than Russia.
 ### Homogeneous vs heterogeneous societies
 
 Democracy in western culture largely evolved from homogeneous societies.
-
-## Evolution of the Nation-State
-
-...
-
-## Navigating Globalization
-
-...

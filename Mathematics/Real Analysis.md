@@ -163,5 +163,8 @@ Now we can assume usual laws of algebra, order, and exponentiation for reals.
 Proposition 6.1.12 and Theorem 6.4.18 say that
 a sequence is convergent iff it's a Cauchy sequence of reals.
 
-Corollary 6.1.17, which relies on Lemma 5.1.15 and Proposition 6.1.12,
+Corollary 6.1.17,
+which relies on Lemma 5.1.15 and Proposition 6.1.12,
 cleverly notes that every convergent sequence is bounded.
+
+Contrapositives of Proposition 6.1.12 and Corollary 6.1.17 are especially useful.

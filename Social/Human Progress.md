@@ -28,19 +28,3 @@ Generally, the humanity improves in all areas except for terror, conflicts, and 
 ## Progressophobia
 
 Be aware of the negativity bias: you notice mostly bad news.
-
-## Theories of Progress
-
-...
-
-## Progress through Innovation
-
-...
-
-## Competition & Modern Prosperity
-
-...
-
-## Critique & Future of Progress
-
-...

@@ -126,7 +126,3 @@ People perceive national symbols differently.
 
 In the case of a national flag, different groups might use it to achieve different objectives;
 the meaning behind the usage of a Canadian flag during Canadian farmers protest is quite different from the meaning behind the usage of this flag by the Canadian government.
-
-## Nationalism and Populism
-
-...

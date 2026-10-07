@@ -1,14 +1,5 @@
 # Philosophy of Ethics
 
-## Eternal questions
-
-* Where do we get our ethics from?
-* How do we get to defining ethics?
-* Does an ethical system recognize individuals or it's a collectivist one?
-* Are moral norms universal or relative?
-* What's good and what's bad?
-* Why should one strive to be good?
-
 ## Locke and Rousseau
 
 King James I argues that a king a little God which rules the other men.
