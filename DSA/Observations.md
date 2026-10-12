@@ -2,7 +2,7 @@
 
 ## Overview
 
-This note contains observations and useful problems.
+Here I note important observations on a DSA topic.
 
 ## Binary Trees
 
@@ -22,10 +22,10 @@ This note contains observations and useful problems.
 * Prim's vs Kruskal's:
 
       The main advantage of Kruskal's over Prim's
-      is that one can control inclusion / exclusion of edges:
+      is that one can control inclusion / exclusion of edges in an MST:
 
-      * Introduce an edge into a minimum spanning tree (force an edge to be present);
-      * Exclude an edge from a minimum spanning tree.
+      * Force an edge to be present.
+      * Ensure an edge to be not present.
 
       https://neetcode.io/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/question.
 
@@ -61,6 +61,14 @@ This note contains observations and useful problems.
 
       https://neetcode.io/problems/reorganize-string/question
 
-* DSU + the Sieve + prime numbers:
+* DSU + the Sieve + Prime Numbers:
 
       https://neetcode.io/problems/greatest-common-divisor-traversal/
+
+* Kadane's Algorithm:
+
+      https://neetcode.io/problems/maximum-product-subarray/
+
+* Stone Game Problems are hard:
+
+      https://neetcode.io/problems/stone-game/question

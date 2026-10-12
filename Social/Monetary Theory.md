@@ -11,11 +11,3 @@ and one can debase coins, or use legal compulsion to use these coins.
 ### Private Mints
 
 Bechtler Mint operated from 1830s through 1850s and produced high-quality coins.
-
-## The Gold Standard
-
-...
-
-## Free Banking
-
-...

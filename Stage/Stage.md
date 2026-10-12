@@ -121,3 +121,16 @@ Computer Networks.
 1500 - Благодетель;
 3000 - Меценат;
 10000 - Сир.
+
+A Day Plan:
+
+* Math;
+* One algorithms problem;
+* Postgres;
+* master.dev.
+
+FrontendMasters Plan:
+
+* Intro;
+* CSS on master.dev + CSS on Udemy;
+* JS + JS on Udemy;
