@@ -122,14 +122,19 @@ Computer Networks.
 3000 - Меценат;
 10000 - Сир.
 
+---
+
 A Day Plan:
 
 * Math;
-* One algorithms problem;
-* Postgres;
+* At least one algorithms problem:
+
+      NeetCode top 250 review, then TypeScript on LeetCode.
+
+* Postgres course;
 * master.dev.
 
-FrontendMasters Plan:
+master.dev Plan:
 
 * Intro;
 * CSS on master.dev + CSS on Udemy;

@@ -1,25 +1,8 @@
 # Logging in Python
 
-## Logging Library Entities
-
-* Logger:
-
-      First a logger filters a message based on its level.
-
-* Handler:
-
-      Then handler filters a message based on its level as well.
-
-* Formatter:
-
-      Each handler might have its own formatter
-      which is applied before a message is sent to the handler's destination.
-
-* Filter:
-
-      Filter filters a message or enriches a message with new fields.
-
 ## Message Flow
+
+A rough message flow is as follows:
 
 1. Logger's severity level is checked.
 2. Logger's attached filters are checked.
@@ -27,6 +10,8 @@
 4. Logger's handlers' filters are checked.
 5. Handler's formatter formats a message.
 6. A message is emitted to a destination.
+
+Obviously, there might be multiple handlers, for one logger.
 
 ## Message Propagation
 
