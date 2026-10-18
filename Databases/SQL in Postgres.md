@@ -1,12 +1,22 @@
-# SQL
+# SQL in Postgres
+
+## Overview
+
+Here I note SQL standard that's used in Postgres.
 
 ## Primary Keys
 
 ### Overview
 
 PK = NOT NULL + UNIQUE CONSTRAINT.
-
 Recall that a PK can be natural and surrogate.
+When a primary key is created, an index is created as well.
+
+An example of ID:
+
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY
+
+`GENERATED ALWAYS AS IDENTITY` prohibits a manual ID insertion.
 
 ### UUID as a primary key
 
@@ -38,6 +48,11 @@ You usually consider the usage of 1NF, 2NF, 3NF.
 
 ## Foreign References
 
+### NOT NULL has to be explicit
+
+Foreign key does not prohibit a NULL to be present.
+If you want to enforce referencing to an external column, use `NOT NULL` constraint.
+
 ### One-to-one references
 
 You can implement one-to-one relation using REFERENCES with UNIQUE constraint.
@@ -48,6 +63,22 @@ A foreign key must reference a primary key or a unique column.
 
 ## Schema Design
 
-### Timestamps
+### Markers
 
 Always add created_at, updated_at, deleted_at columns.
+
+### Money
+
+To store money, use cents with `BIGINT` type.
+Alternatively, `NUMERIC` type can be used.
+
+### CHECK CONSTRAINT
+
+`CHECK amount >= 0` does not prevent `amount` from being set to `NULL`.
+Use `NOT NULL` additionally.
+
+### TIMESTAMPTZ
+
+TIMESTAMPTZ will always be stored in UTC time zone.
+
+https://www.datacamp.com/doc/postgresql/timestamptz

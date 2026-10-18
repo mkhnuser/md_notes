@@ -106,7 +106,7 @@ Concurrency.
 
 III.
 NLP.
-CV.
+Foundational LLM Knowledge.
 Bayesian Methods in ML.
 Distributed Systems.
 

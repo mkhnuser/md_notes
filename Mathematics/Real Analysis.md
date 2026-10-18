@@ -139,7 +139,7 @@ Now we can use the usual order on reals.
 
 ### The Least Upper Bound Property
 
-One of the main advantages of the real numbers is the presence of the supremum.
+One of the main advantages of the real numbers is the presence of the supremum, a.k.a l.u.b.
 Every non-empty upper-bounded subset of reals will have the l.u.b.
 
 Exercise 5.5.4 shows a proper Corollary 5.4.10 usage.
@@ -168,3 +168,22 @@ which relies on Lemma 5.1.15 and Proposition 6.1.12,
 cleverly notes that every convergent sequence is bounded.
 
 Contrapositives of Proposition 6.1.12 and Corollary 6.1.17 are especially useful.
+
+Exercise 6.1.8, which proves the limit properties, is challenging.
+
+## The Extended Number System
+
+Supremum and infimum are further discussed and enriched with plus and minus infinities.
+The separation between a finite and an infinite number is introduced.
+
+## Suprema and Infima of Sequences
+
+Discussion just above Proposition 6.3.8 !disproves!
+that every bound sequence is convergent.
+
+Proposition 6.3.8 proves that every monotone bounded sequence converges.
+Note that a bound has to be finite, that is not plus or minus infinity.
+
+Discussion just below Proposition 6.3.8 proves
+that a monotone sequence converges iff it's bounded,
+with reliance on Proposition 6.3.8 and Corollary 6.1.17.
