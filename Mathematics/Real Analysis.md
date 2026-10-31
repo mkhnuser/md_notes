@@ -187,3 +187,7 @@ Note that a bound has to be finite, that is not plus or minus infinity.
 Discussion just below Proposition 6.3.8 proves
 that a monotone sequence converges iff it's bounded,
 with reliance on Proposition 6.3.8 and Corollary 6.1.17.
+
+## Limsup, Liminf, and Limit Points
+
+...

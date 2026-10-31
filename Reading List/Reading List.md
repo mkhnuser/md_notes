@@ -61,3 +61,9 @@ The most dangerous books are not on public lists.
 * Denationalization of Money;
 * Free Banking in Britain: theory, experience, and debate;
 * The Theory of Monetary Institutions.
+
+## The Intellectual Origins of the American Revolution
+
+* America's Revolutionary Mind by Thomson;
+* The Creation of the American Republic by Wood.
+* The Ideological Origins of the American Revolution by Bailyn.

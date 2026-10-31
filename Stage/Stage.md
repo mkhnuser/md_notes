@@ -118,9 +118,8 @@ Computer Networks.
 
 250 - Патрон;
 500 - Патрон+;
-1500 - Благодетель;
-3000 - Меценат;
-10000 - Сир.
+1000 - Благодетель;
+2000 - Сир.
 
 ---
 
@@ -131,7 +130,6 @@ A Day Plan:
 
       NeetCode top 250 review, then TypeScript on LeetCode.
 
-* Postgres course;
 * master.dev.
 
 master.dev Plan:
