@@ -26,7 +26,7 @@ whereas others will say that a law is unjust because it violates fundamental pri
 
 ## The Rise of Revolution
 
-...
+American Colonies were not able to elect a politician for a British Parliament.
 
 ## Tea and Coercion
 

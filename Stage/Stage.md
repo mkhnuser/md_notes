@@ -106,15 +106,18 @@ Concurrency.
 
 III.
 NLP.
-Foundational LLM Knowledge.
+CV.
 Bayesian Methods in ML.
 Distributed Systems.
 
 IV.
 RL.
 Deep Learning.
-A/B Testing.
+Foundational LLM Knowledge.
 Computer Networks.
+
+Михеенко >> Об IT
+Михеенко >> Широкие Очерки
 
 250 - Патрон;
 500 - Патрон+;

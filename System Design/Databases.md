@@ -2,17 +2,21 @@
 
 ## DB types and their usage
 
-### Wide-column
+### Relational
 
-Wide-column databases allow quick access on a per column basis.
-This contrasts with a relational database, which operates on a per row basis.
-
-So, wide-column databases load particular columns from a hard drive,
-whereas relational ones load rows from a hard drive.
+Relational databases load the whole rows from a hard drive.
 
 Use cases:
 
-* Analytics - aggregate queries over a column;
+* OLTP traffic.
+
+### Column-based
+
+Column-based databases load particular columns from a hard drive.
+
+Use cases:
+
+* OLAP traffic;
 * Sparse data.
 
 Concrete examples:
@@ -31,11 +35,9 @@ Use cases:
 ### Document-oriented
 
 The primary advantage of document-oriented databases is that they are schemaless.
-
-The second advantage is that they allow data locality:
-you store everything you need in one document,
-so you don't have to perform JOINs across multiple documents to fetch data,
-which is critical for read-heavy applications.
+Another advantage is data locality:
+you store everything you need in just one document,
+which is critical for read-heavy applications because no joins are needed.
 
 Use cases:
 
@@ -66,7 +68,7 @@ Concrete examples:
 
 * Amazon S3.
 
-### OLAP, OLTP, HTAP traffic
+## OLAP, OLTP, HTAP traffic
 
 * OLAP = Online Analytical Processing.
 * OLTP = Online Transactional Processing.
@@ -76,24 +78,29 @@ Usually, there is a lot of OLTP requests, but few OLAP requests.
 However, OLAP requests generate a lot of load, whereas OLTP don't.
 Because of this, it makes sense to use separate databases based on these types of requests.
 
+## Tools and Databases
+
+Ensure that version of tools are compatible with version of databases.
+For example, `pg_dump` version 9.2 won't work with Postgres 9.6.
+
 ## Database Backups
 
-Consider using database backups.
-You should have two or three backup files, ideally.
-Understand: it takes some time to spin up a new database instance with backups applied.
+Consider the usage of many backup files during various time spans.
 
 ## Database Replication
 
-The main difference between replication and backups is that
-replication is an ongoing process, whereas backups are stored cold.
+### Overview
+
+Understand: replication does not scale writes, it scales reads.
+
+The difference between replication and backups
+is that replication is an ongoing process, whereas backups are stored cold.
 
 If a malicious actor decides to delete data,
-replication is going to reflect these change across all replicas.
-However, backups will be intact.
-That's the reason why ideally you should have replication and backups.
+replication will replicate these changes across all replicas.
+However, backups will be intact if a malicious action has been performed.
 
-Replication does not allow you to scale writing to a database,
-only reading throughput increases.
+That's the reason why ideally you should have both replication and backups.
 
 ### Replication Types
 
@@ -104,8 +111,7 @@ only reading throughput increases.
 
 * Leader / Leader:
 
-      Depending on a geolocation, for example,
-      requests may be routed to a different leader.
+      A leader is chosen based on user's location, for example.
 
       Be aware: write conflicts might happen.
       https://programmingappliedai.substack.com/p/how-do-we-resolve-write-conflicts
@@ -114,21 +120,15 @@ only reading throughput increases.
 
 ### How do you synchronize data between replicas?
 
-* Synchronous replication;
+* Synchronous replication: consistency over low latency.
 
-      Strong consistency - high latency.
+      If at least one follower fails, all writes to a leader are blocked.
 
-* Asynchronous replication;
+* Asynchronous replication: low latency over consistency.
 
-      Eventual consistency - low latency.
+      If data has not been replicated and a leader fails, the data is lost.
 
-* Semisync.
-
-A database cluster might have both sync and async replicas.
-
-### Failover
-
-When a leader node dies, a failover process has to happen: a new leader has to be chosen.
+* Semisync: some replicas are synchronous, and some are not.
 
 ### Hot standby replicas vs Warm standby replicas
 
@@ -137,7 +137,7 @@ Warm standby: followers don't accept read requests, they are merely receiving th
 
 ### Logical Replication vs Physical Replication
 
-Physical replication copies the whole files, whereas logical one copies records.
+Physical replication copies data files, whereas logical one copies records.
 
 Logical replication is represented by:
 
@@ -145,7 +145,19 @@ Logical replication is represented by:
 * Row Based Replication (RBR).
 * Mixed.
 
+### Failover
+
+When a leader, a failover process has to happen:
+
+* A new leader has to be chosen.
+* Clients have to perform writes to the new leader.
+* Followers have to start accept replication stream from the new leader.
+
+Be sure to examine your caching strategy in case of failover: should cache be invalidated?
+
 ## Data Partitioning
+
+### Overview
 
 Partitioning allows you to partition (to split) a table into multiple ones.
 Partitioning happens on precisely one machine.
@@ -174,9 +186,8 @@ For example, we can use sharding to partition a database as follows:
 * All users data is on machine number one;
 * All products data is on machine number two.
 
-So, each shard has its own portion of data,
-whereas each replica contains its own copy of data.
-Even further, each shard can contains its own replicas.
+Each database shard can be replicated.
+In a leader / follower case, each shard will be a leader.
 
 ### How do you choose a sharding key?
 
@@ -213,7 +224,8 @@ For example, it can be used if new buckets are to be added to the hash table:
 
 ## CAP Theorem
 
-Partition tolerant distributed data store can provide at most one of the following guarantees:
+In case of a network partition,
+partition-tolerant distributed data store can provide precisely one guarantee:
 
 1. Consistency:
 
@@ -225,22 +237,22 @@ Partition tolerant distributed data store can provide at most one of the followi
 
         Every request received by a non-failing node must produce a response.
 
-When a network partition failure happens, you have to choose between the two options:
+When a network partition happens, you have to choose between the two options:
 
-1. Abort the operation and therefore reduce availability in favor of consistency.
-2. Proceed with the operation and provide availability possibly introducing inconsistency.
+1. Abort the operation: consistency over availability.
+2. Proceed with the operation: availability over consistency.
 
-Understand: in the absence of network partitioning, both aspects can be satisfied;
+If a network partition is not present, both consistency and availability can be achieved;
 consider an application which runs on precisely one host.
 
-Modern technologies allow you to reduce network partitions to a minimum.
-That's why it is important to consider PACELC theorem.
+Nowadays network partition are reduced to a minimum;
+that's why it is important to consider PACELC theorem.
 
 ## PACELC theorem
 
 PACELC theorem expands the CAP theorem:
 
-      If partition happens, you choose between consistency and availability.
+      If partition happens, choose between consistency and availability.
       Else, you choose between latency and consistency.
 
 ## BASE acronym

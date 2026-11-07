@@ -53,5 +53,5 @@ A flow for a cookie-based authentication:
 JWT allow you to make your server stateless:
 you don't need to store anything, you just issue a token and verify it upon each request.
 
-Cookie-based sessions can only exist within a browser.
+Understand: cookie-based sessions can only exist within a browser.
 Therefore, JWT is more versatile.

@@ -67,3 +67,15 @@ The most dangerous books are not on public lists.
 * America's Revolutionary Mind by Thomson;
 * The Creation of the American Republic by Wood.
 * The Ideological Origins of the American Revolution by Bailyn.
+
+## Modern European History
+
+* The Pursuit of Glory;
+* The Pursuit of Power;
+* To Hell and Back.
+
+## Deconstructing decolonization
+
+* Against Decolonization by Stokes;
+* Empire. How Britain made the world modern by Ferguson.
+* The War against the Past by Furedi.
