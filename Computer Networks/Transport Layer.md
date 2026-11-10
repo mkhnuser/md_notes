@@ -4,11 +4,8 @@
 
 ### Overview
 
-The TCP ensures:
+Although, UDP is faster, the TCP ensures:
 
-1. Reliability of transmission;
+1. Reliability of segment transmission;
 2. Bitrate negotiation with a receiver through a `Window size` option.
 3. In-order transmission of data segments.
-
-Whereas UDP is faster.
-

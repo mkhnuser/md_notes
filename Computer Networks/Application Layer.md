@@ -1,69 +1,75 @@
 # Application Layer
 
-## DHCP - Dynamic Host Configuration Protocol
+## HTTP 1.1
 
-### Overview
+### How do you transfer a body?
 
-A DHCP server assigns IP addresses to hosts.
-A DHCP server can as well provide a host with a DNS server or a default gateway.
+1. `Content-length` header is used when you send the whole HTTP body.
+2. `Transfer-Encoding: chunked` header is used when you send an HTTP body in chunks.
 
-### Protocol
+### Application Optimization
 
-1. A host sends a `DHCPDISCOVER` broadcast request.
-2. A DHCP server responds with a `DHCPOFFER` response which contains an available IP address.
-3. A host responds with `DHCPREQUEST` to claim the IP address.
-4. A DHCP server responds with `DHCPACK` to grant the IP address.
+Because of the way HTTP is constructed,
+your application might want to read HTTP headers and / or HTTP body asynchronously:
 
-## DNS - Domain Name System
+      GET /shop/products?category=shoes HTTP/1.1\r\n
+      Host: www.example.com\r\n
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)\r\n
+      Accept: application/json\r\n
+      Accept-Language: en-US,en;q=0.9\r\n\r\n
 
-### Overview
+### Same-value Headers
 
-Before DNS came into existence, users had to manually download `hosts` file,
-which is still present on most machines.
+Suppose you are given the following HTTP request:
 
-### Domain Hierarchy
+      GET /resource HTTP/1.1\r\n
+      Some-Header: one\r\n
+      Some-Header: two\r\n
+      Some-Header: three\r\n\r\n
 
-1. .com, .org, etc. - are all examples of top level domains.
-2. company.com, example.com - are all examples of second level domains.
-3. blog.company.com, wiki.example.com - are all examples of subdomains.
-4. www.blog.company.com - www is an example of a host.
+Then, according to HTTP RFC, after the headers parsing, you should concatenate these values:
 
-### DNS records types
+      Some-Header: one, two, three
 
-There are multiple types of DNS records:
+### Chunked Encoding
 
-* A record = represents an IPv4 address of a host.
-* AAAA record = represents IPv6 address of a host.
-* NS record = represents a name server which is responsible for a given domain name.
-* etc.
+Suppose a large blob of data has to be sent.
+Or, suppose a file of an unknown size has to be sent.
+`Transfer-Encoding: chunked` header is used when you send an HTTP body in chunks.
+Each chunk is sent using the underlying TCP connection.
 
-### Example of a DNS lookup
+Note: chunked encoding is not supported in other HTTP versions.
 
+### Trailer Headers
 
-    user:~$ dig google.com
+Trailer headers are headers which can be found in an HTTP response, after an HTTP body.
 
-    ; <<>> DiG 9.18.39-0ubuntu0.22.04.5-Ubuntu <<>> google.com
-    ;; global options: +cmd
-    ;; Got answer:
-    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11346
-    ;; flags: qr rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 0, ADDITIONAL: 1
+Note: browsers generally ignore them and prohibit access to them,
+though they are defined in HTTP RFCs.
 
-    ;; OPT PSEUDOSECTION:
-    ; EDNS: version: 0, flags:; udp: 65494
-    ;; QUESTION SECTION:
-    ;google.com.                    IN      A
+### Custom Headers
 
-    ;; ANSWER SECTION:
-    google.com.             79      IN      A       64.233.161.100
-    google.com.             79      IN      A       64.233.161.102
-    google.com.             79      IN      A       64.233.161.101
-    google.com.             79      IN      A       64.233.161.113
-    google.com.             79      IN      A       64.233.161.139
-    google.com.             79      IN      A       64.233.161.138
+One should prefix custom headers with an `X`:
 
-    ;; Query time: 4 msec
-    ;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
-    ;; WHEN: Mon Aug 31 14:50:13 UTC 2026
-    ;; MSG SIZE  rcvd: 135
+      X-Content-MD5-Checksum: ...
+      X-Response-Generation-Duration: ...
 
-    user:~$
+### MIME types
+
+MIME types instruct a client how to interpret a data that's being sent:
+
+      Content-Type: application/json
+      Content-Type: plain/text
+      Content-Type: image/png
+      Content-Type: video/mp4
+
+### File Download
+
+So, to implement a file download from a server, you should rely on:
+
+1. `Content-length` for small files or Chunked Encoding for file streaming.
+2. Appropriate MIME type.
+
+          For example, for video file you would specify:
+
+          Content-Type: video/mp4

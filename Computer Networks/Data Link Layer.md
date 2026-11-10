@@ -1,28 +1,11 @@
 # Data Link Layer
 
-## Devices
-
-### Switches
-
-#### Overview
-
-Switches operate on a Data Link Layer.
-
-#### Properties
+## Switches
 
 Switches maintain a CAM table to associate a given switch port with a MAC address.
 That said, switches operate on data frames.
 
-#### Objectives
-
-Switches allow one to:
-
-1. Physically connect devices within a LAN.
-2. Efficiently route frames within a LAN.
-
-## Addressing
-
-### MAC address - Media Access Control
+## MAC address - Media Access Control
 
 MAC address uniquely identifies a device in a network.
 

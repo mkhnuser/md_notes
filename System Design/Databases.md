@@ -112,9 +112,10 @@ That's the reason why ideally you should have both replication and backups.
 * Leader / Leader:
 
       A leader is chosen based on user's location, for example.
+      Leaders are usually distributed across multiple regions.
 
-      Be aware: write conflicts might happen.
-      https://programmingappliedai.substack.com/p/how-do-we-resolve-write-conflicts
+      When a leader receives a write, it replicates it to all other leaders.
+      Ensure you handle write conflicts: manually or automatically.
 
 * Leaderless.
 
@@ -122,7 +123,7 @@ That's the reason why ideally you should have both replication and backups.
 
 * Synchronous replication: consistency over low latency.
 
-      If at least one follower fails, all writes to a leader are blocked.
+      If at least one follower fails, all writes within a leader are blocked.
 
 * Asynchronous replication: low latency over consistency.
 
@@ -137,13 +138,18 @@ Warm standby: followers don't accept read requests, they are merely receiving th
 
 ### Logical Replication vs Physical Replication
 
-Physical replication copies data files, whereas logical one copies records.
+Physical replication copies underlying data files.
+In case of Postgres, WAL records are replicated.
 
 Logical replication is represented by:
 
 * Statement Based Replication (SBR);
+
+      The whole SQL statements are replicated.
+
 * Row Based Replication (RBR).
-* Mixed.
+
+      Given a row, a log of changes to the row are replicated.
 
 ### Failover
 
@@ -154,6 +160,14 @@ When a leader, a failover process has to happen:
 * Followers have to start accept replication stream from the new leader.
 
 Be sure to examine your caching strategy in case of failover: should cache be invalidated?
+
+### Problems with Replication Lag
+
+If asynchronous replication is used, replication lag can introduce anomalies:
+
+1. An inconsistent view of a read after a write.
+2. A move backward in time.
+3. An observer confusion.
 
 ## Data Partitioning
 
