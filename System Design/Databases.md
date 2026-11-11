@@ -166,6 +166,10 @@ Be sure to examine your caching strategy in case of failover: should cache be in
 If asynchronous replication is used, replication lag can introduce anomalies:
 
 1. An inconsistent view of a read after a write.
+
+        A user's request is processed by a replica
+        which is not yet synced with a leader node.
+
 2. A move backward in time.
 3. An observer confusion.
 

@@ -129,10 +129,12 @@ Computer Networks.
 An interview prep plan:
 
 * Linux Bible.
+* Review Postgres.
+
 * Review threading module.
 * Review pytest module.
 * Review flask module.
-* Review Postgres.
+
 * Review Redis.
 
 A Day Plan:

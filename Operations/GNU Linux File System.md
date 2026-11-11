@@ -29,8 +29,13 @@ Further, `plocate`'s database has to be up-to-date.
 
 ### Overview
 
+Inode stands for an index node.
 When you do `ls`, you see inode names.
 These, in turn, point to the actual files on a hard drive and contain file metadata.
+
+### Inodes and file systems
+
+Each file system will have its own set of inodes.
 
 ## Partitions
 
@@ -65,6 +70,14 @@ Partition type is different from a file system type.
 ### Automatic Mounts
 
 `/etc/fstab` file will contain partitions which are mounted automatically.
+
+### Reflecting partition changes
+
+Once partitions have been created, use `partprobe` to reflect the changes in the OS.
+After it, confirm that partitions have been applied:
+
+        partprobe /dev/sdb
+        grep sdb /proc/partitions
 
 ## LVM
 

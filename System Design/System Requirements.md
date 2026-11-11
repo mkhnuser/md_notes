@@ -133,3 +133,26 @@ There the three main types of storage devices:
 * Roughly, one server might have up to 1TB of RAM, up to 50TB of SSD, and up to 200TB of HDD.
 * Average Failure Rate (AFR) of a storage device is around 1 percent.
 * Information can be replicated across multiple disks (RAID).
+
+## Multitenancy
+
+### Overview
+
+Within your application, there might be multiple businesses (tenants).
+
+### Ways to represent tenants
+
+* Table-level multitenancy:
+
+      Use tenant_id to distinguish one tenant’s data from another’s.
+
+* Schema-level multitenancy:
+
+      Within one database, each tenant is assigned its own schema.
+
+* Database-level multitenancy:
+
+      Each tenant will have its own databases.
+      Understand: these databases might live within one postgres instance (OS process).
+
+The latter approach is preferred due to its flexibility.
