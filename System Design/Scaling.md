@@ -4,8 +4,13 @@
 
 ### Types of Load Balancing
 
-* Client-side load balancing (your application code);
-* Server-side load balancing (nginx, apache, etc).
+* Client-side load balancing:
+
+      You application code.
+
+* Server-side load balancing.
+
+      Reverse proxies and web servers: nginx, apache, etc.
 
 ### Balancing Strategies
 
@@ -33,8 +38,10 @@ Proxy to servers with least connection, response time, etc.
 
 ### L4 and L7 balancing
 
-* L4 balancing just proxies all the traffic;
-* L7 allows you to proxy the traffic based on some L7-level metric (HTTP cookies, HTTP Header, etc.)
+* L4 balancing just proxies all the traffic.
+* L7 balancing allows you to proxy the traffic based on some L7 level attribute.
+
+      HTTP cookies, HTTP Header, etc.
 
 ### DNS and geoDNS Balancing
 
@@ -67,7 +74,7 @@ There are various strategies for this:
 * At most once;
 * Exactly once.
 
-Consider the usage to the idempotency key to handle a message only once.
+Consider the usage of an idempotency key to handle a message only once.
 
 You can also put a message broker in front of database;
 if a database fails, you won't lose a message:

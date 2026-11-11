@@ -1,35 +1,29 @@
 # Outline
 
-Here is a rough outline of how a system design interview should go:
+## Steps
 
-1. Understand Functional and Non-Functional System Requirements.
-2. Understand Load and Storage Requirements.
+1. Understand functional and non-functional system requirements.
+2. Understand load and storage requirements.
 
         1. MAU; DAU; READ / WRITE RATIO.
         2. The number of requests per month for read / write operations.
-        3. RPS; QPS.
+        3. RPS; QPS:
 
-                 Make sure you do it on a per-entity basis.
-                 For example, calculate it for accounts, photos,
-                 and other entities separetely.
+        Make sure you do it on a per-entity basis.
+        For example, calculate RPS for accounts, photos,
+        or other entities separetely.
 
         4. Storage Requirements.
         5. Network Requirements.
         6. Storage Requirements for 5 years of work.
         7. CAP Theorem Restrictions.
 
-3. Conduct the design.
+3. Outline a schema of the system and scale the system.
 
-        1. Draw a basic schema of the system.
-        2. Choose a DB considering CAP restrictions.
-        3. Conduct a modular design considering the Functional Requirements.
+        1. Discuss load balancing.
+        2. Use a message broker.
+        3. Choose a database considering the CAP theorem restrictions.
+        4. Consider a database backups, sharding, and replication.
+        5. Perhaps use cache.
 
-                 Consider the usage of a message broker.
-
-        4. Add scaling to the system.
-
-                  Discuss Load Balancing.
-                  Consider Database sharding and replication.
-
-        5. Increase System Responsiveness.
-        6. Add observability.
+4. Add observability.

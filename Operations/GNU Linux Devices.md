@@ -1,10 +1,10 @@
 # GNU Linux Devices
 
-## Hardware to Device
+## Hardware to device & automount
 
-UDev service adds and removes devices in `/dev` directory.
-As the hardware is plugged in, UDev adds an appropriate device in `/dev`.
-If a device contains a filesystem, modern Linux distributions try to mount it.
+As the hardware is plugged in, Linux adds an appropriate device in `/dev`.
+`UDev` service is responsible for this translation.
+If a device contains a file system, modern Linux distributions will try to mount it.
 
 ## dmesg
 
@@ -26,4 +26,4 @@ Often, by modules we mean drivers for hardware.
 
 ## Listing Loaded Modules
 
-To list loaded modules, issue: `lsmod`.
+To list loaded modules: `lsmod`.

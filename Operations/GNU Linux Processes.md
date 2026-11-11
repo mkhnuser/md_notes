@@ -27,6 +27,14 @@ If a service process is compromised, no harm will be done to other parts of your
 
 `procs` utility is a modern alternative for `ps` for process monitoring.
 
+### free
+
+`free` displays the amount of free and used RAM.
+
+### vmstat
+
+`vmstat` lets you see a general information about how your system performs.
+
 ### CTRL + Z
 
 Recall: `CTRL + Z` stops a process and puts it in the background to rest.

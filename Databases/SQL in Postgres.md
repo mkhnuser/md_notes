@@ -48,18 +48,18 @@ You usually consider the usage of 1NF, 2NF, 3NF.
 
 ## Foreign References
 
+### What can a foreign key reference?
+
+A foreign key must reference a primary key or a unique column.
+
 ### NOT NULL has to be explicit
 
 Foreign key does not prohibit a NULL to be present.
-If you want to enforce referencing to an external column, use `NOT NULL` constraint.
+If you want to enforce a reference to an external column, use `NOT NULL` constraint.
 
 ### One-to-one references
 
 You can implement one-to-one relation using REFERENCES with UNIQUE constraint.
-
-### What can a foreign key reference?
-
-A foreign key must reference a primary key or a unique column.
 
 ## Schema Design
 
