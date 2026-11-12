@@ -4,7 +4,7 @@
 
 ### tcpdump
 
-# TODO: Examine carefully.
+Shows the traffic dump.
 
 ## DNS
 
@@ -32,3 +32,15 @@ There are two main commands to get IP addresses:
 ## Network Isolation
 
 `ip netns` - create a network namespace to which network interfaces can be attached.
+
+## Copying files over a network
+
+### scp & rsync
+
+`scp` command has the following disadvantages:
+
+1. It doesn't preserve files metadata.
+2. It doesn't compute transmission deltas.
+3. It doesn't preserve symbolic links.
+
+See "The Linux Bible", 11th edition, discussion on this in Chapter 13.
