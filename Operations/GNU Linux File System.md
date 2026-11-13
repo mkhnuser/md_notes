@@ -25,6 +25,10 @@ Further, `plocate`'s database has to be up-to-date.
 
 `du -d 1 -h`
 
+### Finding disk consumption with find command
+
+Refer to the "Linux Bible", 11th edition, Chapter 13 discussion on this.
+
 ## Inodes
 
 ### Overview

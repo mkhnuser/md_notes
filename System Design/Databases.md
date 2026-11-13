@@ -87,6 +87,12 @@ For example, `pg_dump` version 9.2 won't work with Postgres 9.6.
 
 Consider the usage of many backup files during various time spans.
 
+## 3-2-1 rule for backups
+
+Keep three copies of data,
+on two separate hard drives,
+with one copy of data outside the cloud.
+
 ## Database Replication
 
 ### Overview

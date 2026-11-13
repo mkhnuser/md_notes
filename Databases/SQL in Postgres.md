@@ -67,12 +67,18 @@ You can implement one-to-one relation using REFERENCES with UNIQUE constraint.
 
 Always add created_at, updated_at, deleted_at columns.
 
+### Soft Deletes
+
+One of the possible reasons for soft deletes are foreign keys:
+if a record is referenced, it can't be deleted by issuing a `DELETE` statement.
+So, create `deleted_at` column which reflects whether a record is deleted or not.
+
 ### Money
 
 To store money, use cents with `BIGINT` type.
 Alternatively, `NUMERIC` type can be used.
 
-### CHECK CONSTRAINT
+### CHECK CONSTRAINT and NULL
 
 `CHECK amount >= 0` does not prevent `amount` from being set to `NULL`.
 Use `NOT NULL` additionally.
@@ -82,3 +88,15 @@ Use `NOT NULL` additionally.
 TIMESTAMPTZ will always be stored in UTC time zone.
 
 https://www.datacamp.com/doc/postgresql/timestamptz
+
+## ALTER TABLE
+
+### Overview
+
+`ALTER TABLE` allows you to change the table schema:
+
+     ALTER TABLE products.reviews
+     ALTER COLUMN review SET NOT NULL,
+     ADD CONSTRAINT review_rank_check CHECK (rank BETWEEN 1 AND 5);
+
+In the query above, two constraints are added.

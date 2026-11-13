@@ -62,7 +62,8 @@ One can use `chown` recursively `chown -R joe:joe /mnt/mystuff`.
 
 ### umask
 
-One can use `umask` to change the default permissions.
+One can use `umask` to change the base permissions,
+which are `777` for directories, and `666` for files.
 
 ## ACL
 

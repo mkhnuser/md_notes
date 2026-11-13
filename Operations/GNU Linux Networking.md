@@ -1,14 +1,24 @@
 # GNU Linux Networking
 
-## Traffic Analysis
+## Network Isolation
 
-### tcpdump
+`ip netns` - create a network namespace to which network interfaces can be attached.
 
-Shows the traffic dump.
+## Copying files over a network
+
+### scp & rsync
+
+`scp` command has the following disadvantages:
+
+1. No preservation of files metadata.
+2. No computation of transmission deltas.
+3. No preservation of symbolic links.
+
+See "The Linux Bible", 11th edition, discussion on this in Chapter 13.
 
 ## DNS
 
-### Overview
+### DNS commands
 
 There are two main commands to get IP addresses:
 
@@ -28,19 +38,3 @@ There are two main commands to get IP addresses:
 * Get a domain name of an IP address with a short output:
 
       dig -x 142.251.1.139 +short
-
-## Network Isolation
-
-`ip netns` - create a network namespace to which network interfaces can be attached.
-
-## Copying files over a network
-
-### scp & rsync
-
-`scp` command has the following disadvantages:
-
-1. It doesn't preserve files metadata.
-2. It doesn't compute transmission deltas.
-3. It doesn't preserve symbolic links.
-
-See "The Linux Bible", 11th edition, discussion on this in Chapter 13.

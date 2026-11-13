@@ -1,5 +1,7 @@
 # Postgres
 
+# TODO: Learn explicit locks deeper.
+
 ## Postmaster Process
 
 ### Overview
@@ -30,10 +32,14 @@ https://www.youtube.com/watch?v=S0LEDGbAnn8
 
 ### Shared buffers
 
-When a client executes a query, the query executor will examine shared buffers for the data.
+Shared buffers hold data pages and indexes and allow for a fast data look up.
+
+When a client executes a query,
+the query executor will examine shared buffers for the data page.
 If the data is not present there, OS cache is examined.
 If the data is not present there, the data is loaded from disk.
-Similarly, when `INSERT` happens, the data is first stored in shared buffers.
+
+Similarly, when `UPDATE` happens, the data is first stored in shared buffers.
 
 ### WAL buffers
 
@@ -51,6 +57,11 @@ Understand: due to performance concerns, a commit is successful when:
 1. WAL buffers are successfully flushed.
 
 not when shared buffers are flushed.
+
+### Shared buffers and WAL buffers link
+
+Since WAL is responsible for whether a transaction is successful or not,
+WAL buffers are flushed to the disk first, and only after it shared buffers are flushed.
 
 ## Background processes
 
@@ -72,6 +83,15 @@ Hence, transactions in Postgres will not be subjects of dirty reads.
 
 https://www.youtube.com/watch?v=TBmDBw1IIoY
 https://github.com/dmagda/DevMastersDb/blob/main/postgres/postgres_mvcc_backstage.md
+
+### The purpose of MVCC
+
+MVCC allows transactions to run concurrently and prevents a dirty read phenomenon.
+
+### MVCC and dirty writes
+
+MVCC and row-level locking prevent dirty writes.
+See "Just Use Postgres", 2.4.3 Multiversion concurrence control.
 
 ### Tuple creation
 
@@ -132,6 +152,13 @@ https://github.com/laurenz
 
 ## Transactions in Postgres
 
+### Implicit transactions
+
+When you issue `INSERT`, `DELETE`, `CREATE TABLE`, `ALTER TABLE`,
+Postgres wraps these statements with `BEGIN` and `COMMIT` statements.
+That way, consistency is achieved:
+if anything happens, partial updates to the database are rolled back.
+
 ### Transaction isolation levels
 
 * READ UNCOMMITTED:
@@ -166,6 +193,11 @@ SERIALIZABLE isolation level doesn't guarantee a specific order of execution of 
 The whole idea of atomicity is to be able to rerun transactions.
 So, be prepared to rerun REPEATABLE READ and SERIALIZABLE transactions.
 
+### Transaction rollbacks and MVCC
+
+Even if a rollback happens, MVCC has already captured the partial changes.
+See "Just Use Postgres", Extract 2.4.2 Explicit transactions.
+
 ## Logical Organization
 
 ### Overview
@@ -178,16 +210,31 @@ Postgres OS Process -> will contain a collection of databases -> each will conta
 
 Schemas create a namespace for tables, indexes, views, functions, etc.
 
-### Joins between schemas
+### Default Schemas
 
-Joins between schemas are possible.
+`SHOW search_path;` will display the schemas which will be used, in order.
+
+### Various joins
+
+Joins between different schemas are possible.
+Joins between different databases are not automatically possible.
+
+## Indexes
+
+### Automatically created indexes
+
+Indexes are created automatically for primary keys and unique columns.
 
 ## psql
+
+### Default role and default database
+
+Psql uses the current user for the role and the database name to be connected to.
 
 ### Execute a file
 
         psql -h 127.0.0.1 -U app -d movies_database -f movies_database.ddl
 
-### Default role and default database
+### List schemas
 
-Psql uses the current user for the role and the database name to be connected to.
+Use `\dn` to list schemas.
