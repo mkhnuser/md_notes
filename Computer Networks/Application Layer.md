@@ -73,3 +73,13 @@ So, to implement a file download from a server, you should rely on:
           For example, for video file you would specify:
 
           Content-Type: video/mp4
+
+## DHCP
+
+### Overview
+
+Here are a DHCP server objectives:
+
+* Assign an IP address to a host for a period of time.
+* Give the default gateway destination address.
+* Give a DNS server destination address.

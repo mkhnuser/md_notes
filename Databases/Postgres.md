@@ -1,7 +1,5 @@
 # Postgres
 
-# TODO: Learn explicit locks deeper.
-
 ## Postmaster Process
 
 ### Overview
@@ -9,13 +7,19 @@
 Postmaster process is responsible for creating other Postgres processes.
 
 https://www.youtube.com/watch?v=S0LEDGbAnn8
+https://www.youtube.com/watch?v=Vq34xPYZwXg
 
 ### What happens during the client connection?
 
 When a client connects to a Postgres instance,
-a postmaster process will fork itself and create a dedicated process for a client;
-Postgres calls this process Postgres backend.
-After that, each query will be handled by this process.
+a postmaster process will fork itself and create a dedicated OS process for a client.
+
+Postgres calls a client process a backend.
+After that, each query will be handled by a backend.
+
+### What happens when a client disconnects?
+
+The postgres backend process which was responsible for the connection is terminated.
 
 ## Shared memory
 
@@ -61,7 +65,7 @@ not when shared buffers are flushed.
 ### Shared buffers and WAL buffers link
 
 Since WAL is responsible for whether a transaction is successful or not,
-WAL buffers are flushed to the disk first, and only after it shared buffers are flushed.
+WAL buffers are flushed to the disk first, and only after that shared buffers are flushed.
 
 ## Background processes
 
@@ -84,19 +88,16 @@ Hence, transactions in Postgres will not be subjects of dirty reads.
 https://www.youtube.com/watch?v=TBmDBw1IIoY
 https://github.com/dmagda/DevMastersDb/blob/main/postgres/postgres_mvcc_backstage.md
 
-### The purpose of MVCC
-
-MVCC allows transactions to run concurrently and prevents a dirty read phenomenon.
-
-### MVCC and dirty writes
-
-MVCC and row-level locking prevent dirty writes.
-See "Just Use Postgres", 2.4.3 Multiversion concurrence control.
-
 ### Tuple creation
 
 When you perform `UPDATE` or `DELETE`, new tuple record will be created by MVCC.
 The previous tuple record will contain a reference to the next tuple record.
+
+### The purpose of MVCC
+
+MVCC allows transactions to run concurrently and prevents a dirty read phenomenon.
+MVCC and row-level locking prevent dirty writes.
+See "Just Use Postgres", 2.4.3 Multiversion concurrence control.
 
 ## Vacuum
 
@@ -125,6 +126,7 @@ and the space which was occupied by the dead tuples is release to the OS.
 
 `VACUUM ANALYZE` will allow the query planner to use an index if it was just created,
 as well as it will reclaim the space which was taken by the dead tuples.
+You might want to use it after the `ALTER TABLE` statement.
 
 ### Auto vacuum
 
@@ -156,6 +158,7 @@ https://github.com/laurenz
 
 When you issue `INSERT`, `DELETE`, `CREATE TABLE`, `ALTER TABLE`,
 Postgres wraps these statements with `BEGIN` and `COMMIT` statements.
+
 That way, consistency is achieved:
 if anything happens, partial updates to the database are rolled back.
 
@@ -214,7 +217,7 @@ Schemas create a namespace for tables, indexes, views, functions, etc.
 
 `SHOW search_path;` will display the schemas which will be used, in order.
 
-### Various joins
+### Joins on schemas
 
 Joins between different schemas are possible.
 Joins between different databases are not automatically possible.
@@ -224,6 +227,24 @@ Joins between different databases are not automatically possible.
 ### Automatically created indexes
 
 Indexes are created automatically for primary keys and unique columns.
+
+## Roles and Access
+
+### Roles
+
+Each connection has an associated role with it.
+
+### postgres role
+
+postgres role is all-permissive and should be avoided for production purposes.
+
+### Role creation
+
+        CREATE ROLE coffee_chain_admin WITH LOGIN PASSWORD 'password';
+        GRANT CONNECT ON DATABASE coffee_chain TO coffee_chain_admin;
+        REVOKE CONNECT ON DATABASE coffee_chain FROM PUBLIC;
+
+See roles discussion in "Just Use Postgres", 2.8 Roles and access control.
 
 ## psql
 
@@ -238,3 +259,7 @@ Psql uses the current user for the role and the database name to be connected to
 ### List schemas
 
 Use `\dn` to list schemas.
+
+### List roles
+
+Use `\du` to list roles.

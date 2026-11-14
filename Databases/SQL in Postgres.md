@@ -83,6 +83,15 @@ Alternatively, `NUMERIC` type can be used.
 `CHECK amount >= 0` does not prevent `amount` from being set to `NULL`.
 Use `NOT NULL` additionally.
 
+### EXCLUDE USING constraint
+
+     ALTER TABLE sales.orders
+     ADD CONSTRAINT one_pending_order_per_customer
+     EXCLUDE USING btree (customer_id WITH =)
+     WHERE (status = 'pending');
+
+See "Just Use Postgres", 2.6.1 Functions: A practical example.
+
 ### TIMESTAMPTZ
 
 TIMESTAMPTZ will always be stored in UTC time zone.
@@ -100,3 +109,19 @@ https://www.datacamp.com/doc/postgresql/timestamptz
      ADD CONSTRAINT review_rank_check CHECK (rank BETWEEN 1 AND 5);
 
 In the query above, two constraints are added.
+
+Consider the usage of `VACUUM ANALYZE` after a table alteration.
+
+## Views
+
+### Overview
+
+Views allow you to execute a complex query using a name for this query.
+Views are stored within a particular schema can be reused among many clients.
+Since views are reused, your applications might not need to store complex SQL statements.
+
+### Types of views
+
+There are plain views and materialized views:
+plain views are always executed, whereas materialized ones executed only once.
+Materialized views are materialized during creation and can be refreshed when needed.

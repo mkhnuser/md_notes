@@ -38,3 +38,7 @@ There are two main commands to get IP addresses:
 * Get a domain name of an IP address with a short output:
 
       dig -x 142.251.1.139 +short
+
+### /etc/hosts
+
+`/etc/hosts` file is used before any DNS queries.

@@ -151,3 +151,5 @@ master.dev Plan:
 * Intro;
 * CSS on master.dev + CSS on Udemy;
 * JS + JS on Udemy;
+
+Learn Postgres Explicit Locks deeper.
