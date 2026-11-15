@@ -153,3 +153,4 @@ master.dev Plan:
 * JS + JS on Udemy;
 
 Learn Postgres Explicit Locks deeper.
+Refresh soft links knowledge.

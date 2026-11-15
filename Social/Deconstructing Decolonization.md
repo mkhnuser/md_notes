@@ -28,3 +28,11 @@ to racism or patronization.
 ## Cultural Adaptation
 
 ...
+
+## Colonial Reparations
+
+...
+
+## Reevaluating Decolonization
+
+...

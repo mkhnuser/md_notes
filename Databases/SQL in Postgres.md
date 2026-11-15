@@ -125,3 +125,10 @@ Since views are reused, your applications might not need to store complex SQL st
 There are plain views and materialized views:
 plain views are always executed, whereas materialized ones executed only once.
 Materialized views are materialized during creation and can be refreshed when needed.
+
+## Common table expressions
+
+### Overview
+
+CTEs are defined on a per-query basis, whereas views are global.
+Recursive queries can be applied to CTEs.
