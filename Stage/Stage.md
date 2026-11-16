@@ -153,4 +153,5 @@ master.dev Plan:
 * JS + JS on Udemy;
 
 Learn Postgres Explicit Locks deeper.
+Examine the difference between SERIALIZABLE level and Explicit locks.
 Refresh soft links knowledge.

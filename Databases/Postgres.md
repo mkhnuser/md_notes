@@ -9,7 +9,7 @@ Postmaster process is responsible for creating other Postgres processes.
 https://www.youtube.com/watch?v=S0LEDGbAnn8
 https://www.youtube.com/watch?v=Vq34xPYZwXg
 
-### What happens during the client connection?
+### Connections to Postgres
 
 When a client connects to a Postgres instance,
 a postmaster process will fork itself and create a dedicated OS process for a client.
@@ -17,9 +17,8 @@ a postmaster process will fork itself and create a dedicated OS process for a cl
 Postgres calls a client process a backend.
 After that, each query will be handled by a backend.
 
-### What happens when a client disconnects?
-
-The postgres backend process which was responsible for the connection is terminated.
+When a client disconnects,
+the postgres backend process which was responsible for the connection is terminated.
 
 ## Shared memory
 
@@ -67,23 +66,25 @@ not when shared buffers are flushed.
 Since WAL is responsible for whether a transaction is successful or not,
 WAL buffers are flushed to the disk first, and only after that shared buffers are flushed.
 
-## Background processes
+## Auxiliary Processes
 
 ### Overview
 
-Postgres has a set of background processes.
+Postgres has a set of background processes:
 
-Some of them are responsible for flushing parts of shared memory.
-For example, there are processes which flush shared buffers & WAL buffers.
+* Checkpointer.
+* Logger.
+* WAL writer.
+* Auto vacuum workers.
+* etc.
 
 ## MVCC
 
-### Overview
+### The purpose of MVCC
 
-MVCC keeps track of the versions of a row.
-Roughly speaking, when you begin a transaction,
-you create a snapshot of the current database state.
-Hence, transactions in Postgres will not be subjects of dirty reads.
+MVCC allows transactions to run concurrently and prevents a dirty read phenomenon.
+MVCC and row-level locking prevent dirty writes.
+See "Just Use Postgres", 2.4.3 Multiversion concurrence control.
 
 https://www.youtube.com/watch?v=TBmDBw1IIoY
 https://github.com/dmagda/DevMastersDb/blob/main/postgres/postgres_mvcc_backstage.md
@@ -92,12 +93,6 @@ https://github.com/dmagda/DevMastersDb/blob/main/postgres/postgres_mvcc_backstag
 
 When you perform `UPDATE` or `DELETE`, new tuple record will be created by MVCC.
 The previous tuple record will contain a reference to the next tuple record.
-
-### The purpose of MVCC
-
-MVCC allows transactions to run concurrently and prevents a dirty read phenomenon.
-MVCC and row-level locking prevent dirty writes.
-See "Just Use Postgres", 2.4.3 Multiversion concurrence control.
 
 ## Vacuum
 
@@ -131,12 +126,13 @@ You might want to use it after the `ALTER TABLE` statement.
 ### Auto vacuum
 
 Postgres performs vacuum automatically when a certain dead tuples threshold is passed.
-However, the defaults are conservative and might not be appropriate for write-heavy applications.
+The threshold is calculated by a formula.
+Auto vacuum defaults are conservative and might not be appropriate for write-heavy applications.
 
 ### Possible auto vacuum problems
 
 * Auto vacuum runs, but is so slow that it never gets done.
-* Auto vacuum runs, but a long running open transaction prevents it from removing dead tuples.
+* Auto vacuum runs, but a long running open transaction prevents the removal of dead tuples.
 * Other tables need to be vacuumed more urgently to avoid transaction ID wraparound.
 
       So the autovacuum workers are busy with other things.
@@ -146,7 +142,7 @@ However, the defaults are conservative and might not be appropriate for write-he
       LOCK TABLE, ALTER TABLE, etc.
       This makes autovacuum give up and try again later.
 
-* Auto vacuum is disabled, either globally or for a table.
+* Auto vacuum might be disabled, either globally or for a table.
 
 https://stackoverflow.com/questions/67468949/understanding-auto-vacuum-and-when-it-is-triggered
 https://www.cybertec-postgresql.com/en/author/laurenz_albe/
@@ -172,34 +168,89 @@ if anything happens, partial updates to the database are rolled back.
 * READ COMMITTED:
 
       Solves dirty reads problem;
-      allows phantom reads and non-repeatable reads.
+      However, non-repeatable reads and phantom reads are possible.
 
 * REPEATABLE READ:
 
-      Solves non-repeatable reads;
-      solves phantom reads (in PostgreSQL, other databases might not solve it);
-      does not prevent serialization errors.
+      Solves non-repeatable reads and phantom reads.
+      However, serialization exceptions are possible.
+
+      Note: phantom reads are solved in Postgres, other databases may allow them at this level.
 
 * SERIALIZABLE.
 
-Postgres doesn't allow dirty reads to happen due to MVCC.
-Postgres doesn't allow phantom reads to happen in a REPEATABLE READ transaction isolation level. Other databases, however, may allow it.
+### READ COMMITTED
+
+When `UPDATE` or `DELETE` happens on a row within a transaction which is run at this level,
+the transaction will attempt to acquire a lock on the row,
+by first waiting till another transaction releases a lock on the row,
+if any lock was acquired by a concurrent transaction on the row in the first place.
+
+Suppose a row lock has finally been acquired after waiting for another transaction:
+
+      If the concurrent transaction has rolled back, the original row is just used.
+      If the concurrent transaction has committed and deleted the row, no operation is done.
+
+      If the concurrent transaction has committed and updated the original row,
+      then the updated row is used and `WHERE` condition is reevaluated on the updated row,
+      and if the `WHERE` condition reevaluation doesn't match the updated row,
+      no operation is done.
+
+See "Just Use Postgres", 2.4.3 Multiversion concurrence control.
+
+### REPEATABLE READ
+
+Suppose you perform `UPDATE` or `DELETE` on a row, and hence you attempt to acquire a row lock.
+Suppose further that a concurrent transaction has already acquired the lock.
+Because of this, you wait till the concurrent transaction commits or aborts.
+If the concurrent transaction commits,
+and the row is updated or deleted,
+a serialization error is raised.
+
+Once a serialization error has been raised, Postgres aborts the transaction.
+Consequently, you must roll it back, and then potentially rerun a transaction.
+
+Understand: a read-only transaction will never have a serialization error.
+
+Understand:
+Once a row or a set of rows has been read,
+a serialization error is only raised if an update happens on the same row,
+and so `REPEATABLE READ` does not prevent different rows from being modified,
+and so write skews are possible, and so `SERIALIZABLE` or `SELECT ... FOR UPDATE` are needed.
 
 ### SERIALIZABLE
 
-SERIALIZABLE checks whether the executing of multiple concurrent transaction equals the execution of these transactions in some order.
-SERIALIZABLE isolation level doesn't guarantee a specific order of execution of transactions; it guarantees that there is order.
+`SERIALIZABLE` level guarantees a consistent execution order of concurrent transactions.
+Write skews are prevented as well,
+and so `SERIALIZABLE` level is an alternative to `SELECT ... FOR UPDATE`.
 
 ### Atomicity
 
-! Transactions fail, so you should be ready to rerun them in your code.
-The whole idea of atomicity is to be able to rerun transactions.
-So, be prepared to rerun REPEATABLE READ and SERIALIZABLE transactions.
+The whole idea of atomicity is to be able to rerun transactions safely.
+Be prepared to rerun `REPEATABLE READ` and `SERIALIZABLE` transactions due to possible errors.
+
+### Atomicity and Sequences
+
+Sequences are not rolled back if a transaction roll back happens.
+https://www.postgresql.org/docs/current/transaction-iso.html
 
 ### Transaction rollbacks and MVCC
 
-Even if a rollback happens, MVCC has already captured the partial changes.
+Even if a rollback happens, MVCC has already captured the partial changes, so vacuum is needed.
 See "Just Use Postgres", Extract 2.4.2 Explicit transactions.
+
+## Locks
+
+### Overview
+
+https://dba.stackexchange.com/questions/332314/understanding-read-commited-in-postgresql
+
+# TODO: https://milanjovanovic.tech/blog/pessimistic-locking-ef-core-postgresql
+# TODO: Select for update.
+
+### Deadlock monitoring
+
+Postgres monitors deadlocks for you and raises exception if deadlocks were found.
 
 ## Logical Organization
 
