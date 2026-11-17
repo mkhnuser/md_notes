@@ -56,7 +56,7 @@ After the flush has happened, the transaction is considered successful: a commit
 
 Understand: due to performance concerns, a commit is successful when:
 
-1. `COMMIT` is encountered.
+1. `COMMIT` statement is encountered.
 1. WAL buffers are successfully flushed.
 
 not when shared buffers are flushed.
@@ -72,18 +72,18 @@ WAL buffers are flushed to the disk first, and only after that shared buffers ar
 
 Postgres has a set of background processes:
 
-* Checkpointer.
 * Logger.
-* WAL writer.
+* Checkpointer.
 * Auto vacuum workers.
+* WAL writer.
 * etc.
 
 ## MVCC
 
 ### The purpose of MVCC
 
-MVCC allows transactions to run concurrently and prevents a dirty read phenomenon.
-MVCC and row-level locking prevent dirty writes.
+MVCC allows write queries to not be blocked by read queries, and vice versa.
+Additionaly, MVCC and row-level locking prevent dirty writes.
 See "Just Use Postgres", 2.4.3 Multiversion concurrence control.
 
 https://www.youtube.com/watch?v=TBmDBw1IIoY
@@ -212,17 +212,22 @@ Consequently, you must roll it back, and then potentially rerun a transaction.
 
 Understand: a read-only transaction will never have a serialization error.
 
-Understand:
-Once a row or a set of rows has been read,
-a serialization error is only raised if an update happens on the same row,
-and so `REPEATABLE READ` does not prevent different rows from being modified,
-and so write skews are possible, and so `SERIALIZABLE` or `SELECT ... FOR UPDATE` are needed.
+Understand: at this level, write skews are not prevented.
+To prevent write skews, explicit locks have to be used at this isolation level.
 
 ### SERIALIZABLE
 
-`SERIALIZABLE` level guarantees a consistent execution order of concurrent transactions.
-Write skews are prevented as well,
-and so `SERIALIZABLE` level is an alternative to `SELECT ... FOR UPDATE`.
+`SERIALIZABLE` guarantees that
+a result of the committing a group of concurrent transactions
+is consistent with at least one ordering of running these transactions one at a time, serially.
+
+If a serialization anomaly is detected,
+one transaction be allowed to commit, and the other will be rolled back.
+
+Further, even in the case of read-only transactions at `SERIALIZABLE` level,
+the data should only be considered valid only when a transaction commits successfully.
+
+Note: `SERIALIZABLE` prevents write skews and is an alternative to `SELECT ... FOR UPDATE`.
 
 ### Atomicity
 
@@ -241,16 +246,75 @@ See "Just Use Postgres", Extract 2.4.2 Explicit transactions.
 
 ## Locks
 
-### Overview
+### Locks Names
 
-https://dba.stackexchange.com/questions/332314/understanding-read-commited-in-postgresql
+Understand:
+due to historical reasons,
+lock names can contain a word "row", but a lock, in fact, is applied to a table.
 
-# TODO: https://milanjovanovic.tech/blog/pessimistic-locking-ef-core-postgresql
-# TODO: Select for update.
+### Locks life cycle
 
-### Deadlock monitoring
+Locks are acquired within a transaction and are released when a transaction is finished.
+However, savepoints are respected: if a lock is acquired after a savepoint
+and you roll back to a savepoint, lock is released.
 
-Postgres monitors deadlocks for you and raises exception if deadlocks were found.
+### Locks types
+
+There are:
+
+* Table-level locks;
+* Row-level locks;
+* Page-level locks.
+
+### Mutual Exclusion
+
+Concurrent transactions can't hold locks of conflicting modes on a resource.
+Therefore, multiple transactions can hold locks of non-conflicting modes on a resource.
+
+### No exclusion within one transaction
+
+However, locks never conflict within the very same transaction:
+for example, you can hold both `ACCESS EXCLUSIVE` and `ACCESS SHARE` locks simultaneously.
+
+### SELECT ... FOR UPDATE
+
+Understand: `SELECT ... FOR UPDATE` will not prevent a plain `SELECT` from reading the data.
+Understand: depending on the isolation level, be ready to handle a possible error.
+
+### Locks can trigger disk access
+
+https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-ROWS
+
+### Deadlocks Overview
+
+Suppose transaction A hold a lock on table 1 and tries to acquire a lock on table 2.
+Suppose further transaction B holds a lock on table 2 and tries to acquire a lock on table 1.
+Then Postgres realizes that there is a deadlock and aborts one of the transactions.
+Other concurrent transactions will be allowed to continue.
+One can't predict which transaction is aborted.
+
+https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-DEADLOCKS
+
+### Deadlocks can occur even when no explicit locking is used
+
+Understand: deadlocks are possible even if no explicit locks are used,
+so be ready to rerun transactions.
+
+https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-DEADLOCKS
+
+### Why long running transactions are bad?
+
+Long running transactions might prevent other transactions from acquiring locks on resources.
+
+https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-DEADLOCKS
+
+### Locks Statistics
+
+Locks statistics are stored at `pg_locks` table.
+
+### Advisory Locks
+
+https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-DEADLOCKS
 
 ## Logical Organization
 

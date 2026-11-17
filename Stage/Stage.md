@@ -124,6 +124,8 @@ Computer Networks.
 1000 - Благодетель;
 2000 - Сир.
 
+High-Tech Ренессанс?
+
 ---
 
 An interview prep plan:
@@ -152,6 +154,4 @@ master.dev Plan:
 * CSS on master.dev + CSS on Udemy;
 * JS + JS on Udemy;
 
-Learn Postgres Explicit Locks deeper.
-Examine the difference between SERIALIZABLE level and Explicit locks.
 Refresh soft links knowledge.
