@@ -154,4 +154,6 @@ master.dev Plan:
 * CSS on master.dev + CSS on Udemy;
 * JS + JS on Udemy;
 
+boot.dev: use Go path.
+
 Refresh soft links knowledge.
