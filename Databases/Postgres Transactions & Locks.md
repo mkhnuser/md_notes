@@ -67,6 +67,15 @@ Understand: a read-only transaction will never have a serialization error.
 Understand: at this level, write skews are not prevented.
 To prevent write skews, explicit locks have to be used at this isolation level.
 
+From Postgres documentation:
+
+      A repeatable read transaction's snapshot
+      is actually frozen at the start of its first query
+      or data-modification command (SELECT, INSERT, UPDATE, DELETE, or MERGE),
+      so it is possible to obtain locks explicitly before the snapshot is frozen.
+
+https://www.postgresql.org/docs/current/applevel-consistency.html#NON-SERIALIZABLE-CONSISTENCY
+
 ### SERIALIZABLE
 
 `SERIALIZABLE` guarantees that
@@ -80,6 +89,9 @@ Further, even in the case of read-only transactions at `SERIALIZABLE` level,
 the data should only be considered valid only when a transaction commits successfully.
 
 Note: `SERIALIZABLE` prevents write skews and is an alternative to `SELECT ... FOR UPDATE`.
+
+Postgres doesn't allow you to use `SERIALIZABLE` for hot standbys or logical replicas:
+https://www.postgresql.org/docs/current/applevel-consistency.html#SERIALIZABLE-CONSISTENCY
 
 ### Atomicity
 
@@ -136,6 +148,8 @@ Understand: `SELECT ... FOR UPDATE` will not prevent a plain `SELECT` from readi
 Understand: the only way to prevent `SELECT` is to acquire `ACCESS EXCLUSIVE` lock.
 Understand: depending on the isolation level, be ready to handle a possible serialization error.
 
+https://www.postgresql.org/docs/current/applevel-consistency.html#NON-SERIALIZABLE-CONSISTENCY
+
 ### Locks can trigger disk access
 
 https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-ROWS
@@ -170,3 +184,14 @@ Locks statistics are stored at `pg_locks` table.
 ### Advisory Locks
 
 https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-DEADLOCKS
+
+## Transaction Retries
+
+### Overview
+
+Transactions with level `REPEATABLE READ`, `SERIALIZABLE`,
+and also dead locks, have to be retried.
+
+Once an error happens, its error code is returned, and therefore can be checked.
+
+https://www.postgresql.org/docs/current/mvcc-serialization-failure-handling.html#MVCC-SERIALIZATION-FAILURE-HANDLING

@@ -82,6 +82,7 @@ https://hamvocke.com/blog/
 https://マリウス.com/
 https://blog.parasrah.com/posts
 https://martinheinz.dev/
+blog.cloudflare.com
 
 https://github.com/fuodorov/yaalgorithms/ - some solutions to Yandex Praktikum Algorithms Course.
 https://profi.ru/profile/ZaharovAV18/#prices - Yandex School of Data Analysis Private Tutor.
@@ -157,3 +158,15 @@ master.dev Plan:
 boot.dev: use Go path.
 
 Refresh soft links knowledge.
+
+PostgreSQL: архитектура, WAL, Shared Buffers
+PostgreSQL: транзакции, ACID, MVCC, изоляция, блокировки
+PostgreSQL: индексы, оптимизация SQL-запросов, селективность
+PostgreSQL: репликация, бэкапы, безопасность
+PostgreSQL: шардирование, консистентное хеширование, решардирование
+PostgreSQL: JSON, hstore, расширения
+
+Математика: логика и теория доказательств
+Математика: множества, функции, отношения
+Математика: индукция и рекурсия
+Математика: комбинаторика, графы и FSM
