@@ -125,29 +125,14 @@ Computer Networks.
 1000 - Благодетель;
 2000 - Сир.
 
-High-Tech Ренессанс?
-
----
-
-An interview prep plan:
-
-* Linux Bible.
-* Review Postgres.
-
-* Review threading module.
-* Review pytest module.
-* Review flask module.
-
-* Review Redis.
-
 A Day Plan:
 
 * Math;
 * At least one algorithms problem:
 
-      NeetCode top 250 review, then TypeScript on LeetCode.
+      NeetCode top 250 review, then TypeScript on LeetCode after master.dev courses.
 
-* master.dev.
+* Just use Postgres.
 
 master.dev Plan:
 
@@ -157,7 +142,8 @@ master.dev Plan:
 
 boot.dev: use Go path.
 
-Refresh soft links knowledge.
+SQL: 10 опасных ошибок
+Рассказать про COUNT(*), etc.
 
 PostgreSQL: архитектура, WAL, Shared Buffers
 PostgreSQL: транзакции, ACID, MVCC, изоляция, блокировки

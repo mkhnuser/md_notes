@@ -42,6 +42,8 @@ the query executor will examine shared buffers for the data page.
 If the data is not present there, OS cache is examined.
 If the data is not present there, the data is loaded from disk.
 
+One can analyze whether the data in the shared buffers using `EXPLAIN ANALYZE`.
+
 Similarly, when `UPDATE` happens, the data is first stored in shared buffers.
 
 ### WAL buffers

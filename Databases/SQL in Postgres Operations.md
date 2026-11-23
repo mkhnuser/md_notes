@@ -40,12 +40,13 @@ When you do `ORDER BY` remember about `NULLS LAST`, `NULLS FIRST` options, which
 Use `IS NULL` or `IS NOT NULL` for `NULL` comparison:
 https://lab.karpov.courses/learning/152/module/1762/lesson/18485/53202/251025/
 
+Be careful to specify `NOT NULL` constraint on `CHECK` constraint.
+
 ## COALESCE
 
 `COALESCE` returns a first non-null value:
 
       SELECT COALESCE(NULL, 'I am not NULL' , 'The last non-null.')
-      -- The first string is returned.
 
 ## CASE
 
@@ -62,31 +63,11 @@ Here is an example of a `CASE` statement:
 Understand: if `ELSE` clause is not specified and no `WHEN` case is matched,
 `NULL` is returned.
 
-## DATE comparison
+## DATE casting to TIMESTAMP with 00:00:00
 
-When you compare dates, they are interpreted as 12 a.m.
-So, these two queries are equivalent:
-
-      SELECT column_1
-      FROM table
-      WHERE column_2 <= '2022-12-31'
-
-
-      SELECT column_1
-      FROM table
-      WHERE column_2 <= '2022-12-31 00:00:00'
-
-Be careful when you write the following query:
-
-      SELECT column_1, column_2, column_3
-      FROM table
-      WHERE column_3 BETWEEN '2022-11-20' AND '2022-12-31'
-
-The date `'2022-12-31'` is interpreted as `'2022-12-31 00:00:00'`, which is 12 a.m..
-Because of this, the last day of the interval is almost excluded from your sample.
-So, to include the last day, specify the date as follows:
-
-      '2022-12-31 23:59:59'
+`DATE` type is sometimes cast to `TIMESTAMP`.
+When this happens, date will be interpreted as a midnight.
+One should be especially careful when one compares dates and timestamps.
 
 https://lab.karpov.courses/learning/152/module/1762/lesson/18485/53202/288782/
 https://lab.karpov.courses/learning/152/module/1762/lesson/18485/53202/251024/
@@ -102,10 +83,10 @@ The following example contains a various usage of `DATE_PART` function:
         time
       FROM user_actions WHERE
         action = 'cancel_order'
-        and date_part('dow', time) = 3
-        and date_part('month', time) = 8
-        and date_part('hour', time) between 12 and 15
-        and date_part('year', time) = 2022
+        and date_part('dow', time) = 1
+        and date_part('month', time) = 1
+        and date_part('hour', time) between 1 and 10
+        and date_part('year', time) = 2000
       ORDER BY order_id desc
 
 ## LIKE and ILIKE
@@ -114,7 +95,7 @@ The following queries will return `TRUE`.
 
       SELECT 'SQL' ILIKE '%q%'
       SELECT 'SQL' ILIKE '_q_';
-      SELECT 'SQL' NOT LIKE '% %'; -- SQL is just one word. No space.
+      SELECT 'SQL' NOT LIKE '% %'; -- Search for a precisely one word.
 
 ## Aggregate Functions
 
@@ -171,9 +152,9 @@ To select all distinct pairs of values:
 
 `CASE` can be used within an aggregate function:
 
-      SELECT sum(case when name = 'chips' then price * 3
+      SELECT sum(case when name = 'chips' then price * 1
                       when name = 'fish' then price * 2
-                      when name = 'energy drink' then price
+                      when name = 'energy drink' then price * 3
                       else 0 end) as order_price
       FROM   products
 
@@ -194,7 +175,7 @@ https://stackoverflow.com/questions/34504497/division-not-giving-my-answer-in-po
 
 ## FILTER operator
 
-`FILTER` allows you to apply an aggregate function only to specific rows.
+`FILTER` allows you to apply an aggregate function only to rows which satisfy some criterion.
 
       SELECT
           COUNT(DISTINCT order_id) AS orders,
@@ -204,3 +185,20 @@ https://stackoverflow.com/questions/34504497/division-not-giving-my-answer-in-po
       FROM orders;
 
 https://lab.karpov.courses/learning/152/module/1762/lesson/17926/53322/289238/
+
+## GROUP BY
+
+...
+
+## Subqueries
+
+### Subqueries vs CTEs
+
+Subqueries and CTEs are two different concepts.
+One defines CTEs before a query, whereas subqueries are used within queries.
+
+## JOIN
+
+### Default JOIN in Postgres
+
+In Postgres, the default `JOIN` is `INNER JOIN`.
