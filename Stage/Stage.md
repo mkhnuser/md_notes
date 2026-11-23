@@ -127,18 +127,21 @@ Computer Networks.
 
 A Day Plan:
 
-* Math;
-* At least one algorithms problem:
+* One algo problem:
 
       NeetCode top 250 review, then TypeScript on LeetCode after master.dev courses.
 
-* Just use Postgres.
+* Just use Postgres book.
+* Microservices in Python book.
 
 master.dev Plan:
 
 * Intro;
 * CSS on master.dev + CSS on Udemy;
-* JS + JS on Udemy;
+* JS + JS on Udemy + the JS book.
+* React + React on Udemy + the React book.
+* NodeJS + the NodeJS book.
+* TypeScript + the TypeScript book.
 
 boot.dev: use Go path.
 
