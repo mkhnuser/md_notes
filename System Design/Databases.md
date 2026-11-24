@@ -42,7 +42,7 @@ which is critical for read-heavy applications because no joins are needed.
 Use cases:
 
 * JSON Blobs;
-* Catalogs, documents, resumes.
+* Catalogs, documents, resumes, shop orders.
 
 ### Graph
 

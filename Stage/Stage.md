@@ -83,6 +83,7 @@ https://マリウス.com/
 https://blog.parasrah.com/posts
 https://martinheinz.dev/
 blog.cloudflare.com
+https://microapis.io/blog
 
 https://github.com/fuodorov/yaalgorithms/ - some solutions to Yandex Praktikum Algorithms Course.
 https://profi.ru/profile/ZaharovAV18/#prices - Yandex School of Data Analysis Private Tutor.
@@ -117,7 +118,7 @@ Deep Learning.
 Foundational LLM Knowledge.
 Computer Networks.
 
-Михеенко >> Об IT
+Михеенко >> Техно Хаос
 Михеенко >> Широкие Очерки
 
 250 - Патрон;

@@ -79,3 +79,9 @@ The most dangerous books are not on public lists.
 * Against Decolonization by Stokes;
 * Empire. How Britain made the world modern by Ferguson.
 * The War against the Past by Furedi.
+
+## Evolutionary Inference
+
+* A Hunter-Gatherer's Guide to the 21st century;
+* Evolutionary Ecology.
+* The selfish Gene.
