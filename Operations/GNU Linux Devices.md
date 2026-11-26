@@ -1,6 +1,14 @@
 # GNU Linux Devices
 
-## Hardware to device & automount
+## What do we mean by devices?
+
+Devices might represent:
+
+* Disk partitions.
+* Periphery: a mouse, a keyboard, etc.
+* Network devices.
+
+## Hardware to device mapping & auto mount process for file systems
 
 As the hardware is plugged in, Linux adds an appropriate device in `/dev`.
 `UDev` service is responsible for this translation.
@@ -8,8 +16,9 @@ If a device contains a file system, modern Linux distributions will try to mount
 
 ## dmesg
 
-`sudo dmesg | less` displays which devices have been found
-and which drivers have been loaded during the kernel boot.
+`sudo dmesg | less` displays:
+* Which devices have been found.
+* Which drivers have been loaded during the kernel boot.
 
 ## ls* commands
 

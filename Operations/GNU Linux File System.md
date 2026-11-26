@@ -9,7 +9,7 @@ Because of this, consider adding `alias mv= mv -i` to your `.bashrc`.
 
 ### cp with archiving
 
-Consider using `cp -a` to preserve the original metadata.
+Consider using `cp -a` to preserve the original file metadata.
 
 ### Finding Files
 
@@ -36,9 +36,6 @@ Refer to the "Linux Bible", 11th edition, Chapter 13 discussion on this.
 Inode stands for an index node.
 When you do `ls`, you see inode names.
 These, in turn, point to the actual files on a hard drive and contain file metadata.
-
-### Inodes and file systems
-
 Each file system will have its own set of inodes.
 
 ## Partitions
@@ -88,7 +85,7 @@ After it, confirm that partitions have been applied:
 ### Objective of LVM
 
 Suppose you are about to run out of space on your hard drive.
-Without LVM, you have to copy the data to another drive,
+Without an LVM in place, you have to copy the data to another drive,
 and then mount the drive, which leads to a downtime.
 
 LVM resolves this problem: LVM allows one to resize the file system with ease.
@@ -103,7 +100,7 @@ PV -> VG -> LV.
 
 ### LVM flow
 
-A physical volume set up:
+First, set up a physical volume:
 
 1. Creating a partition with the partition type of LVM.
 2. Create a physical volume.
@@ -121,7 +118,7 @@ After a physical volume is created, volume groups and logical volumes can be con
 
 ### Kernel and mount
 
-When you mount a file system, Kernel loads a module to handle the file system.
+When you mount a file system, kernel loads a module to handle the file system.
 
 ### Device UUIDs
 

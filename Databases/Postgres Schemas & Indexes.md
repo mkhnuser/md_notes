@@ -63,24 +63,26 @@ Functional indexes index an application of some SQL function to a set of columns
       ON table_name(function_or_expression(columnA, [additional_columns]))
 
 See "Just use Postgres", 4.9 Functional and expression indexes.
+See "Just use Postgres", 5.6.1 Using an expression index with a B-tree.
 
 ### B-tree index
 
 B-tree is of great use for comparison operators and `BETWEEN`.
 Overall, B-tree works well for ranges, numbers, and strings.
 
-An example of a B-tree index creation:
-
-      CREATE INDEX idx_region_score_win_count
-      ON game.player_stats (region, score DESC, win_count DESC);
-
 See "Just use Postgres", 4.5.1 Single-column B-tree indexes.
+See "Just use Postgres", 5.6.1 Using an expression index with a B-tree.
 
 ### Hash index
 
 Hash index works similar to a hash table and is used only for an `=` and `IN`.
 
 See "Just use Postgres", 4.5.2 Single-column hash indexes.
+
+### GIN index
+
+Generalized Inverted Index is a great choice for indexing JSON structures.
+See "Just use Postgres", 5.6.2 Using GIN indexes.
 
 ## ANALYZE
 

@@ -1,21 +1,26 @@
 # API Design
 
-## HTTP Rest API
+## HTTP REST API
 
 ### Overview
 
-One of the biggest advantages of having API is loose coupling: you don' need to
-know the internal implementation of a service you are communicating with.
+One of the biggest advantages of having API is loose coupling:
+you don' need to know the internal implementation of a service you are communicating with.
 
 ### Asynchronous Responses
 
-Sometimes a client requests some long-running operation. In this case, you might
-return a response which contains a URI to the status endpoint: /api/v1/status/<id>.
+Sometimes a client requests some long-running operation.
+In this case, you might return a response which contains a URI to the status endpoint:
+`/api/v1/order/<id>/status`.
 
 ### Partial Responses
 
 Partial Responses may be used to stream large files.
 https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
+
+### HATEOAS
+
+HATEOAS stands for hypermedia as the engine of the application state.
 
 ## SOAP
 
@@ -23,7 +28,7 @@ All information is passed in an XML document.
 
 ## RPC
 
-Some procedures access external resources over HTTP (usually).
+Some application-level procedures access external resources over HTTP (usually).
 
 ## Under and Over Data Fetching
 

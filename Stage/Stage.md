@@ -118,7 +118,7 @@ Deep Learning.
 Foundational LLM Knowledge.
 Computer Networks.
 
-Михеенко >> Техно Хаос
+Михеенко >> Техно Драйв
 Михеенко >> Широкие Очерки
 
 250 - Патрон;
@@ -128,12 +128,9 @@ Computer Networks.
 
 A Day Plan:
 
-* One algo problem:
-
-      NeetCode top 250 review, then TypeScript on LeetCode after master.dev courses.
-
-* Just use Postgres book.
-* Microservices in Python book.
+* "Just use Postgres" book.
+* "Practical Cryptography in Python" book.
+* "Microservices in Python" book.
 
 master.dev Plan:
 
