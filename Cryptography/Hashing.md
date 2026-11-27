@@ -28,7 +28,8 @@ See "Practical Cryptography in Python", Chapter 2, Hashing.
 
 ## Cryptographic Hash Functions
 
-All cryptographic hash functions have to satisfy the following:
+Cryptographic hash functions
+extend the requirements imposed by plain hash functions as follows:
 
 * Preimage resistance:
 
@@ -36,12 +37,12 @@ All cryptographic hash functions have to satisfy the following:
       it should be extremely hard to obtain an input which was used.
       An input can obviously be any binary sequence of data: files, images, numbers, etc.
 
-* Second-preimage resistance.
+* Second-preimage resistance:
 
       Given a cryptographic hash function output, and even if one preimage becomes known,
       it should be still extremely hard to find another preimage.
 
-* Collision resistance.
+* Collision resistance:
 
       A good cryptographic hash function follows an avalanche property:
       ideally, for a small input change, at least 50% of output bits have to changed.
@@ -71,11 +72,11 @@ See "Practical Cryptography in Python", Chapter 2, Hashing.
 
 ## Salt
 
-Salt is an random sequence which is added to a password before hashing.
+Salt is a unique sequence which is added to a password before hashing.
 Salt prevents a reverse table lookup attack.
 
 One should create salt on a per-user basis
-so that when two users have the same passwords, the hashes are different.
+so that when two users have the same passwords, their hashes are different.
 
 So, one might store the following record in a database:
 
@@ -90,7 +91,7 @@ An example password hashing flow:
 3. Hash the password with salt.
 4. Store user id, salt, hashed password.
 
-Once again: consider the usage of a KDF for passwords.
+Observe: consider the usage of a KDF for passwords.
 Observe: some high-level libraries generate salt for you automatically.
 
 See "Practical Cryptography in Python", Chapter 2, Hashing.
@@ -98,10 +99,12 @@ See "Practical Cryptography in Python", Chapter 2, Hashing.
 ## Key Derivation Functions
 
 Key derivation functions require a compute power to generate passwords.
-The purpose of a KDF is to prevent GPU/ASIC accelerated attacks.
-Essentially, the derived key you obtain means the same as a hash.
+The purpose of a KDF is to prevent GPU/ASIC accelerated brute force attacks.
+The derived key means the same as a hash when it comes to a password protection.
 
 Examples of key derivation functions are: PBKDF2, scrypt, bcrypt, argon2id.
 
 Note: be sure to save compute parameters and salt along with the derived key.
 Usually, a derived key will contain all the necessary information.
+
+See "Practical Cryptography in Python", Chapter 2, Hashing.

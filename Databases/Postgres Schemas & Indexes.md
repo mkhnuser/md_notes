@@ -82,7 +82,16 @@ See "Just use Postgres", 4.5.2 Single-column hash indexes.
 ### GIN index
 
 Generalized Inverted Index is a great choice for indexing JSON structures.
+Generalized Inverted Index is a great choice for full-text search queries.
+
 See "Just use Postgres", 5.6.2 Using GIN indexes.
+See "Just use Postgres", 6.6 Indexing lexemes.
+
+### GiST index
+
+Generalized Search Tree can be used for geometric data, network addresses, and full-text search.
+
+See "Just use Postgres", 6.6.2 Using GiST indexes.
 
 ## ANALYZE
 

@@ -118,7 +118,7 @@ Deep Learning.
 Foundational LLM Knowledge.
 Computer Networks.
 
-Михеенко >> Техно Драйв
+Михеенко >> Техно Хаос
 Михеенко >> Широкие Очерки
 
 250 - Патрон;

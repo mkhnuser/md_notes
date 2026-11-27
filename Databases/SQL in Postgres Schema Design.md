@@ -98,3 +98,24 @@ https://www.datacamp.com/doc/postgresql/timestamptz
 In the query above, two constraints are added.
 
 Consider the usage of `VACUUM ANALYZE` after a table alteration.
+
+## Generated columns
+
+Generated columns are generated when `INSERT` or `UPDATE` happens.
+
+     ALTER TABLE omdb.movies
+     ADD COLUMN lexemes tsvector
+     GENERATED ALWAYS AS (
+      to_tsvector('english', coalesce(name, '') || ' ' || coalesce(description, ''))
+     ) STORED;
+
+A generated column can be stored, as in the example above, or a virtual.
+A stored one is persisted on a disk,
+whereas a virtual one is calculated on demand during `SELECT`.
+
+Hence, a stored generated column is faster to retrieve, but it's slower to write.
+For a virtual column, therefore, a reverse logic applies.
+
+Since a virtual column is not persisted on a disk, it's impossible to index.
+
+See "Just use Postgres", 6.2.2 Storing tsvector lexemes in the database.
